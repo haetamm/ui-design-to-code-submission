@@ -12,6 +12,9 @@ import { PiGauge } from 'react-icons/pi';
 import { IoHomeOutline, IoLayersOutline } from 'react-icons/io5';
 import { FiArchive, FiUser } from 'react-icons/fi';
 import { MdOutlineSavings } from 'react-icons/md';
+import { BsPiggyBank } from 'react-icons/bs';
+import { SiStarlingbank } from 'react-icons/si';
+import { TbCategory2 } from 'react-icons/tb';
 
 export const navItems = [
   {
@@ -30,7 +33,7 @@ export const navItems = [
     label: 'Loan',
   },
   {
-    to: urlPage.PRODUCT,
+    to: '#',
     icon: <AiOutlineShopping className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
     label: 'Product',
   },
@@ -129,5 +132,23 @@ export const cardMenuBank = [
   {
     icon: <FaRegBuilding className='h-12 w-12 flex-shrink-0' />,
     label: 'Take Over dan Bridging Loan',
+  },
+];
+
+export const subNavItem = [
+  {
+    to: urlPage.PRODUCT_BANK,
+    icon: <BsPiggyBank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Bank Product',
+  },
+  {
+    to: '#',
+    icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Produk',
+  },
+  {
+    to: '#',
+    icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Category Product',
   },
 ];

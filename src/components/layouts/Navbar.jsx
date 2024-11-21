@@ -40,7 +40,7 @@ const Navbar = () => {
               <NotificationButton />
             </div>
             <div className='hidden xs:flex space-x-[1px] border-r-2 px-1 h-8 items-center'>
-              <p className='text-md md:text-lg'>Yohannes Affandi</p>
+              <p className='text-md md:text-lg'>Tatang Haetami</p>
               <IoMdArrowDropdown className='h-7 w-7' />
             </div>
           </div>

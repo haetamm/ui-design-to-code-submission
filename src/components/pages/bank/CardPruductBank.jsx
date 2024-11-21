@@ -174,7 +174,10 @@ const CardPruductBank = () => {
               </div>
 
               <div className='inline-block xs:flex xs:flex-col items-center justify-center md:flex-grow mt-4 md:mt-0 w-full md:w-auto'>
-                <Link to={`${urlPage.PRODUCT_BANK}/${data.id}`}>
+                <Link
+                  to={`${urlPage.PRODUCT_BANK}/${data.id}`}
+                  className='w-full'
+                >
                   <Button
                     label='Detail'
                     className='text-[#1cabe6] shadow-lg px-8 py-2 text-lg md:py-1 border-[1px] rounded-none w-full md:w-auto'

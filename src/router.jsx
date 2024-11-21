@@ -8,6 +8,7 @@ import DeveloperPage from './pages/DeveloperPage';
 import BankDetailPage from './pages/BankDetailPage';
 import BankUpdatePage from './pages/BankUpdatePage';
 import LoanPage from './pages/LoanPage';
+import NotFound from './pages/NotFound';
 
 const routerConfig = [
   {
@@ -59,6 +60,10 @@ const routerConfig = [
         handle: { name: 'Edit Application' },
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ];
 
