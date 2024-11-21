@@ -1,0 +1,66 @@
+.p-stepper-header {
+  padding: 20px 0px 20px 0px;
+}
+
+.p-stepper-number {
+  background: #1cabe6;
+}
+
+.p-stepper-action {
+  width: 50px;
+  font-size: 15px;
+}
+
+.p-stepper-action p-component {
+  height: 200px;
+}
+
+.p-stepper-title {
+  font-size: 10px;
+}
+
+.p-stepper-content {
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.p-stepper-nav {
+  background: white;
+  display: none;
+  position: fixed;
+  width: 100vw;
+  z-index: 50;
+}
+
+.p-stepper-panels {
+  margin-top: 10px;
+  background: transparent;
+  padding: 0px;
+}
+
+.p-stepper-separator {
+  margin-left: 3px;
+  margin-top: 15px;
+}
+
+@media (min-width: 1024px) {
+  .p-stepper-panels {
+    margin-top: 75px;
+  }
+
+  .p-stepper-nav {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw - 160px);
+  }
+}
+@media (min-width: 1280px) {
+  .p-stepper-nav {
+    width: calc(1348px - 230px);
+    margin: 0rem 1rem 0rem 0.5rem;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  .p-stepper-header {
+    padding: 0.5rem;
+  }
+}

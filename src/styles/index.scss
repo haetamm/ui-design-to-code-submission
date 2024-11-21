@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "loan";
+  src: url("https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "loan", Roboto;
+}
+
+.bg-custome {
+  background-color: rgb(var(--NN50, 240, 243, 247));
+}
+
+bg-primary {
+  background-color: #1cabe6;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.kontener {
+  width: 100%;
+}
+
+@media (min-width: 1348px) {
+  .kontener {
+    max-width: 1348px;
+  }
+}
+
+.checkbox-custom {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #1cabe6;
+  border-radius: 0.25rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.checkbox-custom:checked {
+  background-color: #1cabe6;
+  color: white;
+}
+
+.checkbox-custom:checked::after {
+  content: "✓";
+  font-size: 0.875rem;
+  font-weight: bold;
+}
