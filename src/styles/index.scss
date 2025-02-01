@@ -10,6 +10,19 @@ body {
   font-family: "loan", Roboto;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; /* Lebar scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #a0aec0; /* Warna thumb (pegangan) */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #edf2f7; /* Warna track (jalur) */
+}
+
 .bg-custome {
   background-color: rgb(var(--NN50, 240, 243, 247));
 }

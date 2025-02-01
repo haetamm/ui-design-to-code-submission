@@ -35,6 +35,7 @@ const BankUpdatePage = () => {
   const [, setMaxTenor] = useState(0);
   const [description, setDescription] = useState(null);
   const [url, setUrl] = useState(null);
+  const [dates, setDates] = useState(null);
 
   useEffect(() => {
     const data = dataProductBank.find((item) => item.id === parseInt(id));
@@ -103,6 +104,8 @@ const BankUpdatePage = () => {
                   </div>
                   <Calendar
                     disabled={!checkedPromotion}
+                    value={dates}
+                    onChange={(e) => setDates(e.value)}
                     showIcon
                     selectionMode='range'
                     className='w-full bg-gray-200 border-[1px] h-[44px] px-1 mt-1.5 rounded-md'

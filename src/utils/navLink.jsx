@@ -23,7 +23,7 @@ export const navItems = [
     label: 'Dashboard',
   },
   {
-    to: '#',
+    to: urlPage.CONTACT,
     icon: <LiaAddressCard className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
     label: 'Contact',
   },
@@ -112,6 +112,17 @@ export const productLink = [
   },
 ];
 
+export const contactLink = [
+  {
+    to: urlPage.CONTACT_ME,
+    label: 'My Contact',
+  },
+  {
+    to: urlPage.CONTACT_OTHER,
+    label: 'Other Contact',
+  },
+];
+
 export const cardMenuBank = [
   {
     icon: <IoHomeOutline className='h-12 w-12 flex-shrink-0' />,
@@ -137,14 +148,14 @@ export const cardMenuBank = [
 
 export const subNavItem = [
   {
-    to: urlPage.PRODUCT_BANK,
+    to: urlPage.PRODUCT,
     icon: <BsPiggyBank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
     label: 'Bank Product',
   },
   {
     to: '#',
     icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-    label: 'Produk',
+    label: 'Product',
   },
   {
     to: '#',

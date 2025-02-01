@@ -9,6 +9,12 @@ import BankDetailPage from './pages/BankDetailPage';
 import BankUpdatePage from './pages/BankUpdatePage';
 import LoanPage from './pages/LoanPage';
 import NotFound from './pages/NotFound';
+import NotificationPage from './pages/NotificationPage';
+import ContactPage from './pages/ContactPage';
+import ContactMePage from './pages/ContactMePage';
+import ContactOtherPage from './pages/ContactOtherPage';
+import ContactDetailPage from './pages/ContactDetailPage';
+import ContactUpdatePage from './pages/ContactUpdatePage';
 
 const routerConfig = [
   {
@@ -23,6 +29,46 @@ const routerConfig = [
         path: urlPage.DASHBOARD,
         element: <DashboardPage />,
         handle: { name: 'Dashboard' },
+      },
+      {
+        path: urlPage.DASHBOARD,
+        element: <DashboardPage />,
+        handle: { name: 'Dashboard' },
+      },
+      {
+        path: urlPage.NOTIFICATION,
+        element: <NotificationPage />,
+        handle: { name: 'Notification' },
+      },
+      {
+        path: urlPage.CONTACT,
+        element: <ContactPage />,
+        children: [
+          {
+            path: '',
+            element: <Navigate to='me' />,
+          },
+          {
+            path: 'me',
+            element: <ContactMePage />,
+            handle: { name: 'Contact' },
+          },
+          {
+            path: 'me/:id',
+            element: <ContactDetailPage />,
+            handle: { name: 'Contact' },
+          },
+          {
+            path: 'me/:id/update',
+            element: <ContactUpdatePage />,
+            handle: { name: 'Contact' },
+          },
+          {
+            path: 'other',
+            element: <ContactOtherPage />,
+            handle: { name: 'Contact' },
+          },
+        ],
       },
       {
         path: urlPage.PRODUCT,

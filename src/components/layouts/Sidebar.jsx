@@ -23,7 +23,7 @@ const Sidebar = () => {
       <div className='bg-white border-r-[1px] h-screen z-50'>
         <div className='flex justify-center p-1 lg:p-0'>
           <img
-            src='https://loanmarket.co.id/assets/img/lm-logo.png'
+            src='https://www.loanmarket.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Floan-market-logo.08e43cb2.png&w=96&q=75'
             alt='logo-img'
             className='hidden lg:inline-block h-[80px] w-[80px]'
           />
@@ -55,7 +55,7 @@ const Sidebar = () => {
                   </p>
                   {(item.label === 'Product' || item.label === 'Whatsapp') && (
                     <IoMdArrowDropdown
-                      className={`hidden md:block h-7 w-7 cursor-pointer transition-transform duration-300 ${
+                      className={`hidden lg:block h-7 w-7 cursor-pointer transition-transform duration-300 ${
                         isDropdownOpen ? 'rotate-180' : ''
                       }`}
                     />

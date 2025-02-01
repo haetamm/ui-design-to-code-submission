@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleSidebar } from '../../store/sidebarSlice';
 import { LuAlignJustify } from 'react-icons/lu';
-import { IoIosNotificationsOutline, IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropdown } from 'react-icons/io';
 import NotificationButton from '../pages/dashboard/NotificationButton';
 import { useMatches } from 'react-router-dom';
 
@@ -36,7 +36,6 @@ const Navbar = () => {
               <IoMdArrowDropdown className='h-7 w-7' />
             </div>
             <div className='flex space-x-[1px] border-x-2 px-1 items-center'>
-              <IoIosNotificationsOutline className='w-8 h-8' />
               <NotificationButton />
             </div>
             <div className='hidden xs:flex space-x-[1px] border-r-2 px-1 h-8 items-center'>

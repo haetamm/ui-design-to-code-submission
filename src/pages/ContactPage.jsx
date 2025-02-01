@@ -1,20 +1,20 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { productLink } from '../utils/navLink';
+import { contactLink } from '../utils/navLink';
 import { urlPage } from '../utils/constans';
 import NavPage from '../components/layouts/NavPage';
 
-const ProductPage = () => {
+const ContactPage = () => {
   return (
     <>
       <NavPage
-        links={productLink}
-        basePath={urlPage.PRODUCT_BANK}
-        entityName='Bank'
+        links={contactLink}
+        basePath={urlPage.CONTACT_ME}
+        entityName='Contact'
       />
       <Outlet />
     </>
   );
 };
 
-export default ProductPage;
+export default ContactPage;

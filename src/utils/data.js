@@ -23,6 +23,18 @@ export const timelineNotif = [
     details: 'Harry Handoko - Contact | MYCRM',
     isActive: false,
   },
+  {
+    time: '2 hrs',
+    status: 'admin_branch has updated',
+    details: 'Harry Handoko - Contact | MYCRM',
+    isActive: true,
+  },
+  {
+    time: '2 hrs',
+    status: 'admin_branch has updated',
+    details: 'Harry Handoko - Application | MYCRM',
+    isActive: false,
+  },
 ];
 
 export const dataProductBank = [
