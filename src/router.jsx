@@ -15,6 +15,10 @@ import ContactMePage from './pages/ContactMePage';
 import ContactOtherPage from './pages/ContactOtherPage';
 import ContactDetailPage from './pages/ContactDetailPage';
 import ContactUpdatePage from './pages/ContactUpdatePage';
+import DeveloperDetailPage from './pages/DeveloperDetailPage';
+import DeveloperUpdatePage from './pages/DeveloperUpdatePage';
+import BankAddPage from './pages/BankAddPage';
+import ContactAddPage from './pages/ContactAddPage';
 
 const routerConfig = [
   {
@@ -47,6 +51,11 @@ const routerConfig = [
           {
             path: '',
             element: <Navigate to='me' />,
+          },
+          {
+            path: 'add',
+            element: <ContactAddPage />,
+            handle: { name: 'Contact' },
           },
           {
             path: 'me',
@@ -84,6 +93,11 @@ const routerConfig = [
             handle: { name: 'Product' },
           },
           {
+            path: 'bank/add',
+            element: <BankAddPage />,
+            handle: { name: 'Product' },
+          },
+          {
             path: 'bank/:id',
             element: <BankDetailPage />,
             handle: { name: 'Product' },
@@ -96,6 +110,16 @@ const routerConfig = [
           {
             path: 'developer',
             element: <DeveloperPage />,
+            handle: { name: 'Product' },
+          },
+          {
+            path: 'developer/:id',
+            element: <DeveloperDetailPage />,
+            handle: { name: 'Product' },
+          },
+          {
+            path: 'developer/:id/update',
+            element: <DeveloperUpdatePage />,
             handle: { name: 'Product' },
           },
         ],

@@ -325,3 +325,116 @@ export const uploadDocField = [
     description: 'File Kekurangan 2',
   },
 ];
+
+export const detailDeveloperField = [
+  {
+    label: 'Developer',
+    value: 'name_dev',
+  },
+  {
+    label: 'Nama Project',
+    value: 'name_product',
+  },
+  {
+    label: 'Type Produk',
+    value: 'type',
+  },
+  {
+    label: 'Harga Unit',
+    value: 'price',
+  },
+  {
+    label: 'Type Property',
+    value: 'type_product',
+  },
+  {
+    label: 'Unit Property',
+    value: 'unit',
+  },
+  {
+    label: 'Address',
+    value: 'address',
+  },
+];
+
+export const contactField = [
+  {
+    label: 'Type Contact',
+    value: 'contact_type',
+    type: 'select',
+  },
+  {
+    label: 'Nama Lengkap',
+    value: 'name',
+    type: 'text',
+  },
+  {
+    label: 'Jenis Kelamin',
+    value: 'gender',
+    type: 'select',
+  },
+  {
+    label: 'Lahir',
+    value: 'birth_date',
+    type: 'date',
+  },
+  {
+    label: 'Jabatan',
+    value: 'position',
+    type: 'text',
+  },
+  {
+    label: 'Type Pekerjaan',
+    value: 'employment_type',
+    type: 'select',
+  },
+  {
+    label: 'Perusahaan',
+    value: 'company',
+    type: 'text',
+  },
+  {
+    label: 'Kategory',
+    value: 'category',
+    type: 'select',
+  },
+  {
+    label: 'Email',
+    value: 'email',
+    type: 'email',
+  },
+  {
+    label: 'Phone',
+    value: 'phone',
+    type: 'number',
+  },
+  {
+    label: 'NIK',
+    value: 'nik',
+    type: 'text',
+  },
+];
+
+export const contact_type = [
+  { name: 'Perusahaan', value: 'perusahaan' },
+  { name: 'Perorangan', value: 'perorangan' },
+];
+
+export const gender = [
+  { name: 'Laki-laki', value: 'laki-laki' },
+  { name: 'Perempuan', value: 'perempuan' },
+];
+
+export const employment_type = [
+  { name: 'Karyawan', value: 'karyawan' },
+  { name: 'Profesional', value: 'profesional' },
+  { name: 'Wiraswasta', value: 'wiraswasta' },
+  { name: 'Pegawai Pemerintahan (PNS/TNI/POLRI)', value: 'asn' },
+];
+
+export const category = [
+  { name: 'Cold leads', value: 'cold leads' },
+  { name: 'Warm leads', value: 'warn leads' },
+  { name: 'Hot leads', value: 'hot leads' },
+  { name: 'Dev partner', value: 'dev partner' },
+];

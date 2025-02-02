@@ -52,13 +52,13 @@ const DocUploadForm = () => {
                       <div className='relative w-full mx-auto'>
                         <label
                           htmlFor={`fileInput-${categoryIndex}-${index}`}
-                          className='flex items-center justify-between w-full px-4 py-2 text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100'
+                          className='flex items-center  justify-between w-full px-4 py-2 text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100'
                         >
                           <span className='line-clamp-1 text-sm'>
                             {uploadedFiles[category]?.[label] ||
                               `--${description}--`}
                           </span>
-                          <BsUpload className='w-6 h-6 text-gray-500' />
+                          <BsUpload className='w-5 h-5 text-gray-500 shrink-0' />
                         </label>
                         <input
                           id={`fileInput-${categoryIndex}-${index}`}

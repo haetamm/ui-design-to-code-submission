@@ -14,7 +14,7 @@ import { FiArchive, FiUser } from 'react-icons/fi';
 import { MdOutlineSavings } from 'react-icons/md';
 import { BsPiggyBank } from 'react-icons/bs';
 import { SiStarlingbank } from 'react-icons/si';
-import { TbCategory2 } from 'react-icons/tb';
+import { TbCategory2, TbReport } from 'react-icons/tb';
 
 export const navItems = [
   {
@@ -161,5 +161,10 @@ export const subNavItem = [
     to: '#',
     icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
     label: 'Category Product',
+  },
+  {
+    to: '#',
+    icon: <TbReport className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Report',
   },
 ];

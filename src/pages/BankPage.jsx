@@ -1,9 +1,10 @@
 import React from 'react';
 import CardMenuBank from '../components/pages/bank/CardMenuBank';
-import CardPruductBank from '../components/pages/bank/CardPruductBank';
+import CardProductBank from '../components/pages/bank/CardProductBank';
 import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
 import { Helmet } from 'react-helmet-async';
+import { scrollTop } from '../utils/helper';
 
 const BankPage = () => {
   return (
@@ -14,9 +15,10 @@ const BankPage = () => {
       </Helmet>
       <div className='mb-14 mt-[42px] md:mb-0'>
         <CardMenuBank />
-        <CardPruductBank />
+        <CardProductBank />
         <ButtomBottom>
           <Button
+            onClick={scrollTop}
             label='Tambah Produk'
             icon='pi pi-plus'
             size='small'

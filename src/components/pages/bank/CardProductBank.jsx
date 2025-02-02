@@ -15,8 +15,9 @@ import { Dropdown } from 'primereact/dropdown';
 import { Link } from 'react-router-dom';
 import { urlPage } from '../../../utils/constans';
 import { product_type } from '../../../utils/fieldInput';
+import { scrollTop } from '../../../utils/helper';
 
-const CardPruductBank = () => {
+const CardProductBank = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProductType, setSelectedProductType] = useState({
     name: 'Semua Tipe',
@@ -65,12 +66,17 @@ const CardPruductBank = () => {
               />
             </div>
           </div>
-          <Button
-            label='Tambah Produk'
-            icon='pi pi-plus'
-            size='small'
-            className='hidden md:block w-full py-3 md:w-[250px] lg:w-[270px] mt-4 md:mt-0 bg-[#1cabe6] text-white px-3'
-          />
+          <Link
+            to={urlPage.PRODUCT_BANK_ADD}
+            className='md:w-[250px] lg:w-[270px] '
+          >
+            <Button
+              label='Tambah Produk'
+              icon='pi pi-plus'
+              size='small'
+              className='hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3'
+            />
+          </Link>
         </div>
       </div>
 
@@ -126,7 +132,7 @@ const CardPruductBank = () => {
                 <div className='block xs:flex xs:flex-col mt-4 xs:mt-0'>
                   <div className='text-xl xs:text-2xl font-bold text-center md:text-start'>
                     {data.bank_name} {''}
-                    <span className='text-[#1cabe6]'>{data.product_name}</span>
+                    <span className='text-[#841ce6]'>{data.product_name}</span>
                   </div>
                   <div className='inline-block xs:flex justify-between mt-2'>
                     <div className='flex flex-col md:border-r-2 pr-4'>
@@ -179,9 +185,10 @@ const CardPruductBank = () => {
                   className='w-full'
                 >
                   <Button
+                    onClick={scrollTop}
                     label='Detail'
                     className='text-[#1cabe6] shadow-lg px-8 py-2 text-lg md:py-1 border-[1px] rounded-none w-full md:w-auto'
-                  ></Button>
+                  />
                 </Link>
               </div>
             </div>
@@ -192,4 +199,4 @@ const CardPruductBank = () => {
   );
 };
 
-export default CardPruductBank;
+export default CardProductBank;

@@ -1,16 +1,17 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from 'primereact/button';
 
-const NavPage = ({ links, basePath, entityName }) => {
-  const { id } = useParams();
+const NavPage = ({ links, entityName, subName }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
   const isBasePage = links.some((link) => location.pathname === link.to);
-  const isUpdatePage = location.pathname === `${basePath}/${id}/update`;
+  const isUpdatePage = location.pathname.endsWith('/update');
+  const isAddPage = location.pathname.endsWith('/add');
 
   const handleBack = () => {
     navigate(-1);
@@ -19,8 +20,10 @@ const NavPage = ({ links, basePath, entityName }) => {
   return (
     <>
       <div
-        className={`flex fixed z-50 bg-white w-full border-b-[1px] lg:w-[calc(100%-160px)] xl:w-[calc(1348px-210px)] h-50 space-x-1${
-          isBasePage ? ' justify-center ' : 'justify-normal px-3 xl:px-6'
+        className={`flex fixed z-50 bg-white w-full border-b-[1px] lg:w-[calc(100%-160px)] xl:w-[calc(1348px-210px)]  space-x-1  ${
+          isBasePage
+            ? '  justify-center'
+            : 'justify-normal px-3 xl:px-6 h-[63px]'
         }`}
       >
         {isBasePage &&
@@ -41,26 +44,30 @@ const NavPage = ({ links, basePath, entityName }) => {
           ))}
         {!isBasePage && (
           <div className='flex justify-between w-full'>
-            <div className='text-md flex justify-center lg:text-xl py-3 mt-1 mb-0.5 space-x-3 items-center'>
+            <div className='text-md flex justify-center lg:text-xl py-2 mt-1 mb-0.5 space-x-3 items-center'>
               <FaArrowAltCircleLeft
                 onClick={handleBack}
                 className='h-8 w-8 text-[#1cabe6] cursor-pointer'
               />
               <div>
-                {!isUpdatePage ? `${entityName} Detail` : `Edit ${entityName}`}
+                {isAddPage
+                  ? `Add ${subName}`
+                  : !isUpdatePage
+                    ? `${subName} Detail`
+                    : `Edit ${entityName}`}
               </div>
             </div>
-            {!isUpdatePage && (
-              <div className='hidden md:flex justify-between py-3 mt-1 mb-0.5 space-x-3 items-center'>
-                <Link to={`${basePath}/${id}/update`}>
+            {!isUpdatePage && !isAddPage && (
+              <div className='hidden md:flex justify-between py-2 mt-1 mb-0.5 space-x-3 items-center'>
+                <Link to={`${location.pathname}/update`}>
                   <Button
-                    label={`${entityName} Produk`}
+                    label={`Edit ${entityName}`}
                     icon='pi pi-pen-to-square'
                     size='small'
                     className=' py-1.5 bg-[#0c2f3e] text-white px-3 text-md'
                   />
                 </Link>
-                {entityName === 'Bank' && (
+                {entityName === 'Product' && (
                   <Button
                     label={`Delete ${entityName}`}
                     icon='pi pi-trash'
@@ -84,8 +91,8 @@ NavPage.propTypes = {
       label: PropTypes.string.isRequired,
     })
   ).isRequired,
-  basePath: PropTypes.string.isRequired,
   entityName: PropTypes.string.isRequired,
+  subName: PropTypes.string.isRequired,
 };
 
 export default NavPage;
