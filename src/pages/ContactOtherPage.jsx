@@ -11,7 +11,7 @@ const ContactOtherPage = () => {
 
   return (
     <>
-      <div className='mb-14 mt-[68px] md:mb-0'>
+      <div className='mb-0 mt-[68px] md:mb-0'>
         <div className='p-3 px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-4 xs:pt-0 w-full'>
           <div className='inline-block md:flex w-full space-x-0 md:space-x-3 justify-between'>
             <div className='inline-block xs:flex space-x-0 xs:space-x-8  w-full '>

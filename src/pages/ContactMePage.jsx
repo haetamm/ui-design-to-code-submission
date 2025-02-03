@@ -7,6 +7,7 @@ import { urlPage } from '../utils/constans';
 import { Button } from 'primereact/button';
 import { dataContact } from '../utils/data';
 import CardContact from '../components/pages/contact/CardContact';
+import ButtomBottom from '../components/pages/bank/ButtomBottom';
 
 const ContactMePage = () => {
   const contact = dataContact.filter((contact) => contact.type === 'my');
@@ -59,6 +60,16 @@ const ContactMePage = () => {
           </div>
         </div>
       </div>
+      <ButtomBottom>
+        <Link to={urlPage.CONTACT_ADD} className='w-full'>
+          <Button
+            label='Tambah Contact'
+            icon='pi pi-plus'
+            size='small'
+            className=' w-full p-3 bg-[#1cabe6] text-white'
+          />
+        </Link>
+      </ButtomBottom>
     </>
   );
 };

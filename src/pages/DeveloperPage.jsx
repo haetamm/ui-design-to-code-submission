@@ -9,7 +9,7 @@ const DeveloperPage = () => {
         <title>Developer Page | Loan Market</title>
         <meta name='description' content='Developer Page' />
       </Helmet>
-      <div className='mb-14 mt-[65px] md:mb-0'>
+      <div className='mb-0 mt-[65px] md:mb-0'>
         <CardProductDeveloper />
       </div>
     </>

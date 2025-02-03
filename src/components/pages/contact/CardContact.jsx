@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IoMdFemale, IoMdMale } from 'react-icons/io';
+import { Link } from 'react-router-dom';
+import { urlPage } from '../../../utils/constans';
 
 const CardContact = ({ id, name, gender, position, email, handphone }) => {
   return (
     <>
-      <div className='w-full text-black bg-white rounded-md p-2 py-5 xs:p-4 inline-block xs:flex md:inline-block space-x-0 xs:space-x-2 md:space-x-0 lg:flex'>
+      <Link
+        to={`${urlPage.CONTACT_ME}/${id}/detail`}
+        className='w-full text-black bg-white rounded-md p-2 py-5 xs:p-4 inline-block xs:flex md:inline-block space-x-0 xs:space-x-2 md:space-x-0 lg:flex'
+      >
         <div className='flex space-x-2 w-full'>
           <div className='flex flex-col items-center justify-center w-[170px] xl:w-[250px]'>
             <img
@@ -26,7 +31,7 @@ const CardContact = ({ id, name, gender, position, email, handphone }) => {
             <p className='text-gray-500 text-sm'>{handphone}</p>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

@@ -19,6 +19,8 @@ import DeveloperDetailPage from './pages/DeveloperDetailPage';
 import DeveloperUpdatePage from './pages/DeveloperUpdatePage';
 import BankAddPage from './pages/BankAddPage';
 import ContactAddPage from './pages/ContactAddPage';
+import ContactAddCategoryPage from './pages/ContactAddCategoryPage';
+import ContactByIdPage from './pages/ContactByIdPage';
 
 const routerConfig = [
   {
@@ -58,12 +60,22 @@ const routerConfig = [
             handle: { name: 'Contact' },
           },
           {
+            path: 'add-category',
+            element: <ContactAddCategoryPage />,
+            handle: { name: 'Contact' },
+          },
+          {
             path: 'me',
             element: <ContactMePage />,
             handle: { name: 'Contact' },
           },
           {
             path: 'me/:id',
+            element: <ContactByIdPage />,
+            handle: { name: 'Contact' },
+          },
+          {
+            path: 'me/:id/detail',
             element: <ContactDetailPage />,
             handle: { name: 'Contact' },
           },

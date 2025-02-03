@@ -2,12 +2,12 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { dataProdctDeveloper } from '../utils/data';
 import { Helmet } from 'react-helmet-async';
-import CardDetailProduct from '../components/pages/CardDetailProduct';
+import CardDetail from '../components/pages/CardDetail';
 import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { urlPage } from '../utils/constans';
 import { Button } from 'primereact/button';
 import { detailDeveloperField } from '../utils/fieldInput';
-import ProductNotFound from '../components/pages/ProductNotFound';
+import ProductNotFound from '../components/pages/DataNotFound';
 
 const DeveloperDetailPage = () => {
   const { id } = useParams();
@@ -23,7 +23,7 @@ const DeveloperDetailPage = () => {
       </Helmet>
       <div className='mt-[60px] mb-14 md:mb-0'>
         <div className='px-3 py-6 md:p-6'>
-          <CardDetailProduct product={product} fields={detailDeveloperField} />
+          <CardDetail data={product} fields={detailDeveloperField} />
         </div>
       </div>
       <ButtomBottom>
@@ -31,7 +31,7 @@ const DeveloperDetailPage = () => {
           label='Delete Produk'
           icon='pi pi-trash'
           size='normal'
-          className=' w-full p-3 bg-red-500 text-white'
+          className=' w-full px-2 py-3 bg-red-500 text-white'
         />
         <Link
           to={`${urlPage.PRODUCT_DEVELOPER}/${id}/update`}
@@ -41,7 +41,7 @@ const DeveloperDetailPage = () => {
             label='Edit Produk'
             icon='pi pi-pen-to-square'
             size='normal'
-            className=' w-full p-3 bg-[#0c2f3e] text-white'
+            className=' w-full px-2 py-3 bg-[#0c2f3e] text-white'
           />
         </Link>
       </ButtomBottom>

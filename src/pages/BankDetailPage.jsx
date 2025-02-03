@@ -5,9 +5,9 @@ import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
 import { urlPage } from '../utils/constans';
 import { Helmet } from 'react-helmet-async';
-import CardDetailProduct from '../components/pages/CardDetailProduct';
+import CardDetail from '../components/pages/CardDetail';
 import { detailProductBankField } from '../utils/fieldInput';
-import ProductNotFound from '../components/pages/ProductNotFound';
+import ProductNotFound from '../components/pages/DataNotFound';
 
 const BankDetailPage = () => {
   const { id } = useParams();
@@ -23,10 +23,7 @@ const BankDetailPage = () => {
       </Helmet>
       <div className='mt-[60px] mb-14 md:mb-0'>
         <div className='px-3 py-6 md:p-6'>
-          <CardDetailProduct
-            product={product}
-            fields={detailProductBankField}
-          />
+          <CardDetail data={product} fields={detailProductBankField} />
         </div>
       </div>
       <ButtomBottom>
@@ -34,14 +31,14 @@ const BankDetailPage = () => {
           label='Delete Produk'
           icon='pi pi-trash'
           size='normal'
-          className=' w-full p-3 bg-red-500 text-white'
+          className=' w-full px-2 py-3 bg-red-500 text-white'
         />
         <Link to={`${urlPage.PRODUCT_BANK}/${id}/update`} className='w-full'>
           <Button
             label='Edit Produk'
             icon='pi pi-pen-to-square'
             size='normal'
-            className=' w-full p-3 bg-[#0c2f3e] text-white'
+            className=' w-full px-2 py-3 bg-[#0c2f3e] text-white'
           />
         </Link>
       </ButtomBottom>

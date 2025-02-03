@@ -2,7 +2,7 @@ import React from 'react';
 import { InputText } from 'primereact/inputtext';
 import PropTypes from 'prop-types';
 
-const CardDetailProduct = ({ product, fields }) => {
+const CardDetail = ({ data, fields }) => {
   return (
     <>
       <div className='bg-white p-3 md:p-8 rounded-md'>
@@ -17,7 +17,11 @@ const CardDetailProduct = ({ product, fields }) => {
                 disabled
                 placeholder='Disabled'
                 className='bg-gray-200 py-3 w-full px-3 text-black'
-                value={product[value] || 0}
+                value={
+                  value === 'birth_date'
+                    ? data[value]?.toLocaleDateString('id-ID')
+                    : data[value]
+                }
               />
             </div>
           </div>
@@ -27,9 +31,9 @@ const CardDetailProduct = ({ product, fields }) => {
   );
 };
 
-CardDetailProduct.propTypes = {
-  product: PropTypes.array.isRequired,
+CardDetail.propTypes = {
+  data: PropTypes.array.isRequired,
   fields: PropTypes.array.isRequired,
 };
 
-export default CardDetailProduct;
+export default CardDetail;

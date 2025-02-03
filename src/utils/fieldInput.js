@@ -415,26 +415,64 @@ export const contactField = [
   },
 ];
 
+export const contactSubDetailField = [
+  {
+    label: 'Phone',
+    value: 'phone',
+    type: 'Contact',
+  },
+  {
+    label: 'Email',
+    value: 'email',
+    type: 'Contact',
+  },
+  {
+    label: 'Type Contact',
+    value: 'contact_type',
+    type: 'Personal Information',
+  },
+  {
+    label: 'KTP',
+    value: 'nik',
+    type: 'Personal Information',
+  },
+  {
+    label: 'Birthday',
+    value: 'birth_date',
+    type: 'Personal Information',
+  },
+  {
+    label: 'Gender',
+    value: 'gender',
+    type: 'Personal Information',
+  },
+  {
+    label: 'Advisor',
+    value: 'adviser',
+    type: 'Personal Information',
+  },
+];
+
 export const contact_type = [
   { name: 'Perusahaan', value: 'perusahaan' },
   { name: 'Perorangan', value: 'perorangan' },
 ];
 
 export const gender = [
-  { name: 'Laki-laki', value: 'laki-laki' },
-  { name: 'Perempuan', value: 'perempuan' },
+  { name: 'Laki-laki', value: 'Laki-laki' },
+  { name: 'Perempuan', value: 'Perempuan' },
 ];
 
 export const employment_type = [
-  { name: 'Karyawan', value: 'karyawan' },
-  { name: 'Profesional', value: 'profesional' },
-  { name: 'Wiraswasta', value: 'wiraswasta' },
+  { name: 'Karyawan', value: 'Karyawan' },
+  { name: 'Profesional', value: 'Profesional' },
+  { name: 'Wiraswasta', value: 'Wiraswasta' },
   { name: 'Pegawai Pemerintahan (PNS/TNI/POLRI)', value: 'asn' },
 ];
 
 export const category = [
-  { name: 'Cold leads', value: 'cold leads' },
-  { name: 'Warm leads', value: 'warn leads' },
-  { name: 'Hot leads', value: 'hot leads' },
-  { name: 'Dev partner', value: 'dev partner' },
+  { name: 'Cold leads', value: 'Cold leads' },
+  { name: 'Warm leads', value: 'Warn leads' },
+  { name: 'Hot leads', value: 'Hot leads' },
+  { name: 'Dev partner', value: 'Dev partner' },
 ];

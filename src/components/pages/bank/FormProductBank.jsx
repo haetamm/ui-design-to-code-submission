@@ -14,7 +14,7 @@ import {
 } from '../../../utils/fieldInput';
 import { dataProductBank } from '../../../utils/data';
 
-const FormProductBank = ({ id }) => {
+const FormProductBank = ({ id, onSubmit }) => {
   const [checkedPromotion, setCheckedPromotion] = useState(false);
   const [productData, setProductData] = useState(null);
   const [selectedBank, setSelectedBank] = useState(null);
@@ -62,8 +62,8 @@ const FormProductBank = ({ id }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log({
+
+    const formData = {
       selectedBank,
       selectedProductType,
       guarantee,
@@ -80,7 +80,8 @@ const FormProductBank = ({ id }) => {
       description,
       url,
       dates,
-    });
+    };
+    onSubmit(formData);
   };
 
   return (
@@ -280,5 +281,6 @@ const FormProductBank = ({ id }) => {
 
 FormProductBank.propTypes = {
   id: PropTypes.string,
+  onSubmit: PropTypes.func.isRequired,
 };
 export default FormProductBank;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { dataProdctDeveloper as initialData } from '../utils/data';
-import ProductNotFound from '../components/pages/ProductNotFound';
+import DataNotFound from '../components/pages/DataNotFound';
 import { Helmet } from 'react-helmet-async';
 import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
@@ -12,7 +12,7 @@ const DeveloperUpdatePage = () => {
   const [data, setData] = useState(initialData);
   const product = data.find((item) => item.id === parseInt(id));
 
-  if (!product) return <ProductNotFound />;
+  if (!product) return <DataNotFound />;
 
   const handleUpdate = (updatedProduct) => {
     console.log(updatedProduct);
@@ -41,7 +41,7 @@ const DeveloperUpdatePage = () => {
       </div>
       <ButtomBottom>
         <Button
-          label='Edit Produk'
+          label='Update'
           icon='pi pi-pen-to-square'
           size='normal'
           className='w-full p-3 bg-[#0c2f3e] text-white'
