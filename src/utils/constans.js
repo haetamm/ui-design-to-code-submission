@@ -3,6 +3,7 @@ export const urlPage = {
   NOTIFICATION: '/notification',
   CONTACT: '/contact',
   CONTACT_ADD: '/contact/add',
+  CONTACT_ADD_CATEGORY: '/contact/add-category',
   CONTACT_ME: '/contact/me',
   CONTACT_OTHER: '/contact/other',
   LOAN: '/loan',

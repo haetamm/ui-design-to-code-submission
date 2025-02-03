@@ -41,7 +41,10 @@ const ContactMePage = () => {
                   className='hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3'
                 />
               </Link>
-              <Link to={urlPage.PRODUCT_BANK_ADD} className='md:w-[160px]  '>
+              <Link
+                to={urlPage.CONTACT_ADD_CATEGORY}
+                className='md:w-[160px]  '
+              >
                 <Button
                   label='Add Category'
                   icon='pi pi-plus'
@@ -61,9 +64,17 @@ const ContactMePage = () => {
         </div>
       </div>
       <ButtomBottom>
+        <Link to={urlPage.CONTACT_ADD_CATEGORY} className='w-full'>
+          <Button
+            label='Category'
+            icon='pi pi-plus'
+            size='small'
+            className=' w-full p-3 bg-[#1cabe6] text-white'
+          />
+        </Link>
         <Link to={urlPage.CONTACT_ADD} className='w-full'>
           <Button
-            label='Tambah Contact'
+            label='Contact'
             icon='pi pi-plus'
             size='small'
             className=' w-full p-3 bg-[#1cabe6] text-white'

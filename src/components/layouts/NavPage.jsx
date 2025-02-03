@@ -14,6 +14,7 @@ const NavPage = ({ links, entityName, subName }) => {
   const isBasePage = links.some((link) => location.pathname === link.to);
   const isUpdatePage = location.pathname.endsWith('/update');
   const isAddPage = location.pathname.endsWith('/add');
+  const isAddCategoryPage = location.pathname.endsWith('/add-category');
   const isDetailPage = location.pathname.endsWith('/detail');
 
   const handleBack = () => {
@@ -55,31 +56,36 @@ const NavPage = ({ links, entityName, subName }) => {
               <div>
                 {isAddPage
                   ? `Add ${subName}`
-                  : !isUpdatePage
-                    ? `${subName} Detail`
-                    : `Edit ${entityName}`}
+                  : isUpdatePage
+                    ? `Edit ${entityName}`
+                    : isAddCategoryPage
+                      ? 'Add Category'
+                      : `${subName} Detail`}
               </div>
             </div>
-            {!isUpdatePage && !isAddPage && !isDetailPage && (
-              <div className='hidden md:flex justify-between py-2 mt-1 mb-0.5 space-x-3 items-center'>
-                <Link to={`${location.pathname}/update`}>
-                  <Button
-                    label={`Edit ${entityName}`}
-                    icon='pi pi-pen-to-square'
-                    size='small'
-                    className=' py-1.5 bg-[#0c2f3e] text-white px-3 text-md'
-                  />
-                </Link>
-                {entityName === 'Product' && (
-                  <Button
-                    label={`Delete ${entityName}`}
-                    icon='pi pi-trash'
-                    size='small'
-                    className=' py-1.5 bg-red-500 text-white px-3 text-md'
-                  />
-                )}
-              </div>
-            )}
+            {!isUpdatePage &&
+              !isAddPage &&
+              !isDetailPage &&
+              !isAddCategoryPage && (
+                <div className='hidden md:flex justify-between py-2 mt-1 mb-0.5 space-x-3 items-center'>
+                  <Link to={`${location.pathname}/update`}>
+                    <Button
+                      label={`Edit ${entityName}`}
+                      icon='pi pi-pen-to-square'
+                      size='small'
+                      className=' py-1.5 bg-[#0c2f3e] text-white px-3 text-md'
+                    />
+                  </Link>
+                  {entityName === 'Product' && (
+                    <Button
+                      label={`Delete ${entityName}`}
+                      icon='pi pi-trash'
+                      size='small'
+                      className=' py-1.5 bg-red-500 text-white px-3 text-md'
+                    />
+                  )}
+                </div>
+              )}
           </div>
         )}
       </div>
