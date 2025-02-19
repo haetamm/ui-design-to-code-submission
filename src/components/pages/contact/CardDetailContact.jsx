@@ -16,7 +16,7 @@ const CardDetailContact = ({ data }) => {
 
   return (
     <>
-      <div className='bg-white py-5 px-4 lg:px-2 xl:px-4 flex flex-col items-center rounded-md'>
+      <div className='bg-white py-5 px-2 xl:px-4 flex flex-col items-center rounded-md'>
         <p className='font-bold text-3xl'>{data?.name}</p>
         <p className='mt-1 text-md'>Date Created : {data?.created_at}</p>
 
@@ -32,10 +32,10 @@ const CardDetailContact = ({ data }) => {
                   idx === fields.length - 1 ? 'border-b-[1px] rounded-b-md' : ''
                 }`}
               >
-                <div className='px-4 py-1.5 text-md w-[40%] border-r-[1px] '>
+                <div className='px-1 xs:px-4 py-1.5 text-md w-[40%] border-r-[1px] '>
                   <p>{label}</p>
                 </div>
-                <div className='px-4 py-1.5 text-md w-[60%]'>
+                <div className='px-1 xs:px-4 py-1.5 text-md w-[60%]'>
                   <p>
                     {value === 'birth_date'
                       ? data[value]?.toLocaleDateString('id-ID')
@@ -52,13 +52,13 @@ const CardDetailContact = ({ data }) => {
             label='Share'
             icon='pi pi-share-alt'
             size='normal'
-            className=' w-full px-2 py-1.5 bg-blue-600 text-white'
+            className=' w-full px-2 py-2 bg-blue-600 text-white'
           />
           <Button
             label='Delete'
             icon='pi pi-trash'
             size='normal'
-            className=' w-full px-2 py-1.5 bg-red-500 text-white'
+            className=' w-full px-2 py-2 bg-red-500 text-white'
           />
         </div>
         <Link to={`${urlPage.CONTACT_ME}/${data.id}`} className='w-full'>
@@ -66,7 +66,7 @@ const CardDetailContact = ({ data }) => {
             label='Edit Contact'
             icon='pi pi-pen-to-square'
             size='normal'
-            className=' w-full px-2 py-1.5 bg-[#0c2f3e] text-white mt-2'
+            className=' w-full px-2 py-2 bg-[#0c2f3e] text-white mt-2'
           />
         </Link>
       </div>

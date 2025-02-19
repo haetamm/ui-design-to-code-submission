@@ -11,7 +11,7 @@ const CardHeaderApplication = ({ name, link }) => {
           <p className='w-full text-lg font-bold text-white'>{name}</p>
           <Link to={link}>
             <Button
-              label={`Tambah ${name}`}
+              label={`${name}`}
               icon='pi pi-plus'
               size='small'
               className='xs:w-[200px] py-1 bg-white text-black px-3'

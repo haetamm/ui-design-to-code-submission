@@ -100,47 +100,6 @@ export const updateProductBankField = [
   },
 ];
 
-export const listBank = [
-  { name: 'Mandiri', value: 'Mandiri' },
-  { name: 'Panin', value: 'Panin' },
-  { name: 'MNC', value: 'MNC' },
-  { name: 'Commonwealth', value: 'Commonwealth' },
-  { name: 'UOB', value: 'UOB' },
-  { name: 'BNI', value: 'BNI' },
-  { name: 'Danamon', value: 'Danamon' },
-  { name: 'BCA', value: 'BCA' },
-  { name: 'BRI', value: 'BRI' },
-  { name: 'BNI', value: 'BNI' },
-];
-
-export const product_type = [
-  { name: 'Semua Tipe', value: null },
-  { name: 'Kredit Kepemilikan Rakyat', value: 'Kredit kepemilikan Rakyat' },
-  { name: 'Kredit Kepemilikan Pejabat', value: 'Kredit kepemilikan Pejabat' },
-  { name: 'Kredit Kepemilikan Guru', value: 'Kredit kepemilikan Guru' },
-];
-
-export const listGuarantee = [
-  'Ruko',
-  'Rumah',
-  'Kendaraan Pribadi',
-  'Slip Gaji',
-  'Rukan',
-  'Apartemen',
-  'Sertifikat Perusahaan',
-];
-
-export const listTargetMarket = [
-  'Pengusaha',
-  'Profesional',
-  'ASN',
-  'TNI',
-  'Karyawan',
-  'Milenial',
-  'POLRI',
-  'Lainnya',
-];
-
 export const personalData = [
   {
     label: 'Fotokopi KTP Pemohon',
@@ -453,26 +412,41 @@ export const contactSubDetailField = [
   },
 ];
 
-export const contact_type = [
-  { name: 'Perusahaan', value: 'perusahaan' },
-  { name: 'Perorangan', value: 'perorangan' },
-];
-
-export const gender = [
-  { name: 'Laki-laki', value: 'Laki-laki' },
-  { name: 'Perempuan', value: 'Perempuan' },
-];
-
-export const employment_type = [
-  { name: 'Karyawan', value: 'Karyawan' },
-  { name: 'Profesional', value: 'Profesional' },
-  { name: 'Wiraswasta', value: 'Wiraswasta' },
-  { name: 'Pegawai Pemerintahan (PNS/TNI/POLRI)', value: 'asn' },
-];
-
-export const category = [
-  { name: 'Cold leads', value: 'Cold leads' },
-  { name: 'Warm leads', value: 'Warn leads' },
-  { name: 'Hot leads', value: 'Hot leads' },
-  { name: 'Dev partner', value: 'Dev partner' },
+export const loanField = [
+  {
+    label: 'Jenis Kebutuhan',
+    value: 'need_type',
+    type: 'select',
+    placeholder: '',
+  },
+  {
+    label: 'Jenis Pinjaman Kredit',
+    value: 'loan_type',
+    type: 'select',
+    placeholder: 'Select Product',
+  },
+  {
+    label: 'Nominal Penempatan',
+    value: 'placement_amount',
+    type: 'number',
+    placeholder: 'Masukan Placement Amount',
+  },
+  {
+    label: 'Jangka Waktu Penempatan',
+    value: 'placement_duration',
+    type: 'select',
+    placeholder: 'Select Duration',
+  },
+  {
+    label: 'Nama Bilyet Deposito',
+    value: 'deposit_certificate_name',
+    type: 'select',
+    placeholder: 'Masukan Deposit Certificate Name',
+  },
+  {
+    label: 'Perpanjangan deposito',
+    value: 'deposit_renewal',
+    type: 'select',
+    placeholder: 'Select Renewal Option',
+  },
 ];

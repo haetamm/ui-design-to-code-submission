@@ -5,14 +5,14 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { InputText } from 'primereact/inputtext';
 import { Calendar } from 'primereact/calendar';
 import { Button } from 'primereact/button';
-import {
-  listBank,
-  listGuarantee,
-  listTargetMarket,
-  product_type,
-  updateProductBankField,
-} from '../../../utils/fieldInput';
+import { updateProductBankField } from '../../../utils/fieldInput';
 import { dataProductBank } from '../../../utils/data';
+import {
+  target_market_option,
+  bank_option,
+  guarantee_option,
+  product_type_option,
+} from '../../../utils/selectOption';
 
 const FormProductBank = ({ id, onSubmit }) => {
   const [checkedPromotion, setCheckedPromotion] = useState(false);
@@ -94,7 +94,7 @@ const FormProductBank = ({ id, onSubmit }) => {
               <Dropdown
                 value={selectedBank}
                 onChange={(e) => setSelectedBank(e.value)}
-                options={listBank}
+                options={bank_option}
                 optionLabel='name'
                 placeholder='Pilih Bank'
                 className='w-full bg-white border-[1px] focus-none'
@@ -104,9 +104,9 @@ const FormProductBank = ({ id, onSubmit }) => {
             <div className='mb-2'>
               <p className='font-bold mb-2'>Jenis Product</p>
               <Dropdown
-                value={selectedProductType}
+                value={product_type_option}
                 onChange={(e) => setSelectedProductType(e.value)}
-                options={product_type.slice(1, 4)}
+                options={product_type_option.slice(1, 4)}
                 optionLabel='name'
                 placeholder='Pilih Bank'
                 className='w-full bg-white border-[1px] focus-none'
@@ -136,7 +136,7 @@ const FormProductBank = ({ id, onSubmit }) => {
             <div className='mb-3.5'>
               <p className='font-bold'>Jaminan</p>
               <div className='grid grid-cols-1 xs:grid-cols-2'>
-                {listGuarantee.map((item, index) => (
+                {guarantee_option.map((item, index) => (
                   <div key={index} className='flex space-x-2 mt-3 items-center'>
                     <input
                       type='checkbox'
@@ -159,7 +159,7 @@ const FormProductBank = ({ id, onSubmit }) => {
             <div className='mb-3.5'>
               <p className='font-bold'>Target Market</p>
               <div className='grid grid-cols-1 xs:grid-cols-2'>
-                {listTargetMarket.map((item, index) => (
+                {target_market_option.map((item, index) => (
                   <div key={index} className='flex space-x-2 mt-3 items-center'>
                     <input
                       checked={targetMarket.includes(item)}

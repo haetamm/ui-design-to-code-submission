@@ -14,8 +14,9 @@ import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Link } from 'react-router-dom';
 import { urlPage } from '../../../utils/constans';
-import { product_type } from '../../../utils/fieldInput';
+
 import { scrollTop } from '../../../utils/helper';
+import { product_type_option } from '../../../utils/selectOption';
 
 const CardProductBank = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -53,7 +54,7 @@ const CardProductBank = () => {
               <Dropdown
                 value={selectedProductType}
                 onChange={(e) => setSelectedProductType(e.value)}
-                options={product_type}
+                options={product_type_option}
                 optionLabel='name'
                 placeholder='Pilih Tipe Produk'
                 className=' w-full md:w-[60%] lg:w-full'

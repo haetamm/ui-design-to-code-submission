@@ -4,15 +4,15 @@ import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
+import { contactField } from '../../../utils/fieldInput';
 import {
-  category,
-  contact_type,
-  contactField,
-  employment_type,
-  gender,
-} from '../../../utils/fieldInput';
+  category_option as category,
+  contact_type_option as contact_type,
+  employment_type_option as employment_type,
+  gender_option as gender,
+} from '../../../utils/selectOption';
 
-const FormContact = ({ data, onSubmit }) => {
+const FormContact = ({ data, onSubmit, setData }) => {
   const [formData, setFormData] = useState({});
 
   useEffect(() => {
@@ -31,11 +31,11 @@ const FormContact = ({ data, onSubmit }) => {
 
   const handleChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    setData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Form Data:', formData);
     onSubmit(formData);
   };
 
@@ -107,6 +107,7 @@ const FormContact = ({ data, onSubmit }) => {
 FormContact.propTypes = {
   data: PropTypes.object,
   onSubmit: PropTypes.func.isRequired,
+  setData: PropTypes.func.isRequired,
 };
 
 export default FormContact;

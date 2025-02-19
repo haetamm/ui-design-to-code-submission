@@ -1,0 +1,77 @@
+import { Button } from 'primereact/button';
+import PropTypes from 'prop-types';
+import { Dropdown } from 'primereact/dropdown';
+import { InputText } from 'primereact/inputtext';
+import React, { useState } from 'react';
+
+const LoanFormCustom = ({ fields, optionsMap }) => {
+  const [formData, setFormData] = useState({});
+
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+  };
+
+  return (
+    <>
+      <form onSubmit={handleSubmit} className='p-3 py-6 md:p-6 '>
+        {fields.map(({ label, value, type, placeholder }, index) => (
+          <div
+            key={index}
+            className='grid grid-cols-1 xs:grid-cols-[30%_70%] items-center mb-3 xs:mb-6 space-x-0 xs:space-x-2'
+          >
+            <div className=' font-bold'>{label}</div>
+            <div className='mt-1 xs:mt-0'>
+              {type !== 'select' && (
+                <InputText
+                  placeholder={`--${placeholder}--`}
+                  className='w-full border-[1px] py-2 px-2'
+                  type={type}
+                  onChange={(e) => handleChange(value, e.target.value)}
+                  value={formData[value] || ''}
+                />
+              )}
+
+              {type === 'select' && optionsMap[value] && (
+                <Dropdown
+                  value={formData[value] || null}
+                  options={optionsMap[value]}
+                  optionLabel='name'
+                  optionValue='value'
+                  placeholder={
+                    formData[value]
+                      ? optionsMap[value].find(
+                          (opt) => opt.value === formData[value]
+                        )?.name
+                      : `--Pilih ${placeholder}--`
+                  }
+                  className='w-full bg-white border-[1px] focus-none'
+                  onChange={(e) => handleChange(value, e.value)}
+                />
+              )}
+            </div>
+          </div>
+        ))}
+        <div className='mt-10 mb-5 flex justify-end px-3 lg:px-6'>
+          <Button
+            label='Save'
+            icon='pi pi-save'
+            size='small'
+            className=' py-2.5 px-5 bg-[#0c2f3e] text-white text-md'
+          />
+        </div>
+      </form>
+    </>
+  );
+};
+
+LoanFormCustom.propTypes = {
+  fields: PropTypes.array.isRequired,
+  optionsMap: PropTypes.object.isRequired,
+};
+
+export default LoanFormCustom;

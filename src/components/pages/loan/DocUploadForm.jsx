@@ -40,19 +40,19 @@ const DocUploadForm = () => {
 
   return (
     <>
-      <div className='bg-white p-1 lg:p-6 h-full mb-4 text-black rounded-md'>
+      <form className='bg-white p-1 lg:p-6 h-full mb-4 text-black rounded-md'>
         {Object.entries(groupedFields).map(
           ([category, fields], categoryIndex) => (
             <Accordion key={categoryIndex} activeIndex={0}>
               <AccordionTab header={categoryHeaders[category] || category}>
                 {fields.map(({ label, description }, index) => (
-                  <div key={index} className='m-0 text-black mb-4'>
+                  <div key={index} className='m-0 text-black'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 items-center'>
                       <div className='font-normal'>{label}</div>
                       <div className='relative w-full mx-auto'>
                         <label
                           htmlFor={`fileInput-${categoryIndex}-${index}`}
-                          className='flex items-center  justify-between w-full px-4 py-2 text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100'
+                          className='flex items-center mb-3 xs:mb-6  justify-between w-full px-4 py-2 text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100'
                         >
                           <span className='line-clamp-1 text-sm'>
                             {uploadedFiles[category]?.[label] ||
@@ -81,7 +81,7 @@ const DocUploadForm = () => {
             </Accordion>
           )
         )}
-        <div className='mt-5 flex justify-end px-3 lg:px-6'>
+        <div className='my-5 flex justify-end px-3 lg:px-6'>
           <Button
             onClick={handleUploadAll}
             label='Save'
@@ -90,7 +90,7 @@ const DocUploadForm = () => {
             className=' py-2.5 px-5 bg-[#0c2f3e] text-white text-md'
           />
         </div>
-      </div>
+      </form>
     </>
   );
 };

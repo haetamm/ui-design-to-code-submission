@@ -8,25 +8,30 @@ import DataNotFound from '../components/pages/DataNotFound';
 
 const ContactUpdatePage = () => {
   const { id } = useParams();
-  const [formData, setFormData] = useState({});
   const contact = dataContact.find((item) => item.id === parseInt(id));
+  const [data, setData] = useState(contact || {});
 
   if (!contact) return <DataNotFound />;
 
-  const handleSubmit = () => {
-    console.log('Form Data:', formData);
+  const handleSubmit = (data) => {
+    setData(data);
+    console.log('Form Data:', data);
   };
 
   return (
     <>
       <div className='mb-14 mt-[68px] md:mb-0'>
         <div className='px-3  md:px-3 lg:px-4 xl:px-6 py-4 w-full'>
-          <FormContact data={contact} onSubmit={setFormData} />
+          <FormContact
+            data={contact}
+            onSubmit={handleSubmit}
+            setData={setData}
+          />
         </div>
       </div>
       <ButtomBottom>
         <Button
-          onClick={handleSubmit}
+          onClick={() => handleSubmit(data)}
           label='Update'
           icon='pi pi-save'
           size='large'

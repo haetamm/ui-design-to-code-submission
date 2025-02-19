@@ -1,5 +1,6 @@
 import CommingSoon from '../components/pages/loan/CommingSoon';
 import DocUploadForm from '../components/pages/loan/DocUploadForm';
+import LoanSection from '../components/pages/loan/LoanSection';
 import ProductBankList from '../components/pages/loan/ProductBankList';
 
 export const loanLink = [
@@ -7,7 +8,7 @@ export const loanLink = [
     header: 'Pinjaman',
     title: 'Pinjaman',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <LoanSection />,
   },
   {
     header: 'Pekerjaan',
