@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-const ButtomBottom = ({ children }) => {
+const ButtonBottom = ({ children }) => {
   const isSidebarOpen = useSelector((state) => state.sidebar.isSidebarOpen);
 
   return (
@@ -14,8 +14,8 @@ const ButtomBottom = ({ children }) => {
   );
 };
 
-ButtomBottom.propTypes = {
+ButtonBottom.propTypes = {
   children: PropTypes.node,
 };
 
-export default ButtomBottom;
+export default ButtonBottom;

@@ -90,12 +90,12 @@ const FormContact = ({ data, onSubmit, setData }) => {
           </div>
         </div>
       ))}
-      <div className='hidden md:flex items-center justify-end space-x-1 mt-auto'>
+      <div className='hidden md:flex items-center justify-end space-x-1 mt-10'>
         <Button
           label={data ? 'Update' : 'Simpan'}
           icon='pi pi-save'
           size='large'
-          className={`${data ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} w-[180px] py-1.5 px-3  text-white`}
+          className={`${data ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} w-[180px] p-3  text-white`}
           type='submit'
         />
       </div>

@@ -1,5 +1,8 @@
+import AssetInfoSection from '../components/pages/contact/AssetInfoSection';
+import AddressSection from '../components/pages/loan/AddressSection';
 import CommingSoon from '../components/pages/loan/CommingSoon';
 import DocUploadForm from '../components/pages/loan/DocUploadForm';
+import EmploymentInfoSection from '../components/pages/loan/EmploymentInfoSection';
 import LoanSection from '../components/pages/loan/LoanSection';
 import ProductBankList from '../components/pages/loan/ProductBankList';
 
@@ -14,19 +17,19 @@ export const loanLink = [
     header: 'Pekerjaan',
     title: 'Pekerjaan',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <EmploymentInfoSection />,
   },
   {
     header: 'Alamat',
     title: 'Alamat',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <AddressSection />,
   },
   {
     header: 'Informasi Aset',
     title: 'Informasi Aset',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <AssetInfoSection />,
   },
   {
     header: 'Informasi Tambahan',

@@ -61,45 +61,6 @@ export const detailProductBankField = [
   },
 ];
 
-export const updateProductBankField = [
-  {
-    label: 'Komisi',
-    value: 'commision',
-  },
-  {
-    label: 'Appraisal',
-    value: 'appraisal',
-  },
-  {
-    label: 'Floating',
-    value: 'floating',
-  },
-  {
-    label: 'Loan to Value',
-    value: 'loan_to_value',
-  },
-  {
-    label: 'Penalty Fee',
-    value: 'penalty_fee',
-  },
-  {
-    label: 'Interest Rate',
-    value: 'interest_rate',
-  },
-  {
-    label: 'Fix Rate',
-    value: 'fix_rate',
-  },
-  {
-    label: 'Fix Rate (year)',
-    value: 'year_fix_rate',
-  },
-  {
-    label: 'Max Tenor (year)',
-    value: 'max_tenor',
-  },
-];
-
 export const productBankField = [
   {
     label: 'Bank',
@@ -434,5 +395,217 @@ export const loanField = [
     value: 'deposit_renewal',
     type: 'select',
     placeholder: 'Select Renewal Option',
+  },
+];
+
+export const employmentInfoField = [
+  {
+    label: 'Pekerjaan Anda Sekarang',
+    value: 'current_job',
+    type: 'select',
+    placeholder: 'Pilih Pekerjaan',
+  },
+  {
+    label: 'Bentuk Perusahaan',
+    value: 'company_type',
+    type: 'select',
+    placeholder: 'Pilih Bentuk Perusahaan',
+  },
+  {
+    label: 'Nama Kantor/Nama Perusahaan',
+    value: 'company_name',
+    type: 'text',
+    placeholder: 'Isi Nama Kantor',
+  },
+  {
+    label: 'Bidang Usaha Perusahaan',
+    value: 'business_field',
+    type: 'select',
+    placeholder: 'Pilih Bidang Usaha Perusahaan',
+  },
+  {
+    label: 'Nomor Phone Kantor',
+    value: 'company_phone_number',
+    type: 'number',
+    placeholder: 'Isi Nomor Phone Kantor',
+  },
+  {
+    label: 'Email Kantor',
+    value: 'company_email',
+    type: 'text',
+    placeholder: 'Isi Email Kantor',
+  },
+  {
+    label: 'Alamat Kantor',
+    value: 'company_address',
+    type: 'textarea',
+    placeholder: 'Isi Alamat Kantor',
+  },
+  {
+    label: 'Jabatan Anda Sekarang',
+    value: 'current_position',
+    type: 'text',
+    placeholder: 'Isi Jabatan',
+  },
+  {
+    label: 'Lama Bekerja',
+    value: 'years_of_experience',
+    type: 'select',
+    placeholder: 'Pilih Lama Bekerja',
+  },
+  {
+    label: 'Penghasilan Perbulan',
+    value: 'monthly_income',
+    type: 'select',
+    placeholder: 'Pilih Penghasilan',
+  },
+];
+
+export const addressField = [
+  {
+    label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
+    value: 'street',
+    type: 'text',
+    category: 'ktp',
+  },
+  {
+    label: 'Kode Pos',
+    value: 'postal_code',
+    type: 'text',
+    category: 'ktp',
+  },
+  {
+    label: 'Provinsi',
+    value: 'province',
+    type: 'select',
+    category: 'ktp',
+  },
+  {
+    label: 'Kab./Kota',
+    value: 'regencies',
+    type: 'select',
+    category: 'ktp',
+  },
+  {
+    label: 'Kecamatan',
+    value: 'district',
+    type: 'select',
+    category: 'ktp',
+  },
+  {
+    label: 'Kelurahan',
+    value: 'villages',
+    type: 'select',
+    category: 'ktp',
+  },
+  {
+    label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
+    value: 'street',
+    type: 'text',
+    category: 'domisili',
+  },
+  {
+    label: 'Kode Pos',
+    value: 'postal_code',
+    type: 'text',
+    category: 'domisili',
+  },
+  {
+    label: 'Provinsi',
+    value: 'province',
+    type: 'select',
+    category: 'domisili',
+  },
+  {
+    label: 'Kab./Kota',
+    value: 'regencies',
+    type: 'select',
+    category: 'domisili',
+  },
+  {
+    label: 'Kecamatan',
+    value: 'district',
+    type: 'select',
+    category: 'domisili',
+  },
+  {
+    label: 'Kelurahan',
+    value: 'villages',
+    type: 'select',
+    category: 'domisili',
+  },
+  {
+    label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
+    value: 'street',
+    type: 'text',
+    category: 'kantor',
+  },
+  {
+    label: 'Kode Pos',
+    value: 'postal_code',
+    type: 'text',
+    category: 'kantor',
+  },
+  {
+    label: 'Provinsi',
+    value: 'province',
+    type: 'select',
+    category: 'kantor',
+  },
+  {
+    label: 'Kab./Kota',
+    value: 'regencies',
+    type: 'select',
+    category: 'kantor',
+  },
+  {
+    label: 'Kecamatan',
+    value: 'district',
+    type: 'select',
+    category: 'kantor',
+  },
+  {
+    label: 'Kelurahan',
+    value: 'villages',
+    type: 'select',
+    category: 'kantor',
+  },
+];
+
+export const assetsInfoField = [
+  {
+    label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
+    value: 'street',
+    type: 'text',
+  },
+  {
+    label: 'Kode Pos',
+    value: 'postal_code',
+    type: 'text',
+  },
+  {
+    label: 'Provinsi',
+    value: 'province',
+    type: 'select',
+  },
+  {
+    label: 'Kab./Kota',
+    value: 'regencies',
+    type: 'select',
+  },
+  {
+    label: 'Kecamatan',
+    value: 'district',
+    type: 'select',
+  },
+  {
+    label: 'Kelurahan',
+    value: 'villages',
+    type: 'select',
+  },
+  {
+    label: 'Harga/Nilai Jaminan',
+    value: 'price',
+    type: 'number',
   },
 ];

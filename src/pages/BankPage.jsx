@@ -1,10 +1,10 @@
 import React from 'react';
 import CardMenuBank from '../components/pages/bank/CardMenuBank';
 import CardProductBank from '../components/pages/bank/CardProductBank';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
 import { Helmet } from 'react-helmet-async';
 import { scrollTop } from '../utils/helper';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const BankPage = () => {
   return (
@@ -16,7 +16,7 @@ const BankPage = () => {
       <div className='mb-14 mt-[42px] md:mb-0'>
         <CardMenuBank />
         <CardProductBank />
-        <ButtomBottom>
+        <ButtonBottom>
           <Button
             onClick={scrollTop}
             label='Tambah Produk'
@@ -24,7 +24,7 @@ const BankPage = () => {
             size='small'
             className=' w-full p-3 bg-[#1cabe6] text-white'
           />
-        </ButtomBottom>
+        </ButtonBottom>
       </div>
     </>
   );

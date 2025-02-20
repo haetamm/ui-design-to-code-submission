@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import FormProductBank from '../components/pages/bank/FormProductBank';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const BankAddPage = () => {
   const [data, setData] = useState({});
@@ -23,7 +23,7 @@ const BankAddPage = () => {
           <FormProductBank onSubmit={handleSubmit} setData={setData} />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           onClick={() => handleSubmit(data)}
           label='Tambah Produk'
@@ -31,7 +31,7 @@ const BankAddPage = () => {
           size='small'
           className=' w-full p-3 bg-[#1cabe6] text-white'
         />
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

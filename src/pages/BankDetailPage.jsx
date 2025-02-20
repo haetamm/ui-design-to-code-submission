@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { dataProductBank } from '../utils/data';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
 import { urlPage } from '../utils/constans';
 import { Helmet } from 'react-helmet-async';
 import CardDetail from '../components/pages/CardDetail';
 import { detailProductBankField } from '../utils/fieldInput';
 import ProductNotFound from '../components/pages/DataNotFound';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const BankDetailPage = () => {
   const { id } = useParams();
@@ -26,7 +26,7 @@ const BankDetailPage = () => {
           <CardDetail data={product} fields={detailProductBankField} />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           label='Delete Produk'
           icon='pi pi-trash'
@@ -41,7 +41,7 @@ const BankDetailPage = () => {
             className=' w-full px-2 py-3 bg-[#0c2f3e] text-white'
           />
         </Link>
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

@@ -98,3 +98,32 @@ export const deposit_renewal_option = [
   { name: 'loram ipsum', value: 'loram ipsum2' },
   { name: 'loram ipsum', value: 'loram ipsum3' },
 ];
+
+export const current_job_option = [
+  { name: 'loram ipsum', value: 'loram ipsum1' },
+  { name: 'loram ipsum', value: 'loram ipsum2' },
+  { name: 'loram ipsum', value: 'loram ipsum3' },
+];
+
+export const company_type_option = [
+  { name: 'loram ipsum', value: 'loram ipsum1' },
+  { name: 'loram ipsum', value: 'loram ipsum2' },
+  { name: 'loram ipsum', value: 'loram ipsum3' },
+];
+export const business_field_option = [
+  { name: 'loram ipsum', value: 'loram ipsum1' },
+  { name: 'loram ipsum', value: 'loram ipsum2' },
+  { name: 'loram ipsum', value: 'loram ipsum3' },
+];
+
+export const years_of_experience_option = [
+  { name: 'loram ipsum', value: 'loram ipsum1' },
+  { name: 'loram ipsum', value: 'loram ipsum2' },
+  { name: 'loram ipsum', value: 'loram ipsum3' },
+];
+
+export const monthly_income_option = [
+  { name: 'loram ipsum', value: 'loram ipsum1' },
+  { name: 'loram ipsum', value: 'loram ipsum2' },
+  { name: 'loram ipsum', value: 'loram ipsum3' },
+];

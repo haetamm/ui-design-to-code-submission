@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 import CardDetail from '../components/pages/CardDetail';
 import { Link, useParams } from 'react-router-dom';
 import { dataContact } from '../utils/data';
@@ -21,7 +21,7 @@ const ContactByIdPage = () => {
           <CardDetail data={data} fields={contactField} />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Link to={`${urlPage.CONTACT_ME}/${id}/update`} className='w-full'>
           <Button
             label='Edit Contact'
@@ -30,7 +30,7 @@ const ContactByIdPage = () => {
             className=' w-full p-3 bg-[#0c2f3e] text-white'
           />
         </Link>
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

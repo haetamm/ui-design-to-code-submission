@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from 'primereact/button';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import FormProductBank from '../components/pages/bank/FormProductBank';
 import { dataProductBank } from '../utils/data';
 import ProductNotFound from '../components/pages/DataNotFound';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const BankUpdatePage = () => {
   const { id } = useParams();
@@ -34,7 +34,7 @@ const BankUpdatePage = () => {
           />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           onClick={() => handleSubmit(data)}
           label='Update'
@@ -42,7 +42,7 @@ const BankUpdatePage = () => {
           size='large'
           className=' w-full p-3 bg-[#0c2f3e] text-white'
         />
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

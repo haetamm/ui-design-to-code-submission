@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import React, { useState } from 'react';
+import { InputTextarea } from 'primereact/inputtextarea';
 
 const LoanFormCustom = ({ fields, optionsMap }) => {
   const [formData, setFormData] = useState({});
@@ -26,13 +27,24 @@ const LoanFormCustom = ({ fields, optionsMap }) => {
           >
             <div className=' font-bold'>{label}</div>
             <div className='mt-1 xs:mt-0'>
-              {type !== 'select' && (
+              {(type === 'text' || type === 'number') && (
                 <InputText
                   placeholder={`--${placeholder}--`}
                   className='w-full border-[1px] py-2 px-2'
                   type={type}
                   onChange={(e) => handleChange(value, e.target.value)}
                   value={formData[value] || ''}
+                />
+              )}
+
+              {type === 'textarea' && (
+                <InputTextarea
+                  value={formData[value]}
+                  rows={5}
+                  cols={30}
+                  placeholder={`--${placeholder}--`}
+                  className='w-full border-[1px] p-3'
+                  onChange={(e) => handleChange(value, e.target.value)}
                 />
               )}
 

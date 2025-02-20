@@ -43,6 +43,16 @@
   margin-top: 15px;
 }
 
+.p-accordion-header-link {
+  background-color: #0c2f3e;
+  color: white;
+}
+
+.p-inputnumber-input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 @media (min-width: 1024px) {
   .p-stepper-panels {
     margin-top: 75px;

@@ -3,11 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import { dataProdctDeveloper } from '../utils/data';
 import { Helmet } from 'react-helmet-async';
 import CardDetail from '../components/pages/CardDetail';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { urlPage } from '../utils/constans';
 import { Button } from 'primereact/button';
 import { detailDeveloperField } from '../utils/fieldInput';
 import ProductNotFound from '../components/pages/DataNotFound';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const DeveloperDetailPage = () => {
   const { id } = useParams();
@@ -26,7 +26,7 @@ const DeveloperDetailPage = () => {
           <CardDetail data={product} fields={detailDeveloperField} />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           label='Delete Produk'
           icon='pi pi-trash'
@@ -44,7 +44,7 @@ const DeveloperDetailPage = () => {
             className=' w-full px-2 py-3 bg-[#0c2f3e] text-white'
           />
         </Link>
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

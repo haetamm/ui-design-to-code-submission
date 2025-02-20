@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import FormContact from '../components/pages/contact/FormContact';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
 import { useParams } from 'react-router-dom';
 import { dataContact } from '../utils/data';
 import DataNotFound from '../components/pages/DataNotFound';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const ContactUpdatePage = () => {
   const { id } = useParams();
@@ -29,7 +29,7 @@ const ContactUpdatePage = () => {
           />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           onClick={() => handleSubmit(data)}
           label='Update'
@@ -37,7 +37,7 @@ const ContactUpdatePage = () => {
           size='large'
           className=' w-full p-3 bg-[#0c2f3e] text-white'
         />
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

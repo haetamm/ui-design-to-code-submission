@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FormContact from '../components/pages/contact/FormContact';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const ContactAddPage = () => {
   const [formData, setFormData] = useState({});
@@ -17,7 +17,7 @@ const ContactAddPage = () => {
           <FormContact onSubmit={setFormData} />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           onClick={handleSubmit}
           label='Simpan'
@@ -25,7 +25,7 @@ const ContactAddPage = () => {
           size='large'
           className=' w-full p-3 bg-[#1cabe6] text-white'
         />
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

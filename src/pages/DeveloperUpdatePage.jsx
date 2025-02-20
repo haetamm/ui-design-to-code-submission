@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { dataProdctDeveloper } from '../utils/data';
 import DataNotFound from '../components/pages/DataNotFound';
 import { Helmet } from 'react-helmet-async';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import { Button } from 'primereact/button';
 import FormProductDeveloper from '../components/pages/developer/FormProductDeveloper';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const DeveloperUpdatePage = () => {
   const { id } = useParams();
@@ -34,7 +34,7 @@ const DeveloperUpdatePage = () => {
           />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           label='Update'
           icon='pi pi-pen-to-square'
@@ -42,7 +42,7 @@ const DeveloperUpdatePage = () => {
           className='w-full p-3 bg-[#0c2f3e] text-white'
           onClick={() => handleSubmit(data)}
         />
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

@@ -36,13 +36,13 @@ const FormProductDeveloper = ({ data, onSubmit, setData }) => {
         </div>
       ))}
 
-      <div className='hidden md:flex items-center justify-end space-x-1 mt-auto'>
+      <div className='hidden md:flex items-center justify-end space-x-1 mt-10'>
         <Button
           type='submit'
           label='Update'
           icon='pi pi-save'
           size='large'
-          className='w-[180px] py-1.5 px-3 bg-[#0c2f3e] text-white cursor-pointer'
+          className='w-[180px] p-3 bg-[#0c2f3e] text-white cursor-pointer'
         />
       </div>
     </form>

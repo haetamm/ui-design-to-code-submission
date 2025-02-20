@@ -3,8 +3,8 @@ import { InputIcon } from 'primereact/inputicon';
 import React from 'react';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
-import ButtomBottom from '../components/pages/bank/ButtomBottom';
 import CardCategory from '../components/pages/contact/CardCategory';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const ContactAddCategoryPage = () => {
   return (
@@ -36,14 +36,14 @@ const ContactAddCategoryPage = () => {
           <CardCategory name='General' />
         </div>
       </div>
-      <ButtomBottom>
+      <ButtonBottom>
         <Button
           label='Add Category'
           icon='pi pi-plus'
           size='small'
           className=' w-full p-3 bg-[#1cabe6] text-white'
         />
-      </ButtomBottom>
+      </ButtonBottom>
     </>
   );
 };

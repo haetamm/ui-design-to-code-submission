@@ -192,7 +192,7 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
             type='submit'
             icon='pi pi-save'
             size='large'
-            className='w-[180px] py-1.5 px-3 bg-[#0c2f3e] text-white cursor-not-allowed'
+            className='w-[180px] p-3 bg-[#0c2f3e] text-white cursor-not-allowed'
           />
         </div>
       </form>
