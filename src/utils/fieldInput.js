@@ -100,100 +100,86 @@ export const updateProductBankField = [
   },
 ];
 
-export const personalData = [
+export const productBankField = [
   {
-    label: 'Fotokopi KTP Pemohon',
-    category: 'personal_data',
-    description: 'Upload Fotokopi KTP Pemohon',
+    label: 'Bank',
+    value: 'bank_name',
+    type: 'select',
   },
   {
-    label: 'Fotokopi KTP Suami / Istri',
-    category: 'personal_data',
-    description: 'Upload Fotokopi KTP Suami / Istri',
+    label: 'Jenis Produk',
+    value: 'product_type',
+    type: 'select',
   },
   {
-    label: 'Fotokopi Kartu Keluarga',
-    category: 'personal_data',
-    description: 'Upload Fotokopi Kartu Keluarga',
+    label: 'Promotial Product',
+    value: 'promotial_date',
+    type: 'date',
   },
   {
-    label: 'Fotokopi Akta Nikah/Cerai',
-    category: 'personal_data',
-    description: 'Upload Fotokopi Akta Nikah/Cerai',
+    label: 'Jaminan',
+    value: 'guarantee',
+    type: 'checkbox',
   },
   {
-    label: 'Fotokopi NPWP Pemohon',
-    category: 'personal_data',
-    description: 'Upload Fotokopi NPWP Pemohon',
+    label: 'Target Market',
+    value: 'target_market',
+    type: 'checkbox',
   },
   {
-    label:
-      'Akta Pisah Harta Notaril dan didaftarkan ke KUA atau catatan sipil (jika ada)',
-    category: 'personal_data',
-    description:
-      'Upload Akta Pisah Harta Notaril dan didaftarkan ke KUA atau catatan sipil (jika ada)',
-  },
-];
-
-export const warrantyData = [
-  {
-    label: 'Fotokopii Dokumen Jaminan: SHM/SHGB, IMB, dan PBB tahun terakhir',
-    category: 'warranty_data',
-    description:
-      'Upload Fotokopii Dokumen Jaminan: SHM/SHGB, IMB, dan PBB tahun terakhir',
+    label: 'Komisi',
+    value: 'commision',
+    type: 'number',
   },
   {
-    label:
-      'Scan Signed PDF Surat Pengajuan Bank yang Dituju, CPA, & Keterangan',
-    category: 'warranty_data',
-    description:
-      'Upload Scan Signed PDF Surat Pengajuan Bank yang Dituju, CPA, & Keterangan',
+    label: 'Appraisal',
+    value: 'appraisal',
+    type: 'number',
   },
   {
-    label: 'Fotokopi Perjanjian Kredit (Jika Over Kredit)',
-    category: 'warranty_data',
-    description: 'Upload Fotokopi Perjanjian Kredit (Jika Over Kredit)',
+    label: 'Floating',
+    value: 'floating',
+    type: 'number',
   },
   {
-    label: 'Dokumen PPJB (Jika Developer)',
-    category: 'warranty_data',
-    description: 'Dokumen PPJB (Jika Developer)',
-  },
-];
-
-export const financialData = [
-  {
-    label: 'Fotokopi SPT/PPh21',
-    category: 'financial_data',
-    description: 'Upload Fotokopi SPT/PPh21',
+    label: 'Loan to Value',
+    value: 'loan_to_value',
+    type: 'number',
   },
   {
-    label: 'Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
-    category: 'financial_data',
-    description: 'Upload Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
+    label: 'Penalty Fee',
+    value: 'penalty_fee',
+    type: 'number',
   },
   {
-    label: 'Fotokopi R/K atau tabungan 1 Bulan Terakhir',
-    category: 'financial_data',
-    description: 'Upload Fotokopi R/K atau tabungan 1 Bulan Terakhir',
+    label: 'Interest Rate',
+    value: 'interest_rate',
+    type: 'number',
   },
   {
-    label: 'Surat Keterangan/Rekomendasi Perusahaan',
-    category: 'financial_data',
-    description: 'Upload Surat Keterangan/Rekomendasi Perusahaan',
-  },
-];
-
-export const additionalData = [
-  {
-    label: 'File Kekurangan 1',
-    category: 'additional_data',
-    description: 'File Kekurangan 1',
+    label: 'Fix Rate',
+    value: 'fix_rate',
+    type: 'number',
   },
   {
-    label: 'File Kekurangan 1',
-    category: 'additional_data',
-    description: 'File Kekurangan 1',
+    label: 'Fix Rate (year)',
+    value: 'year_fix_rate',
+    type: 'number',
+  },
+  {
+    label: 'Max Tenor (year)',
+    value: 'max_tenor',
+    type: 'number',
+  },
+  {
+    label: 'Keterangan',
+    value: 'description',
+    type: 'textarea',
+  },
+  {
+    label: 'URL',
+    value: 'url',
+    type: 'text',
   },
 ];
 
@@ -201,87 +187,87 @@ export const uploadDocField = [
   {
     label: 'Fotokopi KTP Pemohon',
     category: 'personal_data',
-    description: 'Upload Fotokopi KTP Pemohon',
+    placeholder: 'Upload Fotokopi KTP Pemohon',
   },
   {
     label: 'Fotokopi KTP Suami / Istri',
     category: 'personal_data',
-    description: 'Upload Fotokopi KTP Suami / Istri',
+    placeholder: 'Upload Fotokopi KTP Suami / Istri',
   },
   {
     label: 'Fotokopi Kartu Keluarga',
     category: 'personal_data',
-    description: 'Upload Fotokopi Kartu Keluarga',
+    placeholder: 'Upload Fotokopi Kartu Keluarga',
   },
   {
     label: 'Fotokopi Akta Nikah/Cerai',
     category: 'personal_data',
-    description: 'Upload Fotokopi Akta Nikah/Cerai',
+    placeholder: 'Upload Fotokopi Akta Nikah/Cerai',
   },
   {
     label: 'Fotokopi NPWP Pemohon',
     category: 'personal_data',
-    description: 'Upload Fotokopi NPWP Pemohon',
+    placeholder: 'Upload Fotokopi NPWP Pemohon',
   },
   {
     label:
       'Akta Pisah Harta Notaril dan didaftarkan ke KUA atau catatan sipil (jika ada)',
     category: 'personal_data',
-    description:
+    placeholder:
       'Upload Akta Pisah Harta Notaril dan didaftarkan ke KUA atau catatan sipil (jika ada)',
   },
   {
     label: 'Fotokopii Dokumen Jaminan: SHM/SHGB, IMB, dan PBB tahun terakhir',
     category: 'warranty_data',
-    description:
+    placeholder:
       'Upload Fotokopii Dokumen Jaminan: SHM/SHGB, IMB, dan PBB tahun terakhir',
   },
   {
     label:
       'Scan Signed PDF Surat Pengajuan Bank yang Dituju, CPA, & Keterangan',
     category: 'warranty_data',
-    description:
+    placeholder:
       'Upload Scan Signed PDF Surat Pengajuan Bank yang Dituju, CPA, & Keterangan',
   },
   {
     label: 'Fotokopi Perjanjian Kredit (Jika Over Kredit)',
     category: 'warranty_data',
-    description: 'Upload Fotokopi Perjanjian Kredit (Jika Over Kredit)',
+    placeholder: 'Upload Fotokopi Perjanjian Kredit (Jika Over Kredit)',
   },
   {
     label: 'Dokumen PPJB (Jika Developer)',
     category: 'warranty_data',
-    description: 'Dokumen PPJB (Jika Developer)',
+    placeholder: 'Dokumen PPJB (Jika Developer)',
   },
   {
     label: 'Fotokopi SPT/PPh21',
     category: 'financial_data',
-    description: 'Upload Fotokopi SPT/PPh21',
+    placeholder: 'Upload Fotokopi SPT/PPh21',
   },
   {
     label: 'Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
     category: 'financial_data',
-    description: 'Upload Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
+    placeholder: 'Upload Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
   },
   {
     label: 'Fotokopi R/K atau tabungan 1 Bulan Terakhir',
     category: 'financial_data',
-    description: 'Upload Fotokopi R/K atau tabungan 1 Bulan Terakhir',
+    placeholder: 'Upload Fotokopi R/K atau tabungan 1 Bulan Terakhir',
   },
   {
     label: 'Surat Keterangan/Rekomendasi Perusahaan',
     category: 'financial_data',
-    description: 'Upload Surat Keterangan/Rekomendasi Perusahaan',
+    placeholder: 'Upload Surat Keterangan/Rekomendasi Perusahaan',
   },
   {
     label: 'File Kekurangan 1',
     category: 'additional_data',
-    description: 'File Kekurangan 1',
+    placeholder: 'File Kekurangan 1',
   },
   {
     label: 'File Kekurangan 2',
     category: 'additional_data',
-    description: 'File Kekurangan 2',
+    placeholder: 'File Kekurangan 2',
   },
 ];
 

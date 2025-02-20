@@ -4,26 +4,23 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { detailDeveloperField } from '../../../utils/fieldInput';
 
-const FormProductDeveloper = ({ product, onUpdate }) => {
+const FormProductDeveloper = ({ data, onSubmit, setData }) => {
   const [formData, setFormData] = useState({});
 
   useEffect(() => {
-    if (product) {
-      setFormData(product);
+    if (data) {
+      setFormData(data);
     }
-  }, [product]);
+  }, [data]);
 
-  const handleChange = (e, field) => {
-    setFormData({
-      ...formData,
-      [field]: e.target.value,
-    });
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    setData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onUpdate(formData);
-    console.log('Data yang dikirim:', formData);
+    onSubmit(formData);
   };
 
   return (
@@ -34,7 +31,7 @@ const FormProductDeveloper = ({ product, onUpdate }) => {
           <InputText
             className='w-full border-[1px] py-3 px-2'
             value={formData[value] || ''}
-            onChange={(e) => handleChange(e, value)}
+            onChange={(e) => handleChange(value, e.target.value)}
           />
         </div>
       ))}
@@ -53,9 +50,9 @@ const FormProductDeveloper = ({ product, onUpdate }) => {
 };
 
 FormProductDeveloper.propTypes = {
-  id: PropTypes.string,
-  product: PropTypes.object,
-  onUpdate: PropTypes.func,
+  data: PropTypes.object,
+  onSubmit: PropTypes.func.isRequired,
+  setData: PropTypes.func.isRequired,
 };
 
 export default FormProductDeveloper;

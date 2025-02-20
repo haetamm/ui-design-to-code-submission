@@ -11,21 +11,21 @@ export const bank_option = [
   { name: 'BNI', value: 'BNI' },
 ];
 
+export const product_type_option = [
+  { name: 'Semua Tipe', value: null },
+  { name: 'Kredit Kepemilikan Rakyat', value: 'Kredit kepemilikan Rakyat' },
+  { name: 'Kredit Kepemilikan Pejabat', value: 'Kredit kepemilikan Pejabat' },
+  { name: 'Kredit Kepemilikan Guru', value: 'Kredit kepemilikan Guru' },
+];
+
 export const guarantee_option = [
   'Ruko',
   'Rumah',
   'Kendaraan Pribadi',
   'Slip Gaji',
   'Rukan',
-  'Apartemen',
+  'Apartement',
   'Sertifikat Perusahaan',
-];
-
-export const product_type_option = [
-  { name: 'Semua Tipe', value: null },
-  { name: 'Kredit Kepemilikan Rakyat', value: 'Kredit kepemilikan Rakyat' },
-  { name: 'Kredit Kepemilikan Pejabat', value: 'Kredit kepemilikan Pejabat' },
-  { name: 'Kredit Kepemilikan Guru', value: 'Kredit kepemilikan Guru' },
 ];
 
 export const target_market_option = [

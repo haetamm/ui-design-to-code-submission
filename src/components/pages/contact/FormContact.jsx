@@ -17,7 +17,6 @@ const FormContact = ({ data, onSubmit, setData }) => {
 
   useEffect(() => {
     if (data) {
-      console.log(typeof data.birth_date);
       setFormData(data);
     }
   }, [data]);

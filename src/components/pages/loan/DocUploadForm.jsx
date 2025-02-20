@@ -45,7 +45,7 @@ const DocUploadForm = () => {
           ([category, fields], categoryIndex) => (
             <Accordion key={categoryIndex} activeIndex={0}>
               <AccordionTab header={categoryHeaders[category] || category}>
-                {fields.map(({ label, description }, index) => (
+                {fields.map(({ label, placeholder }, index) => (
                   <div key={index} className='m-0 text-black'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 items-center'>
                       <div className='font-normal'>{label}</div>
@@ -56,7 +56,7 @@ const DocUploadForm = () => {
                         >
                           <span className='line-clamp-1 text-sm'>
                             {uploadedFiles[category]?.[label] ||
-                              `--${description}--`}
+                              `--${placeholder}--`}
                           </span>
                           <BsUpload className='w-5 h-5 text-gray-500 shrink-0' />
                         </label>

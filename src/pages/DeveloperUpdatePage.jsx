@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { dataProdctDeveloper as initialData } from '../utils/data';
+import { dataProdctDeveloper } from '../utils/data';
 import DataNotFound from '../components/pages/DataNotFound';
 import { Helmet } from 'react-helmet-async';
 import ButtomBottom from '../components/pages/bank/ButtomBottom';
@@ -9,19 +9,14 @@ import FormProductDeveloper from '../components/pages/developer/FormProductDevel
 
 const DeveloperUpdatePage = () => {
   const { id } = useParams();
-  const [data, setData] = useState(initialData);
-  const product = data.find((item) => item.id === parseInt(id));
+  const product = dataProdctDeveloper.find((item) => item.id === parseInt(id));
+  const [data, setData] = useState(product || {});
 
   if (!product) return <DataNotFound />;
 
-  const handleUpdate = (updatedProduct) => {
-    console.log(updatedProduct);
-    setData((prevData) =>
-      prevData.map((item) =>
-        item.id === updatedProduct.id ? updatedProduct : item
-      )
-    );
-    console.log('Data setelah update:', data);
+  const handleSubmit = (data) => {
+    setData(data);
+    console.log('Form Data', data);
   };
 
   return (
@@ -33,9 +28,9 @@ const DeveloperUpdatePage = () => {
       <div className='mt-[60px] mb-14 md:mb-0'>
         <div className='px-3 py-6 md:p-6'>
           <FormProductDeveloper
-            id={id}
-            product={product}
-            onUpdate={handleUpdate}
+            data={product}
+            onSubmit={handleSubmit}
+            setData={setData}
           />
         </div>
       </div>
@@ -45,7 +40,7 @@ const DeveloperUpdatePage = () => {
           icon='pi pi-pen-to-square'
           size='normal'
           className='w-full p-3 bg-[#0c2f3e] text-white'
-          onClick={() => handleUpdate({ ...product })}
+          onClick={() => handleSubmit(data)}
         />
       </ButtomBottom>
     </>

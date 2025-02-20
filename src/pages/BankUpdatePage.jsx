@@ -9,14 +9,14 @@ import ProductNotFound from '../components/pages/DataNotFound';
 
 const BankUpdatePage = () => {
   const { id } = useParams();
-  const [formData, setFormData] = useState({});
-
   const product = dataProductBank.find((item) => item.id === parseInt(id));
+  const [data, setData] = useState(product || {});
 
   if (!product) return <ProductNotFound />;
 
-  const handleSubmit = () => {
-    console.log('Form Data:', formData);
+  const handleSubmit = (data) => {
+    setData(data);
+    console.log('Form Data', data);
   };
 
   return (
@@ -27,12 +27,16 @@ const BankUpdatePage = () => {
       </Helmet>
       <div className='mt-[60px] mb-14 md:mb-0'>
         <div className='px-3 py-6 md:p-6'>
-          <FormProductBank id={id} onSubmit={setFormData} />
+          <FormProductBank
+            data={product}
+            onSubmit={handleSubmit}
+            setData={setData}
+          />
         </div>
       </div>
       <ButtomBottom>
         <Button
-          onClick={handleSubmit}
+          onClick={() => handleSubmit(data)}
           label='Update'
           icon='pi pi-save'
           size='large'

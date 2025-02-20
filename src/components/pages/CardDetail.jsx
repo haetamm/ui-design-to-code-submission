@@ -1,6 +1,7 @@
 import React from 'react';
 import { InputText } from 'primereact/inputtext';
 import PropTypes from 'prop-types';
+import { formatValue } from '../../utils/helper';
 
 const CardDetail = ({ data, fields }) => {
   return (
@@ -17,11 +18,7 @@ const CardDetail = ({ data, fields }) => {
                 disabled
                 placeholder='Disabled'
                 className='bg-gray-200 py-3 w-full px-3 text-black'
-                value={
-                  value === 'birth_date'
-                    ? data[value]?.toLocaleDateString('id-ID')
-                    : data[value]
-                }
+                value={formatValue(data[value])}
               />
             </div>
           </div>
