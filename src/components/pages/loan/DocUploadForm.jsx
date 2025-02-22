@@ -87,7 +87,7 @@ const DocUploadForm = () => {
             label='Save'
             icon='pi pi-save'
             size='small'
-            className='p-2.5 bg-[#0c2f3e] text-white'
+            className='p-2.5 bg-[#1cabe6] text-white'
           />
         </div>
       </form>

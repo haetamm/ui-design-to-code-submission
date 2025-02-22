@@ -1,5 +1,5 @@
-import AssetInfoSection from '../components/pages/contact/AssetInfoSection';
 import AddressSection from '../components/pages/loan/AddressSection';
+import AssetInfoSection from '../components/pages/loan/AssetInfoSection';
 import CommingSoon from '../components/pages/loan/CommingSoon';
 import DocUploadForm from '../components/pages/loan/DocUploadForm';
 import EmploymentInfoSection from '../components/pages/loan/EmploymentInfoSection';

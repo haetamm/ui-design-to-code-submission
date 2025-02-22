@@ -66,7 +66,7 @@ const AddressSection = () => {
         <div className='flex space-x-3 items-center px-3 my-4'>
           <input
             type='checkbox'
-            className='h-6 w-6 border-[1px]'
+            className='h-6 w-6 border-[1px] shrink-0'
             id='data-domisili'
             checked={isDomisiliSameAsKtp}
             onChange={handleDomisiliCheckboxChange}
@@ -85,7 +85,7 @@ const AddressSection = () => {
         <div className='flex space-x-3 items-center px-3 my-4'>
           <input
             type='checkbox'
-            className='h-6 w-6 border-[1px]'
+            className='h-6 w-6 border-[1px] shrink-0'
             id='data-company'
             checked={isCompanySameAsKtp}
             onChange={handleCompanyCheckboxChange}
@@ -101,7 +101,7 @@ const AddressSection = () => {
             onSubmit={setDataCompany}
           />
         )}
-        <div className='flex items-center justify-end space-x-1 mt-10'>
+        <div className='flex items-center justify-end space-x-1 mt-10 px-6 pb-6 lg:p-0'>
           <Button
             onClick={handleSubmit}
             label='Save'

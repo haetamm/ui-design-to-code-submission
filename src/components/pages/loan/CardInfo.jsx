@@ -131,7 +131,7 @@ const CardInfo = ({ title, fields, onSubmit }) => {
               {type === 'select' && (
                 <select
                   name={value}
-                  className='w-full bg-white border-[1px] p-[11px] rounded-md'
+                  className='w-full bg-white border-[1px] h-[48px] px-2 rounded-md'
                   value={
                     value === 'province'
                       ? selectedProvince?.id || ''

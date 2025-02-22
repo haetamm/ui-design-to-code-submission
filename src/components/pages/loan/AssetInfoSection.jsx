@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CardInfo from '../loan/CardInfo';
+import CardInfo from './CardInfo';
 import { assetsInfoField } from '../../../utils/fieldInput';
 import { Button } from 'primereact/button';
 
@@ -16,7 +16,7 @@ const AssetInfoSection = () => {
           fields={assetsInfoField}
           onSubmit={setData}
         />
-        <div className='flex items-center justify-end space-x-1 mt-10 px-3 pb-6 lg:p-0'>
+        <div className='flex items-center justify-end space-x-1 mt-10 px-6 pb-6 lg:p-0'>
           <Button
             onClick={handleSubmit}
             label='Save'
