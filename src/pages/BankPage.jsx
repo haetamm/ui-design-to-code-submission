@@ -5,6 +5,8 @@ import { Button } from 'primereact/button';
 import { Helmet } from 'react-helmet-async';
 import { scrollTop } from '../utils/helper';
 import ButtonBottom from '../components/layouts/ButtonBottom';
+import { urlPage } from '../utils/constans';
+import { Link } from 'react-router-dom';
 
 const BankPage = () => {
   return (
@@ -17,13 +19,15 @@ const BankPage = () => {
         <CardMenuBank />
         <CardProductBank />
         <ButtonBottom>
-          <Button
-            onClick={scrollTop}
-            label='Tambah Produk'
-            icon='pi pi-plus'
-            size='small'
-            className=' w-full p-3 bg-[#1cabe6] text-white'
-          />
+          <Link to={urlPage.PRODUCT_BANK_ADD} className='w-full'>
+            <Button
+              onClick={scrollTop}
+              label='Tambah Produk'
+              icon='pi pi-plus'
+              size='small'
+              className=' w-full p-2.5 bg-[#1cabe6] text-white'
+            />
+          </Link>
         </ButtonBottom>
       </div>
     </>

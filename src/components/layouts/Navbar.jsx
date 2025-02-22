@@ -1,13 +1,12 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { toggleSidebar } from '../../store/sidebarSlice';
 import { LuAlignJustify } from 'react-icons/lu';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import NotificationButton from '../pages/dashboard/NotificationButton';
 import { useMatches } from 'react-router-dom';
+import { useSidebar } from '../../store/sidebar';
 
 const Navbar = () => {
-  const dispatch = useDispatch();
+  const { toggleSidebar } = useSidebar();
   const matches = useMatches();
   const namePage = matches.find((match) => match.handle?.name);
 
@@ -17,7 +16,7 @@ const Navbar = () => {
         <div className='flex justify-between items-center px-2 py-1 lg:py-2'>
           <div className='flex items-center'>
             <button
-              onClick={() => dispatch(toggleSidebar())}
+              onClick={() => toggleSidebar()}
               className='h-9 w-9 flex items-center justify-center lg:hidden'
             >
               <LuAlignJustify className='h-9 w-9' />

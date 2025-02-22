@@ -47,7 +47,7 @@ const CardProductDeveloper = () => {
                   >
                     <Button
                       label='Detail'
-                      className='bg-[#1cabe6] w-full text-white px-4 py-1 rounded-none text-md'
+                      className='bg-[#1cabe6] w-full text-white p-2.5 rounded-md text-md'
                     />
                   </Link>
                 </div>

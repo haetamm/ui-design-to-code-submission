@@ -52,7 +52,7 @@ const DocUploadForm = () => {
                       <div className='relative w-full mx-auto'>
                         <label
                           htmlFor={`fileInput-${categoryIndex}-${index}`}
-                          className='flex items-center mb-3 xs:mb-6  justify-between w-full px-4 py-2 text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100'
+                          className='flex items-center mb-5  justify-between w-full p-[13px] text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100'
                         >
                           <span className='line-clamp-1 text-sm'>
                             {uploadedFiles[category]?.[label] ||
@@ -87,7 +87,7 @@ const DocUploadForm = () => {
             label='Save'
             icon='pi pi-save'
             size='small'
-            className=' py-2.5 px-5 bg-[#0c2f3e] text-white text-md'
+            className='p-2.5 bg-[#0c2f3e] text-white'
           />
         </div>
       </form>

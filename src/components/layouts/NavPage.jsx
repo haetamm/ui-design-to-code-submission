@@ -3,12 +3,12 @@ import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from 'primereact/button';
-import { useSelector } from 'react-redux';
+import { useSidebar } from '../../store/sidebar';
 
 const NavPage = ({ links, entityName, subName }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const isSidebarOpen = useSelector((state) => state.sidebar.isSidebarOpen);
+  const { isOpen } = useSidebar();
 
   const isActive = (path) => location.pathname === path;
   const isBasePage = links.some((link) => location.pathname === link.to);
@@ -24,7 +24,7 @@ const NavPage = ({ links, entityName, subName }) => {
   return (
     <>
       <div
-        className={`${isSidebarOpen ? 'w-[calc(100%-55px)]' : 'w-full '} flex fixed z-50 bg-white border-b-[1px] lg:w-[calc(100%-160px)] xl:w-[calc(1348px-210px)]  space-x-1  ${
+        className={`${isOpen ? 'w-[calc(100%-55px)]' : 'w-full '} flex fixed z-50 bg-white border-b-[1px] lg:w-[calc(100%-160px)] xl:w-[calc(1348px-210px)]  space-x-1  ${
           isBasePage
             ? '  justify-center'
             : 'justify-normal px-3 xl:px-6 h-[63px]'
@@ -73,7 +73,7 @@ const NavPage = ({ links, entityName, subName }) => {
                       label={`Edit ${entityName}`}
                       icon='pi pi-pen-to-square'
                       size='small'
-                      className=' py-1.5 bg-[#0c2f3e] text-white px-3 text-md'
+                      className='p-2.5 bg-[#0c2f3e] text-white text-md'
                     />
                   </Link>
                   {entityName === 'Product' && (
@@ -81,7 +81,7 @@ const NavPage = ({ links, entityName, subName }) => {
                       label={`Delete ${entityName}`}
                       icon='pi pi-trash'
                       size='small'
-                      className=' py-1.5 bg-red-500 text-white px-3 text-md'
+                      className='p-2.5 bg-red-500 text-white text-md'
                     />
                   )}
                 </div>

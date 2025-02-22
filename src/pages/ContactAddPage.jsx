@@ -23,7 +23,7 @@ const ContactAddPage = () => {
           label='Simpan'
           icon='pi pi-save'
           size='large'
-          className=' w-full p-3 bg-[#1cabe6] text-white'
+          className=' w-full p-2.5 bg-[#1cabe6] text-white'
         />
       </ButtonBottom>
     </>

@@ -31,7 +31,7 @@ const DeveloperDetailPage = () => {
           label='Delete Produk'
           icon='pi pi-trash'
           size='normal'
-          className=' w-full px-2 py-3 bg-red-500 text-white'
+          className=' w-full px-2 py-2.5 bg-red-500 text-white'
         />
         <Link
           to={`${urlPage.PRODUCT_DEVELOPER}/${id}/update`}
@@ -41,7 +41,7 @@ const DeveloperDetailPage = () => {
             label='Edit Produk'
             icon='pi pi-pen-to-square'
             size='normal'
-            className=' w-full px-2 py-3 bg-[#0c2f3e] text-white'
+            className=' w-full px-2 py-2.5 bg-[#0c2f3e] text-white'
           />
         </Link>
       </ButtonBottom>

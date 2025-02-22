@@ -27,7 +27,7 @@ const ContactByIdPage = () => {
             label='Edit Contact'
             icon='pi pi-save'
             size='large'
-            className=' w-full p-3 bg-[#0c2f3e] text-white'
+            className=' w-full p-2.5 bg-[#0c2f3e] text-white'
           />
         </Link>
       </ButtonBottom>

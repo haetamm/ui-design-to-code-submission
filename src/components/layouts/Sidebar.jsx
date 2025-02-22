@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { navItems } from '../../utils/navLink';
 import { LuAlignJustify } from 'react-icons/lu';
-import { toggleSidebar } from '../../store/sidebarSlice';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { BsPiggyBank } from 'react-icons/bs';
 import { SiStarlingbank } from 'react-icons/si';
 import { TbCategory2, TbReport } from 'react-icons/tb';
 import { urlPage } from '../../utils/constans';
+import { useState } from 'react';
+import { useSidebar } from '../../store/sidebar';
 
 const Sidebar = () => {
-  const isSidebarOpen = useSelector((state) => state.sidebar.isSidebarOpen);
-  const dispatch = useDispatch();
+  const { isOpen, toggleSidebar } = useSidebar();
   const location = useLocation();
   const [dropdowns, setDropdowns] = useState({});
 
@@ -54,7 +52,7 @@ const Sidebar = () => {
   ];
 
   return (
-    isSidebarOpen && (
+    isOpen && (
       <div className='bg-white border-r-[1px] h-screen z-50'>
         <div className='flex justify-center p-1 lg:p-0'>
           <img
@@ -63,7 +61,7 @@ const Sidebar = () => {
             className='hidden lg:inline-block h-[80px] w-[80px]'
           />
           <LuAlignJustify
-            onClick={() => dispatch(toggleSidebar())}
+            onClick={() => toggleSidebar()}
             className='h-10 w-10 block lg:hidden'
           />
         </div>

@@ -28,7 +28,7 @@ const ContactMePage = () => {
             label='Category'
             icon='pi pi-plus'
             size='small'
-            className=' w-full p-3 bg-[#1cabe6] text-white'
+            className=' w-full p-2.5 bg-[#1cabe6] text-white'
           />
         </Link>
         <Link to={urlPage.CONTACT_ADD} className='w-full'>
@@ -36,7 +36,7 @@ const ContactMePage = () => {
             label='Contact'
             icon='pi pi-plus'
             size='small'
-            className=' w-full p-3 bg-[#1cabe6] text-white'
+            className=' w-full p-2.5 bg-[#1cabe6] text-white'
           />
         </Link>
       </ButtonBottom>

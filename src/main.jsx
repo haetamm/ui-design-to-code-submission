@@ -5,8 +5,6 @@ import './styles/index.scss';
 import { HelmetProvider } from 'react-helmet-async';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
-import { Provider } from 'react-redux';
-import store from './store';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -14,9 +12,7 @@ import 'primeicons/primeicons.css';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <Provider store={store}>
-        <RouterProvider router={router} />
-      </Provider>
+      <RouterProvider router={router} />
     </HelmetProvider>
   </StrictMode>
 );

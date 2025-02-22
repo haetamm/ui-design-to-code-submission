@@ -140,7 +140,7 @@ const CardProductBank = () => {
                 </div>
               </div>
 
-              <div className='inline-block xs:flex xs:flex-col items-center justify-center md:flex-grow mt-4 md:mt-0 w-full md:w-auto'>
+              <div className='inline-block xs:flex xs:flex-col items-center justify-center md:flex-grow mt-4 md:mt-0 w-full md:w-auto shrink-0'>
                 <Link
                   to={`${urlPage.PRODUCT_BANK}/${data.id}`}
                   className='w-full'
@@ -148,7 +148,7 @@ const CardProductBank = () => {
                   <Button
                     onClick={scrollTop}
                     label='Detail'
-                    className='text-[#1cabe6] shadow-lg px-8 py-2 text-lg md:py-1 border-[1px] rounded-none w-full md:w-auto'
+                    className='text-[#1cabe6] p-2.5 shadow-lg text-lg border-[1px] rounded-md w-full md:w-[130px]'
                   />
                 </Link>
               </div>

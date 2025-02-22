@@ -30,7 +30,7 @@ const LoanFormCustom = ({ fields, optionsMap }) => {
               {(type === 'text' || type === 'number') && (
                 <InputText
                   placeholder={`--${placeholder}--`}
-                  className='w-full border-[1px] py-2 px-2'
+                  className='w-full border-[1px] p-[11px]'
                   type={type}
                   onChange={(e) => handleChange(value, e.target.value)}
                   value={formData[value] || ''}
@@ -73,7 +73,7 @@ const LoanFormCustom = ({ fields, optionsMap }) => {
             label='Save'
             icon='pi pi-save'
             size='small'
-            className=' py-2.5 px-5 bg-[#0c2f3e] text-white text-md'
+            className=' p-2.5 bg-[#1cabe6] text-white'
           />
         </div>
       </form>

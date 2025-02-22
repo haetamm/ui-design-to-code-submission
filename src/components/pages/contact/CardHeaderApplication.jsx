@@ -14,7 +14,7 @@ const CardHeaderApplication = ({ name, link }) => {
               label={`${name}`}
               icon='pi pi-plus'
               size='small'
-              className='xs:w-[200px] py-1 bg-white text-black px-3'
+              className='xs:w-[200px] p-2.5 bg-white text-black '
             />
           </Link>
         </div>

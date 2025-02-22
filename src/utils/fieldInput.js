@@ -2,62 +2,115 @@ export const detailProductBankField = [
   {
     label: 'Bank',
     value: 'bank_name',
+    type: 'text',
   },
   {
     label: 'Nama Produk',
     value: 'product_name',
+    type: 'text',
   },
   {
     label: 'Jaminan',
     value: 'guarantee',
+    type: 'text',
   },
   {
     label: 'Target Market',
     value: 'target_market',
+    type: 'text',
   },
   {
     label: 'Komisi',
     value: 'commision',
+    type: 'text',
   },
   {
     label: 'Appraisal',
     value: 'appraisal',
+    type: 'text',
   },
   {
     label: 'Floating',
     value: 'floating',
+    type: 'text',
   },
   {
     label: 'Loan to Value',
     value: 'loan_to_value',
+    type: 'text',
   },
   {
     label: 'Penalty Fee',
     value: 'penalty_fee',
+    type: 'text',
   },
   {
     label: 'Interest Rate',
     value: 'interest_rate',
+    type: 'text',
   },
   {
     label: 'Fix Rate %',
     value: 'fix_rate',
+    type: 'text',
   },
   {
     label: 'Fix Rate (year)',
     value: 'year_fix_rate',
+    type: 'text',
   },
   {
     label: 'Max Tenor (year)',
     value: 'max_tenor',
+    type: 'text',
   },
   {
-    label: 'Ketarangan',
+    label: 'Keterangan',
     value: 'description',
+    type: 'textarea',
   },
   {
     label: 'URL',
     value: 'url',
+    type: 'text',
+  },
+];
+
+export const detailDeveloperField = [
+  {
+    label: 'Developer',
+    value: 'name_dev',
+    type: 'text',
+  },
+  {
+    label: 'Nama Project',
+    value: 'name_product',
+    type: 'text',
+  },
+  {
+    label: 'Type Produk',
+    value: 'type',
+    type: 'text',
+  },
+  {
+    label: 'Harga Unit',
+    value: 'price',
+    type: 'text',
+  },
+  {
+    label: 'Type Property',
+    value: 'type_product',
+    type: 'text',
+  },
+  {
+    label: 'Unit Property',
+    value: 'unit',
+    type: 'text',
+  },
+  {
+    label: 'Address',
+    value: 'address',
+    type: 'text',
   },
 ];
 
@@ -229,37 +282,6 @@ export const uploadDocField = [
     label: 'File Kekurangan 2',
     category: 'additional_data',
     placeholder: 'File Kekurangan 2',
-  },
-];
-
-export const detailDeveloperField = [
-  {
-    label: 'Developer',
-    value: 'name_dev',
-  },
-  {
-    label: 'Nama Project',
-    value: 'name_product',
-  },
-  {
-    label: 'Type Produk',
-    value: 'type',
-  },
-  {
-    label: 'Harga Unit',
-    value: 'price',
-  },
-  {
-    label: 'Type Property',
-    value: 'type_product',
-  },
-  {
-    label: 'Unit Property',
-    value: 'unit',
-  },
-  {
-    label: 'Address',
-    value: 'address',
   },
 ];
 
@@ -466,109 +488,31 @@ export const addressField = [
     label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
     value: 'street',
     type: 'text',
-    category: 'ktp',
   },
   {
     label: 'Kode Pos',
     value: 'postal_code',
     type: 'text',
-    category: 'ktp',
   },
   {
     label: 'Provinsi',
     value: 'province',
     type: 'select',
-    category: 'ktp',
   },
   {
     label: 'Kab./Kota',
     value: 'regencies',
     type: 'select',
-    category: 'ktp',
   },
   {
     label: 'Kecamatan',
     value: 'district',
     type: 'select',
-    category: 'ktp',
   },
   {
     label: 'Kelurahan',
     value: 'villages',
     type: 'select',
-    category: 'ktp',
-  },
-  {
-    label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
-    value: 'street',
-    type: 'text',
-    category: 'domisili',
-  },
-  {
-    label: 'Kode Pos',
-    value: 'postal_code',
-    type: 'text',
-    category: 'domisili',
-  },
-  {
-    label: 'Provinsi',
-    value: 'province',
-    type: 'select',
-    category: 'domisili',
-  },
-  {
-    label: 'Kab./Kota',
-    value: 'regencies',
-    type: 'select',
-    category: 'domisili',
-  },
-  {
-    label: 'Kecamatan',
-    value: 'district',
-    type: 'select',
-    category: 'domisili',
-  },
-  {
-    label: 'Kelurahan',
-    value: 'villages',
-    type: 'select',
-    category: 'domisili',
-  },
-  {
-    label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
-    value: 'street',
-    type: 'text',
-    category: 'kantor',
-  },
-  {
-    label: 'Kode Pos',
-    value: 'postal_code',
-    type: 'text',
-    category: 'kantor',
-  },
-  {
-    label: 'Provinsi',
-    value: 'province',
-    type: 'select',
-    category: 'kantor',
-  },
-  {
-    label: 'Kab./Kota',
-    value: 'regencies',
-    type: 'select',
-    category: 'kantor',
-  },
-  {
-    label: 'Kecamatan',
-    value: 'district',
-    type: 'select',
-    category: 'kantor',
-  },
-  {
-    label: 'Kelurahan',
-    value: 'villages',
-    type: 'select',
-    category: 'kantor',
   },
 ];
 

@@ -39,7 +39,7 @@ const DeveloperUpdatePage = () => {
           label='Update'
           icon='pi pi-pen-to-square'
           size='normal'
-          className='w-full p-3 bg-[#0c2f3e] text-white'
+          className='w-full p-2.5 bg-[#0c2f3e] text-white'
           onClick={() => handleSubmit(data)}
         />
       </ButtonBottom>

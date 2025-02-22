@@ -53,7 +53,7 @@ const FormContact = ({ data, onSubmit, setData }) => {
             {type !== 'select' && type !== 'date' && (
               <InputText
                 placeholder={`--Isi ${label}--`}
-                className='w-full border-[1px] py-2 px-2'
+                className='w-full border-[1px] p-[11px]'
                 type={type}
                 onChange={(e) => handleChange(value, e.target.value)}
                 value={formData[value] || ''}
@@ -73,7 +73,7 @@ const FormContact = ({ data, onSubmit, setData }) => {
                       )?.name
                     : `--Pilih ${label}--`
                 }
-                className='w-full bg-white border-[1px] focus-none'
+                className='w-full bg-gray-200 border-[1px] h-[48px] focus-none'
                 onChange={(e) => handleChange(value, e.value)}
               />
             )}
@@ -82,7 +82,7 @@ const FormContact = ({ data, onSubmit, setData }) => {
               <Calendar
                 showIcon
                 placeholder='dd/mm/yyyy'
-                className='w-full border-[1px] h-[44px] px-1 mt-1.5 rounded-md'
+                className='w-full border-[1px] h-[48px] px-1.5 rounded-md'
                 value={formData[value] || null}
                 onChange={(e) => handleChange(value, e.value)}
               />
@@ -95,7 +95,7 @@ const FormContact = ({ data, onSubmit, setData }) => {
           label={data ? 'Update' : 'Simpan'}
           icon='pi pi-save'
           size='large'
-          className={`${data ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} w-[180px] p-3  text-white`}
+          className={`${data ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} p-2.5 text-white`}
           type='submit'
         />
       </div>

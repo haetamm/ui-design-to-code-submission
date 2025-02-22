@@ -12,6 +12,7 @@ import {
   product_type_option as product_type,
 } from '../../../utils/selectOption';
 import { Calendar } from 'primereact/calendar';
+import NumberInputCustom from './NumberInputCustom';
 
 const FormProductBank = ({ data, onSubmit, setData }) => {
   const [formData, setFormData] = useState({});
@@ -47,16 +48,23 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
             {productBankField
               .slice(0, 8)
               .map(({ label, value, type }, index) => (
-                <div key={index} className='mb-2'>
-                  {type !== 'date' && <p className='font-bold mb-2'>{label}</p>}
+                <div key={index} className='mb-4'>
+                  {type !== 'date' && <p className='font-bold '>{label}</p>}
 
                   {type === 'select' && (
                     <Dropdown
                       value={formData[value] || null}
-                      onChange={(e) => handleChange(value, e.value)}
                       options={optionsMap[value] || []}
                       optionLabel='name'
-                      className='w-full bg-white border-[1px] focus-none'
+                      placeholder={
+                        formData[value]
+                          ? optionsMap[value].find(
+                              (opt) => opt.value === formData[value]
+                            )?.name
+                          : `--Pilih ${label}--`
+                      }
+                      className='w-full bg-white border-[1px] h-[48px] focus-none'
+                      onChange={(e) => handleChange(value, e.value)}
                     />
                   )}
 
@@ -83,13 +91,13 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                         onChange={(e) => handleChange(value, e.value)}
                         showIcon
                         selectionMode='range'
-                        className='w-full bg-gray-200 border-[1px] h-[44px] px-1 mt-1.5 rounded-md'
+                        className='w-full bg-gray-200 border-[1px] h-[48px] px-1.5 mt-1.5 rounded-md'
                       />
                     </div>
                   )}
 
                   {type === 'checkbox' && (
-                    <div className='grid grid-cols-1 xs:grid-cols-2'>
+                    <div className='grid grid-cols-2'>
                       {optionsMap[value].map((item, index) => (
                         <div
                           key={index}
@@ -118,50 +126,30 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                   )}
 
                   {type === 'number' && (
-                    <div className='flex items-center border-slate-300 border-[1px] text-white rounded-md'>
-                      <span className='cursor-pointer rounded-l py-[13px] px-3.5 duration-100 hover:text-blue-50 bg-[#1cabe6]'>
-                        -
-                      </span>
-                      <input
-                        type={type}
-                        value={value ? formData[value] : 0}
-                        onChange={(e) => handleChange(value, e.target.value)}
-                        className='h-8 w-full border bg-white text-black text-center text-xs outline-none border-none'
-                        autoFocus={false}
-                      />
-                      <span className='cursor-pointer rounded-r py-[13px] px-3.5 duration-100 hover:text-blue-50 bg-[#1cabe6]'>
-                        +
-                      </span>
-                    </div>
+                    <NumberInputCustom
+                      type={type}
+                      value={formData[value]}
+                      onChange={(newValue) => handleChange(value, newValue)}
+                    />
                   )}
                 </div>
               ))}
           </div>
 
-          <div className='flex flex-col mt-1'>
+          <div className='flex flex-col mt-1 md:mt-0'>
             <div>
               {productBankField
                 .slice(8, 16)
                 .map(({ label, value, type }, index) => (
-                  <div key={index} className='mb-2'>
-                    <p className='font-bold mb-2'>{label}</p>
+                  <div key={index} className='mb-4'>
+                    <p className='font-bold'>{label}</p>
 
                     {type === 'number' && (
-                      <div className='flex items-center border-slate-300 border-[1px] text-white rounded-md'>
-                        <span className='cursor-pointer rounded-l py-[13px] px-3.5 duration-100 hover:text-blue-50 bg-[#1cabe6]'>
-                          -
-                        </span>
-                        <input
-                          type={type}
-                          value={value ? formData[value] : 0}
-                          onChange={(e) => handleChange(value, e.target.value)}
-                          className='h-8 w-full border bg-white text-black text-center text-xs outline-none border-none'
-                          autoFocus={false}
-                        />
-                        <span className='cursor-pointer rounded-r py-[13px] px-3.5 duration-100 hover:text-blue-50 bg-[#1cabe6]'>
-                          +
-                        </span>
-                      </div>
+                      <NumberInputCustom
+                        type={type}
+                        value={formData[value]}
+                        onChange={(newValue) => handleChange(value, newValue)}
+                      />
                     )}
 
                     {type === 'textarea' && (
@@ -177,7 +165,7 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                     {type === 'text' && (
                       <InputText
                         value={formData[value]}
-                        className='w-full border-[1px] py-3 px-2'
+                        className='w-full border-[1px] p-[11px]'
                         onChange={(e) => handleChange(value, e.target.value)}
                       />
                     )}
@@ -186,13 +174,13 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
             </div>
           </div>
         </div>
-        <div className='hidden md:flex items-center justify-end space-x-1 mt-auto'>
+        <div className='hidden md:flex items-center justify-end space-x-1 mt-10 mb-5'>
           <Button
             label={`${data ? 'Update' : 'Tambah Produk'}`}
             type='submit'
             icon='pi pi-save'
             size='large'
-            className='w-[180px] p-3 bg-[#0c2f3e] text-white cursor-not-allowed'
+            className={`${data ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} p-2.5  text-white`}
           />
         </div>
       </form>

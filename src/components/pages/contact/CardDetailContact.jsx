@@ -52,13 +52,13 @@ const CardDetailContact = ({ data }) => {
             label='Share'
             icon='pi pi-share-alt'
             size='normal'
-            className=' w-full px-2 py-2 bg-blue-600 text-white'
+            className=' w-full p-2.5 bg-blue-600 text-white'
           />
           <Button
             label='Delete'
             icon='pi pi-trash'
             size='normal'
-            className=' w-full px-2 py-2 bg-red-500 text-white'
+            className=' w-full p-2.5 bg-red-500 text-white'
           />
         </div>
         <Link to={`${urlPage.CONTACT_ME}/${data.id}`} className='w-full'>
@@ -66,7 +66,7 @@ const CardDetailContact = ({ data }) => {
             label='Edit Contact'
             icon='pi pi-pen-to-square'
             size='normal'
-            className=' w-full px-2 py-2 bg-[#0c2f3e] text-white mt-2'
+            className=' w-full p-2.5 bg-[#0c2f3e] text-white mt-2'
           />
         </Link>
       </div>
