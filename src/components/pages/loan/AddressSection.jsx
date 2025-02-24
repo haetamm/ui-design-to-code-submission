@@ -1,98 +1,119 @@
-import React, { useState, useEffect } from 'react';
-import { addressField } from '../../../utils/fieldInput';
-import CardInfo from './CardInfo';
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from 'primereact/button';
-import PropTypes from 'prop-types';
-
-const InputCheckbox = ({ isSameData, handleChange, label, id }) => {
-  return (
-    <>
-      <div className='flex space-x-3 items-center px-3 my-4'>
-        <input
-          type='checkbox'
-          className='checkbox-custom shrink-0'
-          id={`data-${id}`}
-          checked={isSameData}
-          onChange={handleChange}
-        />
-        <label htmlFor={`data-${id}`} className='font-bold'>
-          {label}
-        </label>
-      </div>
-    </>
-  );
-};
-
-InputCheckbox.propTypes = {
-  isSameData: PropTypes.bool.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-};
+import CardInfo from './CardInfo';
+import { fullAddressSchema } from '../../../utils/validation';
+import { addressField } from '../../../utils/fieldInput';
+import InputCheckbox from './InputCheckbox';
 
 const AddressSection = () => {
-  const [dataKtp, setDataKtp] = useState({});
-  const [dataDomisili, setDataDomisili] = useState({});
-  const [dataCompany, setDataCompany] = useState({});
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    watch,
+    setValue,
+  } = useForm({
+    resolver: zodResolver(fullAddressSchema),
+    mode: 'onChange',
+    defaultValues: {
+      dataKtp: {
+        street: '',
+        postal_code: '',
+        province: '',
+        regencies: '',
+        district: '',
+        villages: '',
+      },
+      dataDomisili: {
+        street: '',
+        postal_code: '',
+        province: '',
+        regencies: '',
+        district: '',
+        villages: '',
+      },
+      dataCompany: {
+        street: '',
+        postal_code: '',
+        province: '',
+        regencies: '',
+        district: '',
+        villages: '',
+      },
+    },
+  });
+
   const [isDomisiliSameAsKtp, setIsDomisiliSameAsKtp] = useState(false);
   const [isCompanySameAsKtp, setIsCompanySameAsKtp] = useState(false);
 
-  const handleSubmit = () => {
-    const payload = {
-      dataKtp,
-      dataDomisili,
-      dataCompany,
-    };
-    console.log('FormData', payload);
-  };
+  const dataKtp = watch('dataKtp');
 
-  // Handle checkbox untuk dataDomisili
-  const handleDomisiliCheckboxChange = (e) => {
+  // Fungsi generik untuk menangani perubahan checkbox
+  const handleCheckboxChange = (e, fieldName, setIsSameAsKtp) => {
     const checked = e.target.checked;
-    setIsDomisiliSameAsKtp(checked);
+    setIsSameAsKtp(checked);
     if (checked) {
-      setDataDomisili(dataKtp); // Sinkronkan dengan dataKtp saat dicentang
+      setValue(fieldName, { ...dataKtp }, { shouldValidate: true });
     } else {
-      setDataDomisili({}); // Reset saat unchecked
+      setValue(
+        fieldName,
+        {
+          street: '',
+          postal_code: '',
+          province: '',
+          regencies: '',
+          district: '',
+          villages: '',
+        },
+        { shouldValidate: true }
+      );
     }
   };
 
-  // Handle checkbox untuk dataCompany
-  const handleCompanyCheckboxChange = (e) => {
-    const checked = e.target.checked;
-    setIsCompanySameAsKtp(checked);
-    if (checked) {
-      setDataCompany(dataKtp); // Sinkronkan dengan dataKtp saat dicentang
-    } else {
-      setDataCompany({}); // Reset saat unchecked
-    }
-  };
-
-  // Sinkronisasi dataDomisili dengan dataKtp saat checkbox dicentang dan dataKtp berubah
+  // Sinkronisasi dataDomisili dengan dataKtp
   useEffect(() => {
     if (isDomisiliSameAsKtp) {
-      setDataDomisili(dataKtp);
+      setValue('dataDomisili', { ...dataKtp }, { shouldValidate: true });
     }
-  }, [dataKtp, isDomisiliSameAsKtp]);
+  }, [dataKtp, isDomisiliSameAsKtp, setValue]);
 
-  // Sinkronisasi dataCompany dengan dataKtp saat checkbox dicentang dan dataKtp berubah
+  // Sinkronisasi dataCompany dengan dataKtp
   useEffect(() => {
     if (isCompanySameAsKtp) {
-      setDataCompany(dataKtp);
+      setValue('dataCompany', { ...dataKtp }, { shouldValidate: true });
     }
-  }, [dataKtp, isCompanySameAsKtp]);
+  }, [dataKtp, isCompanySameAsKtp, setValue]);
+
+  const onSubmit = (data) => {
+    const payload = {
+      dataKtp: { ...data.dataKtp },
+      dataDomisili: isDomisiliSameAsKtp
+        ? { ...data.dataKtp }
+        : { ...data.dataDomisili },
+      dataCompany: isCompanySameAsKtp
+        ? { ...data.dataKtp }
+        : { ...data.dataCompany },
+    };
+    console.log('FormData Submitted:', payload);
+  };
 
   return (
-    <>
-      <div className='w-full p-1 lg:p-6 bg-white h-full mb-4 text-black rounded-md'>
+    <div className='w-full p-1 lg:p-6 bg-white h-full mb-4 text-black rounded-md'>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <CardInfo
           title='Data KTP'
           fields={addressField}
-          onSubmit={setDataKtp}
+          namespace='dataKtp'
+          control={control}
+          errors={errors}
         />
         <InputCheckbox
           isSameData={isDomisiliSameAsKtp}
-          handleChange={handleDomisiliCheckboxChange}
+          handleChange={(e) =>
+            handleCheckboxChange(e, 'dataDomisili', setIsDomisiliSameAsKtp)
+          }
           label='Domisili Sesuai KTP'
           id='domisili'
         />
@@ -100,35 +121,39 @@ const AddressSection = () => {
           <CardInfo
             title='Data Domisili'
             fields={addressField}
-            onSubmit={setDataDomisili}
+            namespace='dataDomisili'
+            control={control}
+            errors={errors}
           />
         )}
         <InputCheckbox
           isSameData={isCompanySameAsKtp}
-          handleChange={handleCompanyCheckboxChange}
+          handleChange={(e) =>
+            handleCheckboxChange(e, 'dataCompany', setIsCompanySameAsKtp)
+          }
           label='Alamat Tempat Bekerja / Perusahaan Sesuai KTP'
           id='company'
         />
-
         {!isCompanySameAsKtp && (
           <CardInfo
             title='Data Alamat Tempat Kerja'
             fields={addressField}
-            onSubmit={setDataCompany}
+            namespace='dataCompany'
+            control={control}
+            errors={errors}
           />
         )}
         <div className='flex items-center justify-end space-x-1 mt-10 px-6 pb-6 lg:p-0'>
           <Button
-            onClick={handleSubmit}
+            type='submit'
             label='Save'
             icon='pi pi-save'
             size='large'
             className='bg-[#1cabe6] p-2.5 text-white'
-            type='button'
           />
         </div>
-      </div>
-    </>
+      </form>
+    </div>
   );
 };
 

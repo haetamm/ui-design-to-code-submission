@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LoanFormCustom from './LoanFormCustom';
 import { additionalInfoField } from '../../../utils/fieldInput';
 import {
@@ -11,11 +11,27 @@ import {
   number_of_dependents_option as number_of_dependents,
 } from '../../../utils/selectOption';
 import { Button } from 'primereact/button';
-import FamilyFormMobile from './FamilyFormMobile';
+import FamilyForm from './FamilyForm';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { additionalInfoSchema } from '../../../utils/validation';
+import { useForm } from 'react-hook-form';
 
 const AdditionalInfoSection = () => {
-  const [data, setData] = useState({});
-  const [familyData, setFamilyData] = useState([]);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm({
+    resolver: zodResolver(additionalInfoSchema),
+    mode: 'onChange',
+    defaultValues: {
+      familyData: [
+        { fullName: '', relationship: '', phone: '', address: '' },
+        { fullName: '', relationship: '', phone: '', address: '' },
+      ],
+    },
+  });
 
   const optionMap = {
     gender,
@@ -27,44 +43,47 @@ const AdditionalInfoSection = () => {
     length_of_residence,
   };
 
-  const handleFormDataUpdate = (formData) => {
-    setData((prevData) => ({ ...prevData, ...formData }));
+  const onSubmit = (data) => {
+    console.log('Final Data:', data);
   };
 
   const handleFamilyDataUpdate = (newFamilyData) => {
-    setFamilyData(newFamilyData);
-  };
-
-  const handleSubmit = () => {
-    const combinedData = { ...data, familyData };
-    console.log('Final Data:', combinedData);
+    setValue('familyData', newFamilyData);
   };
 
   return (
     <>
       <div className='w-full  bg-white h-full mb-4 text-black rounded-md'>
-        <LoanFormCustom
-          fields={additionalInfoField.slice(0, 10)}
-          optionsMap={optionMap}
-          gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] space-x-0 xs:space-x-2'
-          onSubmit={handleFormDataUpdate}
-        />
-        <FamilyFormMobile onSubmit={handleFamilyDataUpdate} />
-        <LoanFormCustom
-          fields={additionalInfoField.slice(10, 18)}
-          optionsMap={optionMap}
-          gridClass='grid grid-cols-1 '
-          onSubmit={handleFormDataUpdate}
-        />
-        <div className='flex items-center justify-end space-x-1 px-6 pb-6'>
-          <Button
-            onClick={handleSubmit}
-            label='Save'
-            icon='pi pi-save'
-            size='small'
-            className=' p-2.5 bg-[#1cabe6] text-white'
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <LoanFormCustom
+            fields={additionalInfoField.slice(0, 10)}
+            optionsMap={optionMap}
+            gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] space-x-0 xs:space-x-2'
+            control={control}
+            errors={errors}
           />
-        </div>
+          <FamilyForm
+            onSubmit={handleFamilyDataUpdate}
+            control={control}
+            errors={errors}
+          />
+          <LoanFormCustom
+            fields={additionalInfoField.slice(10, 18)}
+            optionsMap={optionMap}
+            gridClass='grid grid-cols-1'
+            control={control}
+            errors={errors}
+          />
+          <div className='flex items-center justify-end space-x-1 px-6 pb-6'>
+            <Button
+              type='submit'
+              label='Save'
+              icon='pi pi-save'
+              size='small'
+              className='p-2.5 bg-[#1cabe6] text-white'
+            />
+          </div>
+        </form>
       </div>
     </>
   );

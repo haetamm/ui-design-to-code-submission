@@ -392,31 +392,31 @@ export const loanField = [
     label: 'Jenis Pinjaman Kredit',
     value: 'loan_type',
     type: 'select',
-    placeholder: 'Pilih Product',
+    placeholder: 'Pilih Produk',
   },
   {
     label: 'Nominal Penempatan',
     value: 'placement_amount',
     type: 'number',
-    placeholder: 'Masukan Placement Amount',
+    placeholder: 'Masukan Nominal Penempatan',
   },
   {
     label: 'Jangka Waktu Penempatan',
     value: 'placement_duration',
     type: 'select',
-    placeholder: 'Select Duration',
+    placeholder: 'Pilih Jangka Waktu Penempatan',
   },
   {
     label: 'Nama Bilyet Deposito',
     value: 'deposit_certificate_name',
     type: 'select',
-    placeholder: 'Masukan Deposit Certificate Name',
+    placeholder: 'Pilih Nama Bilyet Deposito',
   },
   {
     label: 'Perpanjangan deposito',
     value: 'deposit_renewal',
     type: 'select',
-    placeholder: 'Select Renewal Option',
+    placeholder: 'Pilih Perpanjangan deposito',
   },
 ];
 
@@ -454,7 +454,7 @@ export const employmentInfoField = [
   {
     label: 'Email Kantor',
     value: 'company_email',
-    type: 'text',
+    type: 'email',
     placeholder: 'Isi Email Kantor',
   },
   {
@@ -492,7 +492,7 @@ export const addressField = [
   {
     label: 'Kode Pos',
     value: 'postal_code',
-    type: 'text',
+    type: 'number',
   },
   {
     label: 'Provinsi',
@@ -525,7 +525,7 @@ export const assetsInfoField = [
   {
     label: 'Kode Pos',
     value: 'postal_code',
-    type: 'text',
+    type: 'number',
   },
   {
     label: 'Provinsi',
@@ -618,7 +618,7 @@ export const additionalInfoField = [
   {
     label: 'Berapa nilai angsuran yang ingin bapak/ibu dibayar perbulannya?',
     value: 'desired_monthly_installment',
-    type: 'text',
+    type: 'number',
     placeholder: 'Isi nilai angsuran yang diinginkan',
   },
   {
@@ -637,7 +637,7 @@ export const additionalInfoField = [
   {
     label: 'Berapa total penjualan (omset) bapak/ibu perbulannya?',
     value: 'monthly_sales_revenue',
-    type: 'text',
+    type: 'number',
     placeholder: 'Isi total penjualan perbulan',
   },
   {
@@ -662,7 +662,7 @@ export const additionalInfoField = [
   {
     label: 'Berapa total pendapatan gaji dan tunjangan bapak/ibu perbulannya?',
     value: 'monthly_salary_and_allowance',
-    type: 'text',
+    type: 'number',
     placeholder: 'Isi Total Pendapatan Gaji dan Tunjangan',
   },
 ];
