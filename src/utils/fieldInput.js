@@ -386,13 +386,13 @@ export const loanField = [
     label: 'Jenis Kebutuhan',
     value: 'need_type',
     type: 'select',
-    placeholder: '',
+    placeholder: 'Pilih Kebutuhan',
   },
   {
     label: 'Jenis Pinjaman Kredit',
     value: 'loan_type',
     type: 'select',
-    placeholder: 'Select Product',
+    placeholder: 'Pilih Product',
   },
   {
     label: 'Nominal Penempatan',
@@ -551,5 +551,118 @@ export const assetsInfoField = [
     label: 'Harga/Nilai Jaminan',
     value: 'price',
     type: 'number',
+  },
+];
+
+export const additionalInfoField = [
+  {
+    label: 'Jenis Kelamin',
+    value: 'gender',
+    type: 'select',
+    placeholder: 'Pilih Jenis Kelamin',
+  },
+  {
+    label: 'Tanggal Lahir',
+    value: 'birth_date',
+    type: 'date',
+    placeholder: 'Pilih Tanggal Lahir',
+  },
+  {
+    label: 'Status Pernikahan',
+    value: 'marital_status',
+    type: 'select',
+    placeholder: 'Pilih Status Pernikahan',
+  },
+  {
+    label: 'Jenis Perkawinan',
+    value: 'marriage_type',
+    type: 'select',
+    placeholder: 'Pilih Jenis Perkawinan',
+  },
+  {
+    label: 'Jumlah Tanggungan',
+    value: 'number_of_dependents',
+    type: 'select',
+    placeholder: 'Pilih Jumlah Tanggungan',
+  },
+  {
+    label: 'Pendidikan Terakhir',
+    value: 'last_education',
+    type: 'select',
+    placeholder: 'Pilih Pendidikan',
+  },
+  {
+    label: 'Status Kepemilikan Rumah',
+    value: 'home_ownership_status',
+    type: 'select',
+    placeholder: 'Pilih Kepemilikan Rumah',
+  },
+  {
+    label: 'No. Telepon Rumah',
+    value: 'home_phone_number',
+    type: 'number',
+    placeholder: 'No. Telepon Rumah',
+  },
+  {
+    label: 'Nama Gadis Ibu Kandung',
+    value: 'mother_maiden_name',
+    type: 'text',
+    placeholder: 'Nama Gadis Ibu Kandung',
+  },
+  {
+    label: 'Lama Menempati',
+    value: 'length_of_residence',
+    type: 'select',
+    placeholder: 'Pilih Lama Menempati',
+  },
+  {
+    label: 'Berapa nilai angsuran yang ingin bapak/ibu dibayar perbulannya?',
+    value: 'desired_monthly_installment',
+    type: 'text',
+    placeholder: 'Isi nilai angsuran yang diinginkan',
+  },
+  {
+    label: 'Apakah ada pilihan bank lain yang ingin digunakan oleh bapak/ibu?',
+    value: 'preferred_bank',
+    type: 'text',
+    placeholder: 'Isi Nama Pilihan Bank',
+  },
+  {
+    label:
+      'Apakah ada pengalaman yang tidak menyenangkan dengan Bank yang pernah dialami oleh bapak/ibu?',
+    value: 'unpleasant_bank_experience',
+    type: 'text',
+    placeholder: 'Isi Pengalaman yang tidak menyenangkan dengan Bank',
+  },
+  {
+    label: 'Berapa total penjualan (omset) bapak/ibu perbulannya?',
+    value: 'monthly_sales_revenue',
+    type: 'text',
+    placeholder: 'Isi total penjualan perbulan',
+  },
+  {
+    label: 'Ekspansi bisnis apa yang sedang direncanakan bapak/ibu?',
+    value: 'business_expansion_plan',
+    type: 'text',
+    placeholder: 'Isi Ekspansi Bisnis',
+  },
+  {
+    label:
+      'Berapa lama Terms of Payment dari Customer dan Terms of Payment ke Supplier?',
+    value: 'payment_terms',
+    type: 'text',
+    placeholder: 'Isi jangka waktu Terms Of Payment',
+  },
+  {
+    label: 'Apakah ada pendapatan lain seperti pendapatan sewa ataupun bisnis?',
+    value: 'additional_income',
+    type: 'text',
+    placeholder: 'Isi Pendapatan Lain',
+  },
+  {
+    label: 'Berapa total pendapatan gaji dan tunjangan bapak/ibu perbulannya?',
+    value: 'monthly_salary_and_allowance',
+    type: 'text',
+    placeholder: 'Isi Total Pendapatan Gaji dan Tunjangan',
   },
 ];

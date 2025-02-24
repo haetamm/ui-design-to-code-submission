@@ -1,3 +1,4 @@
+import AdditionalInfoSection from '../components/pages/loan/AdditionalInfoSection';
 import AddressSection from '../components/pages/loan/AddressSection';
 import AssetInfoSection from '../components/pages/loan/AssetInfoSection';
 import CommingSoon from '../components/pages/loan/CommingSoon';
@@ -35,7 +36,7 @@ export const loanLink = [
     header: 'Informasi Tambahan',
     title: 'Informasi Tambahan',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <AdditionalInfoSection />,
   },
   {
     header: 'Upload Dokumen',

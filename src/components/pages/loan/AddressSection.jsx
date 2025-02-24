@@ -2,6 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { addressField } from '../../../utils/fieldInput';
 import CardInfo from './CardInfo';
 import { Button } from 'primereact/button';
+import PropTypes from 'prop-types';
+
+const InputCheckbox = ({ isSameData, handleChange, label, id }) => {
+  return (
+    <>
+      <div className='flex space-x-3 items-center px-3 my-4'>
+        <input
+          type='checkbox'
+          className='checkbox-custom shrink-0'
+          id={`data-${id}`}
+          checked={isSameData}
+          onChange={handleChange}
+        />
+        <label htmlFor={`data-${id}`} className='font-bold'>
+          {label}
+        </label>
+      </div>
+    </>
+  );
+};
+
+InputCheckbox.propTypes = {
+  isSameData: PropTypes.bool.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 
 const AddressSection = () => {
   const [dataKtp, setDataKtp] = useState({});
@@ -63,18 +90,12 @@ const AddressSection = () => {
           fields={addressField}
           onSubmit={setDataKtp}
         />
-        <div className='flex space-x-3 items-center px-3 my-4'>
-          <input
-            type='checkbox'
-            className='h-6 w-6 border-[1px] shrink-0'
-            id='data-domisili'
-            checked={isDomisiliSameAsKtp}
-            onChange={handleDomisiliCheckboxChange}
-          />
-          <label htmlFor='data-domisili' className='font-bold'>
-            Domisili Sesuai KTP
-          </label>
-        </div>
+        <InputCheckbox
+          isSameData={isDomisiliSameAsKtp}
+          handleChange={handleDomisiliCheckboxChange}
+          label='Domisili Sesuai KTP'
+          id='domisili'
+        />
         {!isDomisiliSameAsKtp && (
           <CardInfo
             title='Data Domisili'
@@ -82,18 +103,13 @@ const AddressSection = () => {
             onSubmit={setDataDomisili}
           />
         )}
-        <div className='flex space-x-3 items-center px-3 my-4'>
-          <input
-            type='checkbox'
-            className='h-6 w-6 border-[1px] shrink-0'
-            id='data-company'
-            checked={isCompanySameAsKtp}
-            onChange={handleCompanyCheckboxChange}
-          />
-          <label htmlFor='data-company' className='font-bold'>
-            Alamat Tempat Bekerja / Perusahaan Sesuai KTP
-          </label>
-        </div>
+        <InputCheckbox
+          isSameData={isCompanySameAsKtp}
+          handleChange={handleCompanyCheckboxChange}
+          label='Alamat Tempat Bekerja / Perusahaan Sesuai KTP'
+          id='company'
+        />
+
         {!isCompanySameAsKtp && (
           <CardInfo
             title='Data Alamat Tempat Kerja'

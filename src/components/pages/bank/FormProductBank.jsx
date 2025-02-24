@@ -12,7 +12,7 @@ import {
   product_type_option as product_type,
 } from '../../../utils/selectOption';
 import { Calendar } from 'primereact/calendar';
-import NumberInputCustom from './NumberInputCustom';
+import { InputNumber } from 'primereact/inputnumber';
 
 const FormProductBank = ({ data, onSubmit, setData }) => {
   const [formData, setFormData] = useState({});
@@ -56,13 +56,7 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                       value={formData[value] || null}
                       options={optionsMap[value] || []}
                       optionLabel='name'
-                      placeholder={
-                        formData[value]
-                          ? optionsMap[value].find(
-                              (opt) => opt.value === formData[value]
-                            )?.name
-                          : `--Pilih ${label}--`
-                      }
+                      placeholder={`--Pilih ${label}--`}
                       className='w-full bg-white border-[1px] h-[48px] focus-none'
                       onChange={(e) => handleChange(value, e.value)}
                     />
@@ -117,7 +111,7 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                               }
                               handleChange(value, [...updatedValues]);
                             }}
-                            className='checkbox-custome h-5 w-5 cursor-pointer'
+                            className='checkbox-custome h-5 w-5 cursor-pointer shrink-0'
                           />
                           <p>{item}</p>
                         </div>
@@ -126,10 +120,21 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                   )}
 
                   {type === 'number' && (
-                    <NumberInputCustom
-                      type={type}
-                      value={formData[value]}
-                      onChange={(newValue) => handleChange(value, newValue)}
+                    <InputNumber
+                      inputId='horizontal-buttons'
+                      value={formData[value] || ''}
+                      onValueChange={(e) => handleChange(value, e.value)}
+                      showButtons
+                      buttonLayout='horizontal'
+                      step={0.1}
+                      decrementButtonClassName='bg-[#1cabe6] text-white'
+                      incrementButtonClassName='bg-[#1cabe6] text-white'
+                      incrementButtonIcon='pi pi-plus'
+                      decrementButtonIcon='pi pi-minus'
+                      prefix='%'
+                      min={0}
+                      className=''
+                      inputClassName='h-[48px] text-center border-[1px] w-full'
                     />
                   )}
                 </div>
@@ -145,10 +150,21 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                     <p className='font-bold'>{label}</p>
 
                     {type === 'number' && (
-                      <NumberInputCustom
-                        type={type}
-                        value={formData[value]}
-                        onChange={(newValue) => handleChange(value, newValue)}
+                      <InputNumber
+                        inputId='horizontal-buttons'
+                        value={formData[value] || ''}
+                        onValueChange={(e) => handleChange(value, e.value)}
+                        showButtons
+                        buttonLayout='horizontal'
+                        step={0.1}
+                        decrementButtonClassName='bg-[#1cabe6] text-white'
+                        incrementButtonClassName='bg-[#1cabe6] text-white'
+                        incrementButtonIcon='pi pi-plus'
+                        decrementButtonIcon='pi pi-minus'
+                        prefix='%'
+                        min={0}
+                        className=''
+                        inputClassName='h-[48px] text-center border-[1px] w-full'
                       />
                     )}
 

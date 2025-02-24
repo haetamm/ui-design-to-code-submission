@@ -64,66 +64,105 @@ export const category_option = [
 ];
 
 export const need_type_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const loan_type_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const placement_amount_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const placement_duration_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const deposit_certificate_name_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const deposit_renewal_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const current_job_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const company_type_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 export const business_field_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const years_of_experience_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
 
 export const monthly_income_option = [
-  { name: 'loram ipsum', value: 'loram ipsum1' },
-  { name: 'loram ipsum', value: 'loram ipsum2' },
-  { name: 'loram ipsum', value: 'loram ipsum3' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
+export const marital_status_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+export const marriage_type_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+export const number_of_dependents_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+export const last_education_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
+export const home_ownership_status_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
+export const length_of_residence_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
+export const relationship_family_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];

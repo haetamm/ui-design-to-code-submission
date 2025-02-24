@@ -66,13 +66,7 @@ const FormContact = ({ data, onSubmit, setData }) => {
                 options={optionsMap[value]}
                 optionLabel='name'
                 optionValue='value'
-                placeholder={
-                  formData[value]
-                    ? optionsMap[value].find(
-                        (opt) => opt.value === formData[value]
-                      )?.name
-                    : `--Pilih ${label}--`
-                }
+                placeholder={`--Pilih ${label}--`}
                 className='w-full bg-gray-200 border-[1px] h-[48px] focus-none'
                 onChange={(e) => handleChange(value, e.value)}
               />

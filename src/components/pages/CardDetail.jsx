@@ -24,7 +24,7 @@ const CardDetail = ({ data, fields }) => {
                   className='bg-gray-200 w-full border-[1px] px-2'
                 />
               )}
-              {type === 'text' && (
+              {type !== 'textarea' && (
                 <InputText
                   disabled
                   className='bg-gray-200 py-3 w-full px-3 text-black'
