@@ -1,4 +1,4 @@
-import { string, date, object, array, preprocess, number } from 'zod';
+import { z, string, date, object, array, preprocess, number } from 'zod';
 
 // loan
 export const need_type = string().min(1, 'wajib diisi');
@@ -71,6 +71,22 @@ export const price = preprocess(
   (value) => (value === '' || value === null ? null : Number(value)),
   number().min(1, 'Harga wajib diisi').nullable()
 );
+
+// document file
+export const pdfFileSchema = z
+  .instanceof(File, { message: 'Input harus berupa file' })
+  .refine((file) => file.type === 'application/pdf', 'File harus berupa PDF')
+  .refine((file) => file.size > 0, 'File tidak boleh kosong')
+  .refine((file) => file.size <= 500000, 'File tidak boleh lebih dari 500 KB');
+
+// review loan section
+export const review = string().min(1, 'wajib diisi');
+
+// bank officer at loan section
+export const bank = string().min(1, 'wajib diisi');
+export const product = string().min(1, 'wajib diisi');
+export const region = string().min(1, 'wajib diisi');
+export const bank_officer = string().min(1, 'wajib diisi');
 
 export const additionalInfoSchema = object({
   gender,
@@ -148,4 +164,34 @@ export const assetInfoSchema = object({
     villages,
     price,
   }),
+});
+
+export const uploadDocSchema = object({
+  applicant_id_card: pdfFileSchema,
+  spouse_id_card: pdfFileSchema,
+  family_card: pdfFileSchema,
+  marriage_divorce_certificate: pdfFileSchema,
+  applicant_tax_id: pdfFileSchema,
+  property_separation_deed: pdfFileSchema,
+  collateral_documents: pdfFileSchema,
+  bank_application_pdf: pdfFileSchema,
+  credit_agreement: pdfFileSchema,
+  ppjb_document: pdfFileSchema,
+  tax_report: pdfFileSchema,
+  pay_slip: pdfFileSchema,
+  account_statement: pdfFileSchema,
+  company_recommendation: pdfFileSchema,
+  additional_file_1: pdfFileSchema,
+  additional_file_2: pdfFileSchema,
+});
+
+export const reviewSchema = object({
+  review,
+});
+
+export const bankOfficerSchema = object({
+  bank,
+  product,
+  region,
+  bank_officer,
 });

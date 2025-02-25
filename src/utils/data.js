@@ -764,3 +764,10 @@ export const dataApplication = [
     tenor: '10 Tahun',
   },
 ];
+
+export const dataBankOfficer = {
+  bank: 'Mandiri',
+  product: 'Kredit Kepemilikan Rumah Secondary (KPR Secondary)',
+  region: 'Tidak Ada',
+  bank_officer: 'Tidak Ada',
+};

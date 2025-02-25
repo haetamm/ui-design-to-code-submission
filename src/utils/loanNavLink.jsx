@@ -1,11 +1,13 @@
 import AdditionalInfoSection from '../components/pages/loan/AdditionalInfoSection';
 import AddressSection from '../components/pages/loan/AddressSection';
 import AssetInfoSection from '../components/pages/loan/AssetInfoSection';
+import BankOfficerSection from '../components/pages/loan/BankOfficerSection';
 import CommingSoon from '../components/pages/loan/CommingSoon';
 import DocUploadForm from '../components/pages/loan/DocUploadForm';
 import EmploymentInfoSection from '../components/pages/loan/EmploymentInfoSection';
 import LoanSection from '../components/pages/loan/LoanSection';
 import ProductBankList from '../components/pages/loan/ProductBankList';
+import ReviewSection from '../components/pages/loan/ReviewSection';
 
 export const loanLink = [
   {
@@ -48,7 +50,7 @@ export const loanLink = [
     header: 'Review',
     title: 'Review',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <ReviewSection />,
   },
   {
     header: 'Pilihan Produk & Bank',
@@ -60,7 +62,7 @@ export const loanLink = [
     header: 'Bank Officer',
     title: 'Bank Officer',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <BankOfficerSection />,
   },
   {
     header: 'Surat Keterangan',

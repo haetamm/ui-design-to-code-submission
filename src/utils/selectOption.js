@@ -16,6 +16,10 @@ export const product_type_option = [
   { name: 'Kredit Kepemilikan Rakyat', value: 'Kredit kepemilikan Rakyat' },
   { name: 'Kredit Kepemilikan Pejabat', value: 'Kredit kepemilikan Pejabat' },
   { name: 'Kredit Kepemilikan Guru', value: 'Kredit kepemilikan Guru' },
+  {
+    name: 'Kredit Kepemilikan Rumah Secondary (KPR Secondary)',
+    value: 'Kredit Kepemilikan Rumah Secondary (KPR Secondary)',
+  },
 ];
 
 export const guarantee_option = [
@@ -162,6 +166,20 @@ export const length_of_residence_option = [
 ];
 
 export const relationship_family_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
+export const region_option = [
+  { name: 'Tidak Ada', value: 'Tidak Ada' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
+export const bank_officer_option = [
+  { name: 'Tidak Ada', value: 'Tidak Ada' },
   { name: 'loram ipsum1', value: 'loram ipsum1' },
   { name: 'loram ipsum2', value: 'loram ipsum2' },
   { name: 'loram ipsum3', value: 'loram ipsum3' },

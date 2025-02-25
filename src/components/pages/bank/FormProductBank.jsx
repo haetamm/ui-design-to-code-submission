@@ -133,7 +133,7 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                       decrementButtonIcon='pi pi-minus'
                       prefix='%'
                       min={0}
-                      className=''
+                      className='w-full'
                       inputClassName='h-[48px] text-center border-[1px] w-full'
                     />
                   )}
@@ -163,7 +163,7 @@ const FormProductBank = ({ data, onSubmit, setData }) => {
                         decrementButtonIcon='pi pi-minus'
                         prefix='%'
                         min={0}
-                        className=''
+                        className='w-full'
                         inputClassName='h-[48px] text-center border-[1px] w-full'
                       />
                     )}

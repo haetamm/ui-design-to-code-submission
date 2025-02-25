@@ -11,10 +11,10 @@ const CardDetail = ({ data, fields }) => {
         {fields.map(({ label, value, type }, index) => (
           <div
             key={index}
-            className='inline-block xs:flex w-full items-center mb-3 xs:mb-6 space-x-0 xs:space-x-2'
+            className='grid grid-cols-1 md:grid-cols-[30%_70%] space-x-0 md:space-x-2 w-full items-center mb-3 xs:mb-6'
           >
-            <div className='w-full xs:w-[20%] font-bold'>{label}</div>
-            <div className='w-full xs:w-[80%] mt-1 xs:mt-0'>
+            <div className='w-full  font-bold'>{label}</div>
+            <div className='w-full mt-1 xs:mt-0'>
               {type === 'textarea' && (
                 <InputTextarea
                   value={data[value]}

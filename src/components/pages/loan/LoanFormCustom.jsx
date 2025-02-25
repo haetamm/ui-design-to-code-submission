@@ -23,9 +23,9 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                     type === 'email') && (
                     <InputText
                       {...field}
-                      placeholder={placeholder}
-                      className='w-full border-[1px] p-[11px]'
                       type={type}
+                      className={`w-full border-[1px] p-[11px] ${errors[value] ? 'border-red-500' : ''}`}
+                      placeholder={`—${placeholder}—`}
                       value={field.value || ''}
                       onChange={(e) => field.onChange(e.target.value)}
                     />
@@ -33,22 +33,22 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                   {type === 'date' && (
                     <Calendar
                       {...field}
-                      showIcon
-                      placeholder='dd/mm/yyyy'
-                      className='w-full border-[1px] h-[48px] px-1.5 rounded-md'
+                      className={`${errors[value] ? 'border-red-500' : ''} w-full border-[1px] h-[48px] px-1.5 rounded-md`}
+                      placeholder={`—${placeholder}—`}
                       value={field.value || null}
                       onChange={(e) => field.onChange(e.value)}
+                      showIcon
                     />
                   )}
                   {type === 'textarea' && (
                     <InputTextarea
                       {...field}
-                      rows={5}
-                      cols={30}
-                      placeholder={placeholder}
-                      className='w-full border-[1px] p-3'
+                      className={`${errors[value] ? 'border-red-500' : ''} w-full border-[1px] p-3`}
+                      placeholder={`—${placeholder}—`}
                       value={field.value || ''}
                       onChange={(e) => field.onChange(e.target.value)}
+                      rows={6}
+                      cols={30}
                     />
                   )}
                   {type === 'select' && optionsMap[value] && (
@@ -57,8 +57,8 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                       options={optionsMap[value]}
                       optionLabel='name'
                       optionValue='value'
-                      placeholder={placeholder}
-                      className='w-full bg-white border-[1px]'
+                      placeholder={`—${placeholder}—`}
+                      className={`${errors[value] ? 'border-red-500' : ''} w-full bg-white border-[1px]`}
                       value={field.value || null}
                       onChange={(e) => field.onChange(e.value)}
                     />
@@ -80,7 +80,7 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
 
 LoanFormCustom.propTypes = {
   fields: PropTypes.array.isRequired,
-  optionsMap: PropTypes.object.isRequired,
+  optionsMap: PropTypes.object,
   gridClass: PropTypes.string.isRequired,
   control: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,

@@ -67,7 +67,7 @@ const FormContact = ({ data, onSubmit, setData }) => {
                 optionLabel='name'
                 optionValue='value'
                 placeholder={`--Pilih ${label}--`}
-                className='w-full bg-gray-200 border-[1px] h-[48px] focus-none'
+                className='w-full bg-white border-[1px]'
                 onChange={(e) => handleChange(value, e.value)}
               />
             )}

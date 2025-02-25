@@ -91,9 +91,9 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
         {title}
       </h2>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-2 md:p-6'>
-        {fields.map(({ label, value, type }) => (
+        {fields.map(({ label, value, type, placeholder }) => (
           <div key={value}>
-            <label className='block font-bold text-gray-700 mb-1'>
+            <label className='block font-bold text-gray-500 mb-1'>
               {label}
             </label>
             <Controller
@@ -106,7 +106,7 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
                       {...field}
                       type={type}
                       className={`w-full border-[1px] p-[11px] ${errors[namespace]?.[value] ? 'border-red-500' : ''}`}
-                      placeholder={label}
+                      placeholder={`${placeholder}—`}
                       value={field.value || ''}
                       onChange={(e) =>
                         handleChange(value, e.target.value, field.onChange)
@@ -116,7 +116,7 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
                   {type === 'select' && (
                     <select
                       {...field}
-                      className={`w-full bg-white border-[1px] h-[48px] px-2 rounded-md ${errors[namespace]?.[value] ? 'border-red-500' : ''}`}
+                      className={`w-full bg-white text-gray-500  border-[1px] h-[48px] px-2 rounded-md ${errors[namespace]?.[value] ? 'border-red-500' : ''}`}
                       value={
                         field.value
                           ? optionsMap[value]?.find(
@@ -129,7 +129,7 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
                       }
                       disabled={loading || !optionsMap[value]?.length}
                     >
-                      <option value=''>—Pilih {label}—</option>
+                      <option value=''>—{placeholder}—</option>
                       {optionsMap[value]?.map((option) => (
                         <option key={option.id} value={option.id}>
                           {loading ? 'Loading' : option.name}

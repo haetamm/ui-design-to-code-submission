@@ -200,38 +200,45 @@ export const productBankField = [
 export const uploadDocField = [
   {
     label: 'Fotokopi KTP Pemohon',
+    value: 'applicant_id_card',
     category: 'personal_data',
     placeholder: 'Upload Fotokopi KTP Pemohon',
   },
   {
     label: 'Fotokopi KTP Suami / Istri',
+    value: 'spouse_id_card',
     category: 'personal_data',
     placeholder: 'Upload Fotokopi KTP Suami / Istri',
   },
   {
     label: 'Fotokopi Kartu Keluarga',
+    value: 'family_card',
     category: 'personal_data',
     placeholder: 'Upload Fotokopi Kartu Keluarga',
   },
   {
     label: 'Fotokopi Akta Nikah/Cerai',
+    value: 'marriage_divorce_certificate',
     category: 'personal_data',
     placeholder: 'Upload Fotokopi Akta Nikah/Cerai',
   },
   {
     label: 'Fotokopi NPWP Pemohon',
+    value: 'applicant_tax_id',
     category: 'personal_data',
     placeholder: 'Upload Fotokopi NPWP Pemohon',
   },
   {
     label:
       'Akta Pisah Harta Notaril dan didaftarkan ke KUA atau catatan sipil (jika ada)',
+    value: 'property_separation_deed',
     category: 'personal_data',
     placeholder:
       'Upload Akta Pisah Harta Notaril dan didaftarkan ke KUA atau catatan sipil (jika ada)',
   },
   {
     label: 'Fotokopii Dokumen Jaminan: SHM/SHGB, IMB, dan PBB tahun terakhir',
+    value: 'collateral_documents',
     category: 'warranty_data',
     placeholder:
       'Upload Fotokopii Dokumen Jaminan: SHM/SHGB, IMB, dan PBB tahun terakhir',
@@ -239,47 +246,56 @@ export const uploadDocField = [
   {
     label:
       'Scan Signed PDF Surat Pengajuan Bank yang Dituju, CPA, & Keterangan',
+    value: 'bank_application_pdf',
     category: 'warranty_data',
     placeholder:
       'Upload Scan Signed PDF Surat Pengajuan Bank yang Dituju, CPA, & Keterangan',
   },
   {
     label: 'Fotokopi Perjanjian Kredit (Jika Over Kredit)',
+    value: 'credit_agreement',
     category: 'warranty_data',
     placeholder: 'Upload Fotokopi Perjanjian Kredit (Jika Over Kredit)',
   },
   {
     label: 'Dokumen PPJB (Jika Developer)',
+    value: 'ppjb_document',
     category: 'warranty_data',
     placeholder: 'Dokumen PPJB (Jika Developer)',
   },
   {
     label: 'Fotokopi SPT/PPh21',
+    value: 'tax_report',
     category: 'financial_data',
     placeholder: 'Upload Fotokopi SPT/PPh21',
   },
   {
     label: 'Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
+    value: 'pay_slip',
     category: 'financial_data',
     placeholder: 'Upload Asli Slip Gaji / Surat Keterangan Penghasilan 1 Bulan',
   },
   {
     label: 'Fotokopi R/K atau tabungan 1 Bulan Terakhir',
+    value: 'account_statement',
     category: 'financial_data',
     placeholder: 'Upload Fotokopi R/K atau tabungan 1 Bulan Terakhir',
   },
   {
     label: 'Surat Keterangan/Rekomendasi Perusahaan',
+    value: 'company_recommendation',
     category: 'financial_data',
     placeholder: 'Upload Surat Keterangan/Rekomendasi Perusahaan',
   },
   {
     label: 'File Kekurangan 1',
+    value: 'additional_file_1',
     category: 'additional_data',
     placeholder: 'File Kekurangan 1',
   },
   {
     label: 'File Kekurangan 2',
+    value: 'additional_file_2',
     category: 'additional_data',
     placeholder: 'File Kekurangan 2',
   },
@@ -488,31 +504,37 @@ export const addressField = [
     label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
     value: 'street',
     type: 'text',
+    placeholder: 'Isi Alamat Lengkap',
   },
   {
     label: 'Kode Pos',
     value: 'postal_code',
     type: 'number',
+    placeholder: 'Isi Kode Pos',
   },
   {
     label: 'Provinsi',
     value: 'province',
     type: 'select',
+    placeholder: 'Pilih Provinsi',
   },
   {
     label: 'Kab./Kota',
     value: 'regencies',
     type: 'select',
+    placeholder: 'Pilih Kab./Kota',
   },
   {
     label: 'Kecamatan',
     value: 'district',
     type: 'select',
+    placeholder: 'Pilih Kecamatan',
   },
   {
     label: 'Kelurahan',
     value: 'villages',
     type: 'select',
+    placeholder: 'Pilih Desa/Kel.',
   },
 ];
 
@@ -521,36 +543,43 @@ export const assetsInfoField = [
     label: 'Alamat Lengkap (Jalan, Komplek, RT/RW)',
     value: 'street',
     type: 'text',
+    placeholder: 'Isi Alamat Lengkap',
   },
   {
     label: 'Kode Pos',
     value: 'postal_code',
     type: 'number',
+    placeholder: 'Isi Kode Pos',
   },
   {
     label: 'Provinsi',
     value: 'province',
     type: 'select',
+    placeholder: 'Pilih Provinsi',
   },
   {
     label: 'Kab./Kota',
     value: 'regencies',
     type: 'select',
+    placeholder: 'Pilih Kab./Kota',
   },
   {
     label: 'Kecamatan',
     value: 'district',
     type: 'select',
+    placeholder: 'Pilih Kecamatan',
   },
   {
     label: 'Kelurahan',
     value: 'villages',
     type: 'select',
+    placeholder: 'Pilih Desa/Kel.',
   },
   {
     label: 'Harga/Nilai Jaminan',
     value: 'price',
     type: 'number',
+    placeholder: 'Isi Harga',
   },
 ];
 
@@ -664,5 +693,41 @@ export const additionalInfoField = [
     value: 'monthly_salary_and_allowance',
     type: 'number',
     placeholder: 'Isi Total Pendapatan Gaji dan Tunjangan',
+  },
+];
+
+export const reviewField = [
+  {
+    label: 'Review oleh Loan Advisior',
+    value: 'review',
+    type: 'textarea',
+    placeholder: 'Tulis Review',
+  },
+];
+
+export const bankOfficerField = [
+  {
+    label: 'Bank',
+    value: 'bank',
+    type: 'select',
+    placeholder: 'Pilih Bank',
+  },
+  {
+    label: 'Product',
+    value: 'product',
+    type: 'select',
+    placeholder: 'Pilih Produk',
+  },
+  {
+    label: 'Wilayah Bank',
+    value: 'region',
+    type: 'select',
+    placeholder: 'Pilih Wilayah Bank',
+  },
+  {
+    label: 'Bank Officer',
+    value: 'bank_officer',
+    type: 'select',
+    placeholder: 'Pilih Bank Officer',
   },
 ];
