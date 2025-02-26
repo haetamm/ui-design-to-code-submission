@@ -45,7 +45,7 @@ const EmploymentInfoSection = () => {
           control={control}
           errors={errors}
         />
-        <div className='flex items-center justify-end space-x-1 m-6 pb-6'>
+        <div className='flex items-center justify-end space-x-1 m-7 pb-7'>
           <Button
             onClick={handleSubmit}
             label='Save'

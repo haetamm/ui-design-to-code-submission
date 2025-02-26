@@ -1,5 +1,6 @@
 import AdditionalInfoSection from '../components/pages/loan/AdditionalInfoSection';
 import AddressSection from '../components/pages/loan/AddressSection';
+import ApplicationLetter from '../components/pages/loan/ApplicationLetter';
 import AssetInfoSection from '../components/pages/loan/AssetInfoSection';
 import BankOfficerSection from '../components/pages/loan/BankOfficerSection';
 import CommingSoon from '../components/pages/loan/CommingSoon';
@@ -68,7 +69,7 @@ export const loanLink = [
     header: 'Surat Keterangan',
     title: 'Surat Keterangan',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <ApplicationLetter />,
   },
   {
     header: 'PDF CPA',

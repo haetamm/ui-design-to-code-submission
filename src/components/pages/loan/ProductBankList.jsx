@@ -19,7 +19,7 @@ const ProductBankList = () => {
   });
   return (
     <>
-      <div className='bg-white px-3 py-5 lg:p-6 h-full mb-4 text-black rounded-md'>
+      <div className='bg-white px-3 py-5 lg:p-7 h-full mb-4 text-black rounded-md'>
         <div className='inline xs:flex space-x-0 xs:space-x-3 items-center'>
           <IconField iconPosition='left' className='w-full border-2 rounded-md'>
             <InputText
@@ -47,7 +47,7 @@ const ProductBankList = () => {
               Send to Pool (Pilih opsi ini jika Anda ingin mengirim leads ke
               semua bank rekanan Loan Market)
             </p>
-            <FaQuestionCircle className='h-5 w-5 text-[#1cabe6]' />
+            <FaQuestionCircle className='h-5 w-5 text-[#1cabe6] shrink-0' />
           </div>
         </div>
         <div className='flex justify-center'>

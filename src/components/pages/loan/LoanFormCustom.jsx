@@ -8,10 +8,10 @@ import { Controller } from 'react-hook-form';
 
 const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
   return (
-    <div className='px-3 pt-3 md:px-6 md:pt-6'>
+    <div className='px-3 pt-3 md:px-7 md:pt-7'>
       {fields.map(({ label, value, type, placeholder }, index) => (
         <div key={index} className={`${gridClass} mb-3 xs:mb-6 items-center`}>
-          <div className='font-bold'>{label}</div>
+          <div className='font-bold mb-1'>{label}</div>
           <div className='mt-1 xs:mt-0'>
             <Controller
               name={value}

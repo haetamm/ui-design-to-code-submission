@@ -106,7 +106,7 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
                       {...field}
                       type={type}
                       className={`w-full border-[1px] p-[11px] ${errors[namespace]?.[value] ? 'border-red-500' : ''}`}
-                      placeholder={`${placeholder}—`}
+                      placeholder={`—${placeholder}—`}
                       value={field.value || ''}
                       onChange={(e) =>
                         handleChange(value, e.target.value, field.onChange)
