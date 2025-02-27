@@ -65,10 +65,7 @@ const ProductFilterBar = ({
 ProductFilterBar.propTypes = {
   searchTerm: PropTypes.string.isRequired,
   setSearchTerm: PropTypes.func.isRequired,
-  selectedProductType: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  selectedProductType: PropTypes.object,
   setSelectedProductType: PropTypes.func.isRequired,
 };
 

@@ -25,7 +25,7 @@ const FormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                       type={type}
                       className={`${errors[value] ? 'border-red-500' : ''} w-full border-[1px] p-[11px] `}
                       placeholder={`—${placeholder}—`}
-                      value={field.value || ''}
+                      value={field.value}
                       onChange={(e) => field.onChange(e.target.value)}
                     />
                   )}

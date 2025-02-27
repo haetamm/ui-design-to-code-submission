@@ -88,18 +88,6 @@ export const product = string().min(1, 'wajib diisi');
 export const region = string().min(1, 'wajib diisi');
 export const bank_officer = string().min(1, 'wajib diisi');
 
-// contact field
-export const name = string().min(1, 'wajib diisi');
-export const contact_type = string().min(1, 'wajib diisi');
-export const position = string().min(1, 'wajib diisi');
-export const employment_type = string().min(1, 'wajib diisi');
-export const company = string().min(1, 'wajib diisi');
-export const email = string()
-  .min(1, 'wajib diisi')
-  .email('format email invalid');
-export const contact_category = string().min(1, 'wajib diisi');
-export const nik = string().min(1, 'wajib diisi');
-
 export const additionalInfoSchema = object({
   gender,
   birth_date,
@@ -208,6 +196,18 @@ export const bankOfficerSchema = object({
   bank_officer,
 });
 
+// contact field
+export const name = string().min(1, 'wajib diisi');
+export const contact_type = string().min(1, 'wajib diisi');
+export const position = string().min(1, 'wajib diisi');
+export const employment_type = string().min(1, 'wajib diisi');
+export const company = string().min(1, 'wajib diisi');
+export const email = string()
+  .min(1, 'wajib diisi')
+  .email('format email invalid');
+export const contact_category = string().min(1, 'wajib diisi');
+export const nik = string().min(1, 'wajib diisi');
+
 export const contactSchema = object({
   contact_type,
   name,
@@ -220,4 +220,67 @@ export const contactSchema = object({
   email,
   phone,
   nik,
+});
+
+// product developer field
+export const name_product = string().min(1, 'wajib diisi');
+export const type_product = string().min(1, 'wajib diisi');
+export const name_dev = string().min(1, 'wajib diisi');
+export const type_property = string().min(1, 'wajib diisi');
+export const unit = preprocess(
+  (value) => (value === '' || value === null ? null : Number(value)),
+  number().min(1, 'Harga wajib diisi').nullable()
+);
+
+export const productDeveloperSchema = object({
+  name_dev,
+  name_product,
+  price,
+  type_product,
+  type_property,
+  unit,
+  address,
+});
+
+// product bank field
+export const bank_name = string().min(1, 'wajib diisi');
+export const product_type = string().min(1, 'wajib diisi');
+export const guarantee = array(z.string()).min(1, 'wajib diisi');
+export const target_market = array(z.string()).min(1, 'wajib diisi');
+export const description = string().min(1, 'wajib diisi');
+export const promotial_date = array(z.date()).nullable().optional();
+export const commision = number().min(0, 'tidak boleh negatif').optional();
+export const appraisal = number().min(0, 'tidak boleh negatif').optional();
+export const floating = number().min(0, 'tidak boleh negatif').optional();
+export const loan_to_value = number().min(0, 'tidak boleh negatif').optional();
+export const penalty_fee = number().min(0, 'tidak boleh negatif').optional();
+export const interest_rate = number().min(0, 'tidak boleh negatif').optional();
+export const fix_rate = number().min(0, 'tidak boleh negatif').optional();
+export const year_fix_rate = number()
+  .min(0, 'tidak boleh negatif')
+  .nullable()
+  .optional();
+export const max_tenor = number()
+  .min(0, 'tidak boleh negatif')
+  .nullable()
+  .optional();
+export const url = string().optional();
+
+export const productBankSchema = object({
+  bank_name,
+  product_type,
+  guarantee,
+  target_market,
+  description,
+  promotial_date,
+  commision,
+  appraisal,
+  floating,
+  loan_to_value,
+  penalty_fee,
+  interest_rate,
+  fix_rate,
+  year_fix_rate,
+  max_tenor,
+  url,
 });

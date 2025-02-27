@@ -87,25 +87,26 @@ export const detailDeveloperField = [
     value: 'name_product',
     type: 'text',
   },
+
   {
     label: 'Type Produk',
-    value: 'type',
+    value: 'type_product',
     type: 'text',
   },
   {
     label: 'Harga Unit',
     value: 'price',
-    type: 'text',
+    type: 'number',
   },
   {
     label: 'Type Property',
-    value: 'type_product',
+    value: 'type_property',
     type: 'text',
   },
   {
     label: 'Unit Property',
     value: 'unit',
-    type: 'text',
+    type: 'number',
   },
   {
     label: 'Address',

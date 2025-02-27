@@ -13,8 +13,10 @@ import { urlPage } from '../../../utils/constans';
 
 import { formatValue, scrollTop } from '../../../utils/helper';
 import ProductFilterBar from './ProductFilterBar';
+import { useSidebar } from '../../../store/sidebar';
 
 const CardProductBank = () => {
+  const { isOpen } = useSidebar();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProductType, setSelectedProductType] = useState({
     name: 'Semua Tipe',
@@ -54,8 +56,10 @@ const CardProductBank = () => {
                 className='w-[200px] h-[58px] object-contain'
               />
 
-              <div className='flex items-center justify-center w-full min-w-[330px] space-x-2 mt-5 xs:mt-6 lg:mt-0'>
-                <div className='flex flex-col items-center justify-center border-r-2 w-1/2'>
+              <div className='flex items-center justify-center w-full min-w-[330px] mt-5 xs:mt-6 lg:mt-0'>
+                <div
+                  className={`${isOpen ? 'w-[calc(55%-55px)] pr-2' : 'w-1/2'} flex flex-col items-center justify-center border-r-2`}
+                >
                   <p className='text-md text-gray-400 font-bold mb-1 text-center'>
                     Rating : {data.rating}
                   </p>
@@ -76,7 +80,9 @@ const CardProductBank = () => {
                   </p>
                 </div>
 
-                <div className='flex flex-col items-center justify-center w-1/2'>
+                <div
+                  className={`${isOpen ? 'w-[calc(55%-55px)]' : 'w-1/2'} flex flex-col items-center justify-center`}
+                >
                   <p className='text-md text-gray-400 font-bold mb-1 text-center'>
                     User :
                   </p>
