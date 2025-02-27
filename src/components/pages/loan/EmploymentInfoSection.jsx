@@ -1,5 +1,4 @@
 import React from 'react';
-import LoanFormCustom from './LoanFormCustom';
 import { employmentInfoField } from '../../../utils/fieldInput';
 import {
   business_field_option as business_field,
@@ -12,6 +11,7 @@ import { Button } from 'primereact/button';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { employmentInfoSchema } from '../../../utils/validation';
+import FormCustom from '../../layouts/FormCustom';
 
 const EmploymentInfoSection = () => {
   const {
@@ -38,10 +38,10 @@ const EmploymentInfoSection = () => {
   return (
     <div className='w-full bg-white h-full mb-4 text-black rounded-md'>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <LoanFormCustom
+        <FormCustom
           fields={employmentInfoField}
           optionsMap={optionsMap}
-          gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] space-x-0 xs:space-x-2'
+          gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 xs:space-x-2'
           control={control}
           errors={errors}
         />
@@ -50,7 +50,7 @@ const EmploymentInfoSection = () => {
             onClick={handleSubmit}
             label='Save'
             icon='pi pi-save'
-            size='small'
+            size='large'
             className=' p-2.5 bg-[#1cabe6] text-white'
           />
         </div>

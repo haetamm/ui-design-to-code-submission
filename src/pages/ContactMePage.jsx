@@ -6,12 +6,17 @@ import { dataContact } from '../utils/data';
 import CardContact from '../components/pages/contact/CardContact';
 import ButtonBottom from '../components/layouts/ButtonBottom';
 import ContactFilterBar from '../components/pages/contact/ContactFilterBar';
+import { Helmet } from 'react-helmet-async';
 
 const ContactMePage = () => {
   const contact = dataContact.filter((contact) => contact.type === 'my');
 
   return (
     <>
+      <Helmet>
+        <title>Contact | Loan Market</title>
+        <meta name='description' content='Contact page' />
+      </Helmet>
       <div className='mb-14 mt-[68px] md:mb-0'>
         <ContactFilterBar />
         <div className=' px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-6 xs:pt-0 w-full'>
@@ -27,7 +32,7 @@ const ContactMePage = () => {
           <Button
             label='Category'
             icon='pi pi-plus'
-            size='small'
+            size='large'
             className=' w-full p-2.5 bg-[#1cabe6] text-white'
           />
         </Link>
@@ -35,7 +40,7 @@ const ContactMePage = () => {
           <Button
             label='Contact'
             icon='pi pi-plus'
-            size='small'
+            size='large'
             className=' w-full p-2.5 bg-[#1cabe6] text-white'
           />
         </Link>

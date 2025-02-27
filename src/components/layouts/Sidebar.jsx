@@ -1,11 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
-import { navItems } from '../../utils/navLink';
+import {
+  navItems,
+  subNavItemProduct,
+  subNavItemWhatsapp,
+} from '../../utils/link';
 import { LuAlignJustify } from 'react-icons/lu';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { BsPiggyBank } from 'react-icons/bs';
-import { SiStarlingbank } from 'react-icons/si';
-import { TbCategory2, TbReport } from 'react-icons/tb';
-import { urlPage } from '../../utils/constans';
 import { useState } from 'react';
 import { useSidebar } from '../../store/sidebar';
 
@@ -22,34 +22,6 @@ const Sidebar = () => {
   };
 
   const isActive = (path) => location.pathname.startsWith(path);
-
-  // Sub-nav item untuk default
-  const subNavItemDefault = [
-    {
-      to: urlPage.PRODUCT,
-      icon: <BsPiggyBank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-      label: 'Bank Product',
-    },
-    {
-      to: '#',
-      icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-      label: 'Product',
-    },
-    {
-      to: '#',
-      icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-      label: 'Category Product',
-    },
-  ];
-
-  // Sub-nav item khusus untuk 'Whatsapp'
-  const subNavItemWhatsapp = [
-    {
-      to: '#',
-      icon: <TbReport className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-      label: 'Report',
-    },
-  ];
 
   return (
     isOpen && (
@@ -98,10 +70,10 @@ const Sidebar = () => {
                 </div>
               </Link>
               {(item.label === 'Product' || item.label === 'Whatsapp') &&
-                dropdowns[item.label] && // Pastikan hanya dropdown yang sesuai yang terbuka
+                dropdowns[item.label] &&
                 (item.label === 'Whatsapp'
                   ? subNavItemWhatsapp
-                  : subNavItemDefault
+                  : subNavItemProduct
                 ).map((link, index) => (
                   <div
                     key={index}

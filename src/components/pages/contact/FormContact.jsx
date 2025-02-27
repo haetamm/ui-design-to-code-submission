@@ -1,106 +1,49 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Dropdown } from 'primereact/dropdown';
-import { Calendar } from 'primereact/calendar';
-import { Button } from 'primereact/button';
-import { InputText } from 'primereact/inputtext';
 import { contactField } from '../../../utils/fieldInput';
 import {
-  category_option as category,
+  contact_category_option as contact_category,
   contact_type_option as contact_type,
   employment_type_option as employment_type,
   gender_option as gender,
 } from '../../../utils/selectOption';
+import { Button } from 'primereact/button';
+import FormCustom from '../../layouts/FormCustom';
 
-const FormContact = ({ data, onSubmit, setData }) => {
-  const [formData, setFormData] = useState({});
-
-  useEffect(() => {
-    if (data) {
-      setFormData(data);
-    }
-  }, [data]);
-
+const FormContact = ({ control, errors, id }) => {
   const optionsMap = {
     contact_type,
     gender,
     employment_type,
-    category,
-  };
-
-  const handleChange = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    setData((prev) => ({ ...prev, [field]: value }));
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSubmit(formData);
+    contact_category,
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className='bg-white px-3 py-4 xs:p-6 md:p-8 rounded-md'
-    >
-      {contactField.map(({ label, value, type }, index) => (
-        <div
-          key={index}
-          className='inline-block xs:flex w-full items-center mb-3 xs:mb-6 space-x-0 xs:space-x-2'
-        >
-          <div className='w-full xs:w-[20%] font-bold'>{label}</div>
-          <div className='w-full xs:w-[80%] mt-1 xs:mt-0'>
-            {type !== 'select' && type !== 'date' && (
-              <InputText
-                placeholder={`--Isi ${label}--`}
-                className='w-full border-[1px] p-[11px]'
-                type={type}
-                onChange={(e) => handleChange(value, e.target.value)}
-                value={formData[value] || ''}
-              />
-            )}
-
-            {type === 'select' && optionsMap[value] && (
-              <Dropdown
-                value={formData[value] || null}
-                options={optionsMap[value]}
-                optionLabel='name'
-                optionValue='value'
-                placeholder={`--Pilih ${label}--`}
-                className='w-full bg-white border-[1px]'
-                onChange={(e) => handleChange(value, e.value)}
-              />
-            )}
-
-            {type === 'date' && (
-              <Calendar
-                showIcon
-                placeholder='dd/mm/yyyy'
-                className='w-full border-[1px] h-[48px] px-1.5 rounded-md'
-                value={formData[value] || null}
-                onChange={(e) => handleChange(value, e.value)}
-              />
-            )}
-          </div>
-        </div>
-      ))}
-      <div className='hidden md:flex items-center justify-end space-x-1 mt-10'>
+    <div className='bg-white pb-3 rounded-md'>
+      <FormCustom
+        fields={contactField}
+        optionsMap={optionsMap}
+        gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 md:space-x-2'
+        control={control}
+        errors={errors}
+      />
+      <div className='hidden md:flex items-center justify-end space-x-1 md:mx-7 md:mb-3'>
         <Button
-          label={data ? 'Update' : 'Simpan'}
+          label={id ? 'Update' : 'Simpan'}
           icon='pi pi-save'
           size='large'
-          className={`${data ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} p-2.5 text-white`}
+          className={`${id ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} p-2.5 text-white`}
           type='submit'
         />
       </div>
-    </form>
+    </div>
   );
 };
 
 FormContact.propTypes = {
-  data: PropTypes.object,
-  onSubmit: PropTypes.func.isRequired,
-  setData: PropTypes.func.isRequired,
+  control: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+  id: PropTypes.string,
 };
 
 export default FormContact;

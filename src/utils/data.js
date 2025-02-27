@@ -522,7 +522,7 @@ export const dataContact = [
     created_at: 'February 22, 2025',
     employment_type: 'Wiraswasta',
     company: 'PT ABC',
-    category: 'Hot leads',
+    contact_category: 'Hot leads',
   },
   {
     id: 2,
@@ -539,7 +539,7 @@ export const dataContact = [
     created_at: 'June 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
   {
     id: 3,
@@ -556,7 +556,7 @@ export const dataContact = [
     created_at: 'December 12, 2019',
     employment_type: 'Wiraswasta',
     company: 'PT KOCAK GEMING',
-    category: 'Dev partner',
+    contact_category: 'Dev partner',
   },
   {
     id: 4,
@@ -573,7 +573,7 @@ export const dataContact = [
     created_at: 'December 14, 2019',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
   {
     id: 5,
@@ -590,7 +590,7 @@ export const dataContact = [
     created_at: 'June 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Cold leads',
+    contact_category: 'Cold leads',
   },
   {
     id: 6,
@@ -607,7 +607,7 @@ export const dataContact = [
     created_at: 'June 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
   {
     id: 7,
@@ -624,7 +624,7 @@ export const dataContact = [
     created_at: 'December 17, 2009',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
   {
     id: 8,
@@ -641,7 +641,7 @@ export const dataContact = [
     created_at: 'December 12, 2019',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
   {
     id: 9,
@@ -658,7 +658,7 @@ export const dataContact = [
     created_at: 'June 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Cold leads',
+    contact_category: 'Cold leads',
   },
   {
     id: 10,
@@ -675,7 +675,7 @@ export const dataContact = [
     created_at: 'June 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
   {
     id: 11,
@@ -692,7 +692,7 @@ export const dataContact = [
     created_at: 'June 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Dev partner',
+    contact_category: 'Dev partner',
   },
   {
     id: 12,
@@ -709,7 +709,7 @@ export const dataContact = [
     created_at: 'May 19, 2034',
     employment_type: 'Profesional',
     company: 'PT KOCAK GEMING',
-    category: 'Warn leads',
+    contact_category: 'Warn leads',
   },
 ];
 

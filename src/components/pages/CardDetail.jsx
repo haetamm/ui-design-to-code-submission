@@ -11,7 +11,7 @@ const CardDetail = ({ data, fields }) => {
         {fields.map(({ label, value, type }, index) => (
           <div
             key={index}
-            className='grid grid-cols-1 md:grid-cols-[30%_70%] space-x-0 md:space-x-2 w-full items-center mb-3 xs:mb-6'
+            className='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 md:space-x-2 w-full items-center mb-3 xs:mb-6'
           >
             <div className='w-full  font-bold'>{label}</div>
             <div className='w-full mt-1 xs:mt-0'>
@@ -40,7 +40,7 @@ const CardDetail = ({ data, fields }) => {
 };
 
 CardDetail.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.object.isRequired,
   fields: PropTypes.array.isRequired,
 };
 

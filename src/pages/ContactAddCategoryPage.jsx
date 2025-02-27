@@ -5,10 +5,15 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import CardCategory from '../components/pages/contact/CardCategory';
 import ButtonBottom from '../components/layouts/ButtonBottom';
+import { Helmet } from 'react-helmet-async';
 
 const ContactAddCategoryPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Add Contact Category | Loan Market</title>
+        <meta name='description' content='Add Contact Category page' />
+      </Helmet>
       <div className='mb-20 mt-[68px] md:mb-0'>
         <div className='p-3 px-3 md:px-3 lg:px-4 xl:px-6 py-3 w-full'>
           <div className='inline-block md:flex w-full space-x-0 md:space-x-3 justify-between'>

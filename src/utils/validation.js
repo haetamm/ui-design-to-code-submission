@@ -88,6 +88,18 @@ export const product = string().min(1, 'wajib diisi');
 export const region = string().min(1, 'wajib diisi');
 export const bank_officer = string().min(1, 'wajib diisi');
 
+// contact field
+export const name = string().min(1, 'wajib diisi');
+export const contact_type = string().min(1, 'wajib diisi');
+export const position = string().min(1, 'wajib diisi');
+export const employment_type = string().min(1, 'wajib diisi');
+export const company = string().min(1, 'wajib diisi');
+export const email = string()
+  .min(1, 'wajib diisi')
+  .email('format email invalid');
+export const contact_category = string().min(1, 'wajib diisi');
+export const nik = string().min(1, 'wajib diisi');
+
 export const additionalInfoSchema = object({
   gender,
   birth_date,
@@ -194,4 +206,18 @@ export const bankOfficerSchema = object({
   product,
   region,
   bank_officer,
+});
+
+export const contactSchema = object({
+  contact_type,
+  name,
+  gender,
+  birth_date,
+  position,
+  employment_type,
+  company,
+  contact_category,
+  email,
+  phone,
+  nik,
 });

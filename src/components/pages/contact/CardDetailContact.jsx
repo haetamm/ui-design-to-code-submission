@@ -51,13 +51,13 @@ const CardDetailContact = ({ data }) => {
           <Button
             label='Share'
             icon='pi pi-share-alt'
-            size='normal'
+            size='large'
             className=' w-full p-2.5 bg-blue-600 text-white'
           />
           <Button
             label='Delete'
             icon='pi pi-trash'
-            size='normal'
+            size='large'
             className=' w-full p-2.5 bg-red-500 text-white'
           />
         </div>
@@ -65,7 +65,7 @@ const CardDetailContact = ({ data }) => {
           <Button
             label='Edit Contact'
             icon='pi pi-pen-to-square'
-            size='normal'
+            size='large'
             className=' w-full p-2.5 bg-[#0c2f3e] text-white mt-2'
           />
         </Link>

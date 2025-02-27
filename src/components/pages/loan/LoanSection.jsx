@@ -8,11 +8,11 @@ import {
   deposit_certificate_name_option as deposit_certificate_name,
   deposit_renewal_option as deposit_renewal,
 } from '../../../utils/selectOption';
-import LoanFormCustom from './LoanFormCustom';
 import { Button } from 'primereact/button';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loanSchema } from '../../../utils/validation';
+import FormCustom from '../../layouts/FormCustom';
 
 const LoanSection = () => {
   const {
@@ -41,10 +41,10 @@ const LoanSection = () => {
     <>
       <div className='w-full bg-white h-full mb-4 text-black rounded-md'>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <LoanFormCustom
+          <FormCustom
             fields={loanField}
             optionsMap={optionsMap}
-            gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] space-x-0 xs:space-x-2'
+            gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 md:space-x-2'
             control={control}
             errors={errors}
           />
@@ -53,7 +53,7 @@ const LoanSection = () => {
               onClick={handleSubmit}
               label='Save'
               icon='pi pi-save'
-              size='small'
+              size='large'
               className=' p-2.5 bg-[#1cabe6] text-white'
             />
           </div>

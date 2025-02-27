@@ -168,3 +168,29 @@ export const subNavItem = [
     label: 'Report',
   },
 ];
+
+export const subNavItemProduct = [
+  {
+    to: urlPage.PRODUCT,
+    icon: <BsPiggyBank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Bank Product',
+  },
+  {
+    to: '#',
+    icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Product',
+  },
+  {
+    to: '#',
+    icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Category Product',
+  },
+];
+
+export const subNavItemWhatsapp = [
+  {
+    to: '#',
+    icon: <TbReport className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    label: 'Report',
+  },
+];

@@ -24,7 +24,7 @@ const BankPage = () => {
               onClick={scrollTop}
               label='Tambah Produk'
               icon='pi pi-plus'
-              size='small'
+              size='large'
               className=' w-full p-2.5 bg-[#1cabe6] text-white'
             />
           </Link>

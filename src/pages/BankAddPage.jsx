@@ -27,8 +27,8 @@ const BankAddPage = () => {
         <Button
           onClick={() => handleSubmit(data)}
           label='Tambah Produk'
-          icon='pi pi-plus'
-          size='small'
+          icon='pi pi-save'
+          size='large'
           className=' w-full p-2.5 bg-[#1cabe6] text-white'
         />
       </ButtonBottom>

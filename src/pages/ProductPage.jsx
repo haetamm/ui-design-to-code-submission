@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { productLink } from '../utils/navLink';
+import { productLink } from '../utils/link';
 import NavPage from '../components/layouts/NavPage';
 
 const ProductPage = () => {

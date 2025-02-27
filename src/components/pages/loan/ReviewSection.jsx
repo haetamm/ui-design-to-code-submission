@@ -2,9 +2,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from 'primereact/button';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import LoanFormCustom from './LoanFormCustom';
 import { reviewField } from '../../../utils/fieldInput';
 import { reviewSchema } from '../../../utils/validation';
+import FormCustom from '../../layouts/FormCustom';
 
 const ReviewSection = () => {
   const {
@@ -23,7 +23,7 @@ const ReviewSection = () => {
     <>
       <div className='w-full  bg-white h-full mb-4 text-black rounded-md'>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <LoanFormCustom
+          <FormCustom
             fields={reviewField}
             gridClass='grid grid-cols-1'
             control={control}
@@ -34,7 +34,7 @@ const ReviewSection = () => {
               type='submit'
               label='Save'
               icon='pi pi-save'
-              size='small'
+              size='large'
               className='p-2.5 bg-[#1cabe6] text-white'
             />
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cardItems } from '../../../utils/navLink';
+import { cardItems } from '../../../utils/link';
 
 const CardMenu = () => {
   return (

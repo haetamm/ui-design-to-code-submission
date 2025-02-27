@@ -9,6 +9,7 @@ import EmploymentInfoSection from '../components/pages/loan/EmploymentInfoSectio
 import LoanSection from '../components/pages/loan/LoanSection';
 import ProductBankList from '../components/pages/loan/ProductBankList';
 import ReviewSection from '../components/pages/loan/ReviewSection';
+import SummarySection from '../components/pages/loan/SummarySection';
 
 export const loanLink = [
   {
@@ -81,6 +82,6 @@ export const loanLink = [
     header: 'Summary',
     title: 'Summary',
     subtitle: '',
-    content: <CommingSoon />,
+    content: <SummarySection />,
   },
 ];

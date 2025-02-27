@@ -13,7 +13,7 @@ const CardHeaderApplication = ({ name, link }) => {
             <Button
               label={`${name}`}
               icon='pi pi-plus'
-              size='small'
+              size='large'
               className='xs:w-[200px] p-2.5 bg-white text-black '
             />
           </Link>

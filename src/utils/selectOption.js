@@ -60,7 +60,7 @@ export const employment_type_option = [
   { name: 'Pegawai Pemerintahan (PNS/TNI/POLRI)', value: 'asn' },
 ];
 
-export const category_option = [
+export const contact_category_option = [
   { name: 'Cold leads', value: 'Cold leads' },
   { name: 'Warm leads', value: 'Warn leads' },
   { name: 'Hot leads', value: 'Hot leads' },

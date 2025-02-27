@@ -3,7 +3,6 @@ import CardDetail from '../CardDetail';
 import { dataBankOfficer } from '../../../utils/data';
 import { bankOfficerField } from '../../../utils/fieldInput';
 import { Button } from 'primereact/button';
-import LoanFormCustom from './LoanFormCustom';
 import {
   bank_officer_option as bank_officer,
   bank_option as bank,
@@ -13,6 +12,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { bankOfficerSchema } from '../../../utils/validation';
+import FormCustom from '../../layouts/FormCustom';
 
 const BankOfficerSection = () => {
   const [edit, setEdit] = useState(true);
@@ -71,10 +71,10 @@ const BankOfficerSection = () => {
             <CardDetail data={dataBankOfficer} fields={bankOfficerField} />
           )}
           {!edit && (
-            <LoanFormCustom
+            <FormCustom
               fields={bankOfficerField}
               optionsMap={optionsMap}
-              gridClass='grid grid-cols-1 md:grid-cols-[30%_70%] space-x-0 md:space-x-2'
+              gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 md:space-x-2'
               control={control}
               errors={errors}
             />
@@ -85,7 +85,7 @@ const BankOfficerSection = () => {
                 type='submit'
                 label='Save'
                 icon='pi pi-save'
-                size='small'
+                size='large'
                 className=' p-2.5 bg-[#1cabe6] text-white'
               />
             </div>

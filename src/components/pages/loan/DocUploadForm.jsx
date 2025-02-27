@@ -28,7 +28,6 @@ const DocUploadForm = () => {
 
   const onSubmit = (data) => {
     console.log('FormData Submitted:', data);
-    // Add logic to upload files (e.g., FormData to server)
   };
 
   const groupedFields = uploadDocField.reduce((acc, field) => {
@@ -108,7 +107,7 @@ const DocUploadForm = () => {
           type='submit'
           label='Save'
           icon='pi pi-save'
-          size='small'
+          size='large'
           className='p-2.5 bg-[#1cabe6] text-white'
         />
       </div>

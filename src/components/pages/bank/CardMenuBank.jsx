@@ -1,5 +1,5 @@
 import React from 'react';
-import { cardMenuBank } from '../../../utils/navLink';
+import { cardMenuBank } from '../../../utils/link';
 
 const CardMenuBank = () => {
   return (

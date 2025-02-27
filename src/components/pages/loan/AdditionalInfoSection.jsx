@@ -1,5 +1,4 @@
 import React from 'react';
-import LoanFormCustom from './LoanFormCustom';
 import { additionalInfoField } from '../../../utils/fieldInput';
 import {
   gender_option as gender,
@@ -15,6 +14,7 @@ import FamilyForm from './FamilyForm';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { additionalInfoSchema } from '../../../utils/validation';
 import { useForm } from 'react-hook-form';
+import FormCustom from '../../layouts/FormCustom';
 
 const AdditionalInfoSection = () => {
   const {
@@ -55,10 +55,10 @@ const AdditionalInfoSection = () => {
     <>
       <div className='w-full  bg-white h-full mb-4 text-black rounded-md'>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <LoanFormCustom
+          <FormCustom
             fields={additionalInfoField.slice(0, 10)}
             optionsMap={optionMap}
-            gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] space-x-0 xs:space-x-2'
+            gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 xs:space-x-2'
             control={control}
             errors={errors}
           />
@@ -67,7 +67,7 @@ const AdditionalInfoSection = () => {
             control={control}
             errors={errors}
           />
-          <LoanFormCustom
+          <FormCustom
             fields={additionalInfoField.slice(10, 18)}
             optionsMap={optionMap}
             gridClass='grid grid-cols-1'
@@ -79,7 +79,7 @@ const AdditionalInfoSection = () => {
               type='submit'
               label='Save'
               icon='pi pi-save'
-              size='small'
+              size='large'
               className='p-2.5 bg-[#1cabe6] text-white'
             />
           </div>

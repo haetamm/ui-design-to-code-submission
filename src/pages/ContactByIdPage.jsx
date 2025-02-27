@@ -7,6 +7,7 @@ import { dataContact } from '../utils/data';
 import DataNotFound from '../components/pages/DataNotFound';
 import { contactField } from '../utils/fieldInput';
 import { urlPage } from '../utils/constans';
+import { Helmet } from 'react-helmet-async';
 
 const ContactByIdPage = () => {
   const { id } = useParams();
@@ -16,6 +17,10 @@ const ContactByIdPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Detail | Loan Market</title>
+        <meta name='description' content='Contact Detail page' />
+      </Helmet>
       <div className='mb-14 mt-[68px] md:mb-0'>
         <div className='px-3  md:px-3 lg:px-4 xl:px-6 py-4 w-full'>
           <CardDetail data={data} fields={contactField} />

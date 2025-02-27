@@ -6,7 +6,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { Calendar } from 'primereact/calendar';
 import { Controller } from 'react-hook-form';
 
-const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
+const FormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
   return (
     <div className='px-3 pt-3 md:px-7 md:pt-7'>
       {fields.map(({ label, value, type, placeholder }, index) => (
@@ -22,9 +22,8 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                     type === 'number' ||
                     type === 'email') && (
                     <InputText
-                      {...field}
                       type={type}
-                      className={`w-full border-[1px] p-[11px] ${errors[value] ? 'border-red-500' : ''}`}
+                      className={`${errors[value] ? 'border-red-500' : ''} w-full border-[1px] p-[11px] `}
                       placeholder={`—${placeholder}—`}
                       value={field.value || ''}
                       onChange={(e) => field.onChange(e.target.value)}
@@ -32,7 +31,6 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                   )}
                   {type === 'date' && (
                     <Calendar
-                      {...field}
                       className={`${errors[value] ? 'border-red-500' : ''} w-full border-[1px] h-[48px] px-1.5 rounded-md`}
                       placeholder={`—${placeholder}—`}
                       value={field.value || null}
@@ -42,7 +40,6 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                   )}
                   {type === 'textarea' && (
                     <InputTextarea
-                      {...field}
                       className={`${errors[value] ? 'border-red-500' : ''} w-full border-[1px] p-3`}
                       placeholder={`—${placeholder}—`}
                       value={field.value || ''}
@@ -78,7 +75,7 @@ const LoanFormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
   );
 };
 
-LoanFormCustom.propTypes = {
+FormCustom.propTypes = {
   fields: PropTypes.array.isRequired,
   optionsMap: PropTypes.object,
   gridClass: PropTypes.string.isRequired,
@@ -86,4 +83,4 @@ LoanFormCustom.propTypes = {
   errors: PropTypes.object.isRequired,
 };
 
-export default LoanFormCustom;
+export default FormCustom;
