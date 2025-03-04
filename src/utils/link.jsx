@@ -101,9 +101,31 @@ export const cardItems = [
   },
 ];
 
-export const productLink = [
+export const productBankLink = [
   {
     to: urlPage.PRODUCT_BANK,
+    label: 'BANK',
+  },
+  {
+    to: urlPage.PRODUCT_DEVELOPER,
+    label: 'DEVELOPER',
+  },
+];
+
+export const productAddLink = [
+  {
+    to: urlPage.PRODUCT_ADD,
+    label: 'BANK',
+  },
+  {
+    to: urlPage.PRODUCT_DEVELOPER,
+    label: 'DEVELOPER',
+  },
+];
+
+export const productAddCategoryLink = [
+  {
+    to: urlPage.PRODUCT_ADD_CATEGORY,
     label: 'BANK',
   },
   {
@@ -146,29 +168,6 @@ export const cardMenuBank = [
   },
 ];
 
-export const subNavItem = [
-  {
-    to: urlPage.PRODUCT,
-    icon: <BsPiggyBank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-    label: 'Bank Product',
-  },
-  {
-    to: '#',
-    icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-    label: 'Product',
-  },
-  {
-    to: '#',
-    icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-    label: 'Category Product',
-  },
-  {
-    to: '#',
-    icon: <TbReport className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
-    label: 'Report',
-  },
-];
-
 export const subNavItemProduct = [
   {
     to: urlPage.PRODUCT,
@@ -176,12 +175,12 @@ export const subNavItemProduct = [
     label: 'Bank Product',
   },
   {
-    to: '#',
+    to: urlPage.PRODUCT_ADD,
     icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
     label: 'Product',
   },
   {
-    to: '#',
+    to: urlPage.PRODUCT_ADD_CATEGORY,
     icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
     label: 'Category Product',
   },

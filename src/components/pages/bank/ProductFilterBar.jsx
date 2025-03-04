@@ -36,7 +36,7 @@ const ProductFilterBar = ({
               options={product_type_option}
               optionLabel='name'
               placeholder='Pilih Tipe Produk'
-              className=' w-full md:w-[60%] lg:w-full'
+              className=' w-full md:w-[60%] lg:w-[180px] xl:w-[300px]'
             />
             <Button
               label='Sort'

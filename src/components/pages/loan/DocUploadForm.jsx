@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import { BsUpload } from 'react-icons/bs';
-import { uploadDocField } from '../../../utils/fieldInput';
 import { Button } from 'primereact/button';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { uploadDocField } from '../../../utils/fieldInput';
 import { uploadDocSchema } from '../../../utils/validation';
+import InputFileCustom from '../../layouts/InputFileCustom';
 
 const DocUploadForm = () => {
   const [uploadedFiles, setUploadedFiles] = useState({});
@@ -56,37 +56,29 @@ const DocUploadForm = () => {
                         name={fieldName}
                         control={control}
                         render={({ field: { onChange, value } }) => (
-                          <>
-                            <label
-                              htmlFor={`fileInput-${categoryIndex}-${index}`}
-                              className={`${errors[fieldName] ? 'border-red-500' : ''}  flex items-center justify-between w-full p-[13px] text-gray-500 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100`}
-                            >
-                              <span className='line-clamp-1 text-sm'>
-                                {uploadedFiles[category]?.[label] ||
-                                  (value ? value.name : `—${placeholder}—`)}
-                              </span>
-                              <BsUpload className='w-5 h-5 text-gray-500 shrink-0' />
-                            </label>
-                            <input
-                              id={`fileInput-${categoryIndex}-${index}`}
-                              type='file'
-                              className='hidden'
-                              accept='application/pdf'
-                              onChange={(e) => {
-                                const file = e.target.files[0];
-                                if (file) {
-                                  onChange(file);
-                                  setUploadedFiles((prev) => ({
-                                    ...prev,
-                                    [category]: {
-                                      ...prev[category],
-                                      [label]: file.name,
-                                    },
-                                  }));
-                                }
-                              }}
-                            />
-                          </>
+                          <InputFileCustom
+                            id={`fileInput-${categoryIndex}-${index}`}
+                            name={fieldName}
+                            onChange={(e) => {
+                              const file = e.target.files[0];
+                              if (file) {
+                                onChange(file);
+                                setUploadedFiles((prev) => ({
+                                  ...prev,
+                                  [category]: {
+                                    ...prev[category],
+                                    [label]: file.name,
+                                  },
+                                }));
+                              }
+                            }}
+                            value={value}
+                            uploadedFiles={uploadedFiles}
+                            category={category}
+                            label={label}
+                            placeholder={placeholder}
+                            error={errors[fieldName]}
+                          />
                         )}
                       />
                       {errors[fieldName] && (

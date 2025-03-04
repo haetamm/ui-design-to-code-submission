@@ -1,12 +1,14 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import DashboardPage from './pages/DashboardPage';
 import DefaultLayout from './layouts/DefaultLayout';
-import ProductPage from './pages/ProductPage';
+import ProductBankPage from './pages/ProductBankPage';
 import { urlPage } from './utils/constans';
 import BankPage from './pages/BankPage';
 import DeveloperPage from './pages/DeveloperPage';
 import BankDetailPage from './pages/BankDetailPage';
 import BankUpdatePage from './pages/BankUpdatePage';
+import ProductAddPage from './pages/ProductAddPage';
+import ProductAddCategoryPage from './pages/ProductAddCategoryPage';
 import LoanPage from './pages/LoanPage';
 import NotFound from './pages/NotFound';
 import NotificationPage from './pages/NotificationPage';
@@ -93,7 +95,7 @@ const routerConfig = [
       },
       {
         path: urlPage.PRODUCT,
-        element: <ProductPage />,
+        element: <ProductBankPage />,
         children: [
           {
             path: '',
@@ -135,6 +137,16 @@ const routerConfig = [
             handle: { name: 'Product' },
           },
         ],
+      },
+      {
+        path: urlPage.PRODUCT_ADD,
+        element: <ProductAddPage />,
+        handle: { name: 'Product' },
+      },
+      {
+        path: urlPage.PRODUCT_ADD_CATEGORY,
+        element: <ProductAddCategoryPage />,
+        handle: { name: 'Category' },
       },
       {
         path: urlPage.LOAN,

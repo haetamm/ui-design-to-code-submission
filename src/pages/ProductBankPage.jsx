@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { productLink } from '../utils/link';
 import NavPage from '../components/layouts/NavPage';
+import { productBankLink } from '../utils/link';
 
-const ProductPage = () => {
+const ProductBankPage = () => {
   return (
     <>
       <NavPage
-        links={productLink}
+        links={productBankLink}
         entityName='Product'
         subName='Bank Product'
       />
@@ -16,4 +16,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default ProductBankPage;

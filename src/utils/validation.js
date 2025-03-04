@@ -284,3 +284,33 @@ export const productBankSchema = object({
   max_tenor,
   url,
 });
+
+// product add page
+export const product_name = string().min(1, 'wajib diisi');
+export const product_category = string().min(1, 'wajib diisi');
+
+export const productAddSchema = object({
+  product_name,
+  product_category,
+});
+
+export const imageFileSchema = z
+  .instanceof(File, { message: 'Input harus berupa file' })
+  .refine(
+    (file) =>
+      file.type === 'image/png' ||
+      file.type === 'image/jpeg' ||
+      file.type === 'image/jpg',
+    'File harus berupa PNG, JPG, atau JPEG'
+  )
+  .refine((file) => file.size > 0, 'File tidak boleh kosong')
+  .refine((file) => file.size <= 500000, 'File tidak boleh lebih dari 500 KB');
+
+// product add category page
+export const product_category_name = string().min(1, 'wajib diisi');
+export const product_category_icon = imageFileSchema;
+
+export const productAddCategorySchema = object({
+  product_category_name,
+  product_category_icon,
+});

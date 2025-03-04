@@ -5,8 +5,17 @@ import React from 'react';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Calendar } from 'primereact/calendar';
 import { Controller } from 'react-hook-form';
+import InputFileCustom from './InputFileCustom';
 
-const FormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
+const FormCustom = ({
+  fields,
+  optionsMap,
+  gridClass,
+  control,
+  errors,
+  uploadedFiles = {},
+  onFileChange,
+}) => {
   return (
     <div className='px-3 pt-3 md:px-7 md:pt-7'>
       {fields.map(({ label, value, type, placeholder }, index) => (
@@ -50,7 +59,6 @@ const FormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                   )}
                   {type === 'select' && optionsMap[value] && (
                     <Dropdown
-                      {...field}
                       options={optionsMap[value]}
                       optionLabel='name'
                       optionValue='value'
@@ -58,6 +66,29 @@ const FormCustom = ({ fields, optionsMap, gridClass, control, errors }) => {
                       className={`${errors[value] ? 'border-red-500' : ''} w-full bg-white border-[1px]`}
                       value={field.value || null}
                       onChange={(e) => field.onChange(e.value)}
+                    />
+                  )}
+
+                  {type === 'file' && (
+                    <InputFileCustom
+                      id={`file-input-${value}-${index}`}
+                      name={value}
+                      onChange={(e) => {
+                        const file = e.target.files[0];
+                        if (file) {
+                          field.onChange(file);
+                          if (onFileChange) {
+                            onFileChange(value, value, label, file);
+                          }
+                        }
+                      }}
+                      value={field.value}
+                      uploadedFiles={uploadedFiles}
+                      category={value}
+                      label={label}
+                      placeholder={placeholder}
+                      error={errors[value]}
+                      accept='image/png, image/jpeg, image/jpg'
                     />
                   )}
                 </>
@@ -81,6 +112,8 @@ FormCustom.propTypes = {
   gridClass: PropTypes.string.isRequired,
   control: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
+  uploadedFiles: PropTypes.object,
+  onFileChange: PropTypes.func,
 };
 
 export default FormCustom;

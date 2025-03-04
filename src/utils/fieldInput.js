@@ -743,3 +743,33 @@ export const bankOfficerField = [
     placeholder: 'Pilih Bank Officer',
   },
 ];
+
+export const productAddField = [
+  {
+    label: 'Nama Product',
+    value: 'product_name',
+    type: 'text',
+    placeholder: 'Isi Nama Product',
+  },
+  {
+    label: 'Pilih Kategori',
+    value: 'product_category',
+    type: 'select',
+    placeholder: 'Pilih Kategori',
+  },
+];
+
+export const productAddCategoryField = [
+  {
+    label: 'Nama Kategori',
+    value: 'product_category_name',
+    type: 'text',
+    placeholder: 'Isi Nama Kategori',
+  },
+  {
+    label: 'Gambar/Icon Kategori',
+    value: 'product_category_icon',
+    type: 'file',
+    placeholder: 'Upload Gambar/Icon Kategori',
+  },
+];

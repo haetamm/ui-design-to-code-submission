@@ -22,6 +22,12 @@ export const product_type_option = [
   },
 ];
 
+export const product_category_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
+
 export const guarantee_option = [
   'Ruko',
   'Rumah',

@@ -8,6 +8,8 @@ export const urlPage = {
   CONTACT_OTHER: '/contact/other',
   LOAN: '/loan',
   PRODUCT: '/product',
+  PRODUCT_ADD: '/add-product',
+  PRODUCT_ADD_CATEGORY: '/add-category',
   PRODUCT_BANK: '/product/bank',
   PRODUCT_BANK_ADD: '/product/bank/add',
   PRODUCT_DEVELOPER: '/product/developer',
