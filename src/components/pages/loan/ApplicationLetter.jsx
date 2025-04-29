@@ -33,27 +33,27 @@ const ApplicationLetter = () => {
   };
 
   return (
-    <div className='w-full bg-white h-full mb-4 text-black rounded-md'>
-      <div className='px-3 pt-4 pb-10 md:p-10'>
-        <div id='letter-content' className='text-lg p-1'>
-          <div className='flex justify-end mb-3'>
+    <div className="w-full bg-white h-full mb-4 text-black rounded-md">
+      <div className="px-3 pt-4 pb-10 md:p-10">
+        <div id="letter-content" className="text-lg p-1">
+          <div className="flex justify-end mb-3">
             <img
-              src='/img/loan-market-logo.webp'
-              alt='logo-img'
-              className='h-[80px] w-[80px]'
+              src="/img/loan-market-logo.webp"
+              alt="logo-img"
+              className="h-[80px] w-[80px]"
             />
           </div>
 
-          <h1 className='text-2xl font-bold text-center'>Surat Keterangan</h1>
-          <div className='mt-4'>
-            <p className='text-gray-600'>15/3/2023</p>
-            <p className='text-gray-600'>Ref: null</p>
+          <h1 className="text-2xl font-bold text-center">Surat Keterangan</h1>
+          <div className="mt-4">
+            <p className="text-gray-600">15/3/2023</p>
+            <p className="text-gray-600">Ref: null</p>
           </div>
-          <div className='mt-10'>
-            <p className='font-semibold'>Kepada Yth:</p>
+          <div className="mt-10">
+            <p className="font-semibold">Kepada Yth:</p>
             <p>Perihal: Surat Pengantar Aplikasi Loan Market</p>
           </div>
-          <p className='my-10'>
+          <p className="my-10">
             Sehubungan dengan adanya aplikasi atas nama debitur:
           </p>
           <p>
@@ -72,24 +72,24 @@ const ApplicationLetter = () => {
           <p>
             <strong>Alamat Agunan:</strong> null
           </p>
-          <p className='mt-12'>
+          <p className="mt-12">
             Maka dengan ini kami ingin memberitahukan bahwa calon debitur
             tersebut merupakan referral dari Loan Market. Kami mohon bantuan
             rekan-rekan Bank Mandiri untuk dapat membantu memproses kredit calon
             debitur tersebut.
           </p>
-          <p className='mb-12'>
+          <p className="mb-12">
             Demikian surat ini kami buat atas perhatian dan kerjasamanya kami
             ucapkan terima kasih.
           </p>
-          <p className='font-semibold'>Yohannes Affandy (Jojo)</p>
-          <p className='mt-20'>Loan Market Office Dev</p>
+          <p className="font-semibold">Yohannes Affandy (Jojo)</p>
+          <p className="mt-20">Loan Market Office Dev</p>
         </div>
 
-        <div className='flex justify-end mt-4'>
+        <div className="flex justify-end mt-4">
           <button
             onClick={handleDownloadPDF}
-            className='mt-6 text-white px-4 py-2 rounded bg-[#1cabe6]'
+            className="mt-6 text-white px-4 py-2 rounded bg-[#1cabe6]"
           >
             Download
           </button>

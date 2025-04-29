@@ -57,11 +57,48 @@ export const dataProductBank = [
     interest_rate: 3.6,
     fix_rate: 3.88,
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo id incidunt fugiat.',
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo id incidunt fugiat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo id incidunt fugiat. ',
     appraisal: 1,
     floating: 1,
     url: 'null',
     promotial_date: [new Date('2024-02-01'), new Date('2024-02-10')],
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 4,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+      {
+        id: 5,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 2,
@@ -87,6 +124,29 @@ export const dataProductBank = [
     floating: 1,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+    ],
   },
   {
     id: 3,
@@ -112,6 +172,22 @@ export const dataProductBank = [
     floating: 1,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+    ],
   },
   {
     id: 4,
@@ -137,6 +213,22 @@ export const dataProductBank = [
     floating: 1,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+      {
+        id: 2,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 5,
@@ -161,7 +253,43 @@ export const dataProductBank = [
     appraisal: 1,
     floating: 1,
     url: 'null',
-    promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 4,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+      {
+        id: 5,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 6,
@@ -187,6 +315,36 @@ export const dataProductBank = [
     floating: 1,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 4,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+    ],
   },
   {
     id: 7,
@@ -212,6 +370,15 @@ export const dataProductBank = [
     floating: 1.9,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+    ],
   },
   {
     id: 8,
@@ -237,6 +404,22 @@ export const dataProductBank = [
     floating: 2.0,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 2,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+    ],
   },
   {
     id: 9,
@@ -262,6 +445,43 @@ export const dataProductBank = [
     floating: 2.1,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 4,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+      {
+        id: 5,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 10,
@@ -287,6 +507,22 @@ export const dataProductBank = [
     floating: 1.8,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 2,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+    ],
   },
   {
     id: 11,
@@ -312,6 +548,43 @@ export const dataProductBank = [
     floating: 2.0,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 4,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+      {
+        id: 5,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 12,
@@ -337,6 +610,22 @@ export const dataProductBank = [
     floating: 1.8,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+    ],
   },
   {
     id: 13,
@@ -362,6 +651,22 @@ export const dataProductBank = [
     floating: 1.9,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 14,
@@ -387,6 +692,43 @@ export const dataProductBank = [
     floating: 2.0,
     url: 'null',
     promotial_date: null,
+    branch: [
+      {
+        id: 1,
+        name: 'Jakarta Barat',
+        rating: '4',
+        address: 'Jl. Jakbar bla bla...',
+        reviews: '1800',
+      },
+      {
+        id: 2,
+        name: 'Sudirman',
+        rating: '5',
+        address: 'Jl. Sudirman bla bla...',
+        reviews: '2300',
+      },
+      {
+        id: 3,
+        name: 'Jakarta Utara',
+        rating: '3',
+        address: 'Jl. Jakut bla bla...',
+        reviews: '450',
+      },
+      {
+        id: 4,
+        name: 'Bandung',
+        rating: '4',
+        address: 'Jl. Bandung bla bla...',
+        reviews: '980',
+      },
+      {
+        id: 5,
+        name: 'Bogor',
+        rating: '2',
+        address: 'Jl. Bogor bla bla...',
+        reviews: '300',
+      },
+    ],
   },
   {
     id: 15,
@@ -412,6 +754,7 @@ export const dataProductBank = [
     floating: 1.9,
     url: 'null',
     promotial_date: null,
+    branch: [],
   },
 ];
 

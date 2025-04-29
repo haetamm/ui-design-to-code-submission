@@ -9,26 +9,26 @@ const CardContact = ({ id, name, gender, position, email, handphone }) => {
     <>
       <Link
         to={`${urlPage.CONTACT_ME}/${id}/detail`}
-        className='w-full text-black bg-white rounded-md p-2 py-5 xs:p-4 inline-block xs:flex md:inline-block space-x-0 xs:space-x-2 md:space-x-0 lg:flex'
+        className="w-full text-black bg-white rounded-md p-2 py-5 xs:p-4 inline-block xs:flex md:inline-block space-x-0 xs:space-x-2 md:space-x-0 lg:flex"
       >
-        <div className='flex space-x-2 w-full'>
-          <div className='flex flex-col items-center justify-center w-[170px] xl:w-[250px]'>
+        <div className="flex space-x-2 w-full">
+          <div className="flex flex-col items-center justify-center w-[170px] xl:w-[250px]">
             <img
               src={`https://ui-avatars.com/api/?name=${name}&background=841ce6`}
-              alt='img-profile'
-              className='h-[90px] w-[90px]  rounded-full'
+              alt="img-profile"
+              className="h-[90px] w-[90px]  rounded-full"
             />
           </div>
-          <div className='flex flex-col justify-center md:justify-center w-full'>
-            <p className='font-bold text-lg'>{name}</p>
-            <div className='flex space-x-1 items-center text-sm'>
+          <div className="flex flex-col justify-center md:justify-center w-full">
+            <p className="font-bold text-lg">{name}</p>
+            <div className="flex space-x-1 items-center text-sm">
               {gender === 'Perempuan' ? <IoMdFemale /> : <IoMdMale />}
               <p>{gender}</p>
             </div>
 
-            <p className='text-gray-500 text-sm'>{position}</p>
-            <p className='text-gray-500 text-sm'>{email}</p>
-            <p className='text-gray-500 text-sm'>{handphone}</p>
+            <p className="text-gray-500 text-sm">{position}</p>
+            <p className="text-gray-500 text-sm">{email}</p>
+            <p className="text-gray-500 text-sm">{handphone}</p>
           </div>
         </div>
       </Link>

@@ -1,35 +1,38 @@
 import React from 'react';
-import CardMenuBank from '../components/pages/bank/CardMenuBank';
-import CardProductBank from '../components/pages/bank/CardProductBank';
+import FilterBar from '../components/layouts/FilterBar';
 import { Button } from 'primereact/button';
-import { Helmet } from 'react-helmet-async';
-import { scrollTop } from '../utils/helper';
+import { dataProductBank } from '../utils/data';
+import CardBank from '../components/pages/bank/CardBank';
 import ButtonBottom from '../components/layouts/ButtonBottom';
-import { urlPage } from '../utils/constans';
-import { Link } from 'react-router-dom';
 
 const BankPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Product | Loan Market</title>
-        <meta name='description' content='Product page' />
-      </Helmet>
-      <div className='mb-14 mt-[42px] md:mb-0'>
-        <CardMenuBank />
-        <CardProductBank />
-        <ButtonBottom>
-          <Link to={urlPage.PRODUCT_BANK_ADD} className='w-full'>
-            <Button
-              onClick={scrollTop}
-              label='Tambah Produk'
-              icon='pi pi-plus'
-              size='large'
-              className=' w-full p-2.5 bg-[#1cabe6] text-white'
-            />
-          </Link>
-        </ButtonBottom>
+      <div className="m-3 md:m-6 pt-3 md:pt-6 bg-white rounded-md">
+        <FilterBar>
+          <Button
+            label="Add Bank"
+            icon="pi pi-plus"
+            size="small"
+            className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
+          />
+        </FilterBar>
+        <div className=" px-3 pt-2 md:px-3 lg:px-4 xl:px-6 py-6 xs:pt-4 w-full">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {dataProductBank.map((bank, index) => (
+              <CardBank {...bank} key={index} />
+            ))}
+          </div>
+        </div>
       </div>
+      <ButtonBottom>
+        <Button
+          label="Add Bank"
+          icon="pi pi-plus"
+          size="large"
+          className=" w-full p-2.5 bg-[#1cabe6] text-white"
+        />
+      </ButtonBottom>
     </>
   );
 };

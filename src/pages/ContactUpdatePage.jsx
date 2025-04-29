@@ -60,21 +60,21 @@ const ContactUpdatePage = () => {
     <>
       <Helmet>
         <title>Edit Contact | Loan Market</title>
-        <meta name='description' content='Edit Contact page' />
+        <meta name="description" content="Edit Contact page" />
       </Helmet>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='mb-14 mt-[68px] md:mb-0'>
-          <div className='px-3 md:px-3 lg:px-4 xl:px-6 py-4 w-full'>
+        <div className="mb-14 mt-[68px] md:mb-0">
+          <div className="px-3 md:px-3 lg:px-4 xl:px-6 py-4 w-full">
             <FormContact control={control} errors={errors} id={id} />
           </div>
         </div>
         <ButtonBottom>
           <Button
-            label='Update'
-            icon='pi pi-save'
-            size='large'
-            className='w-full p-2.5 bg-[#0c2f3e] text-white'
-            type='submit'
+            label="Update"
+            icon="pi pi-save"
+            size="large"
+            className="w-full p-2.5 bg-[#0c2f3e] text-white"
+            type="submit"
           />
         </ButtonBottom>
       </form>

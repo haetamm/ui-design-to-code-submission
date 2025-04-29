@@ -22,22 +22,22 @@ const AssetInfoSection = () => {
 
   return (
     <>
-      <div className='w-full  p-1 lg:p-7 bg-white h-full mb-4 text-black rounded-md'>
+      <div className="w-full  p-1 lg:p-7 bg-white h-full mb-4 text-black rounded-md">
         <form onSubmit={handleSubmit(onSubmit)}>
           <CardInfo
-            title='Alamat Jaminan'
+            title="Alamat Jaminan"
             fields={assetsInfoField}
-            namespace='dataAsset'
+            namespace="dataAsset"
             control={control}
             errors={errors}
           />
-          <div className='flex items-center justify-end space-x-1 mt-10 px-7 pb-7 lg:p-0'>
+          <div className="flex items-center justify-end space-x-1 mt-10 px-7 pb-7 lg:p-0">
             <Button
-              label='Save'
-              icon='pi pi-save'
-              size='large'
+              label="Save"
+              icon="pi pi-save"
+              size="large"
               className={`bg-[#1cabe6] p-2.5 text-white`}
-              type='submit'
+              type="submit"
             />
           </div>
         </form>

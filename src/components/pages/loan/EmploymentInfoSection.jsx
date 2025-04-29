@@ -36,22 +36,22 @@ const EmploymentInfoSection = () => {
   };
 
   return (
-    <div className='w-full bg-white h-full mb-4 text-black rounded-md'>
+    <div className="w-full bg-white h-full mb-4 text-black rounded-md">
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormCustom
           fields={employmentInfoField}
           optionsMap={optionsMap}
-          gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 xs:space-x-2'
+          gridClass="grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 xs:space-x-2"
           control={control}
           errors={errors}
         />
-        <div className='flex items-center justify-end space-x-1 m-7 pb-7'>
+        <div className="flex items-center justify-end space-x-1 m-7 pb-7">
           <Button
             onClick={handleSubmit}
-            label='Save'
-            icon='pi pi-save'
-            size='large'
-            className=' p-2.5 bg-[#1cabe6] text-white'
+            label="Save"
+            icon="pi pi-save"
+            size="large"
+            className=" p-2.5 bg-[#1cabe6] text-white"
           />
         </div>
       </form>

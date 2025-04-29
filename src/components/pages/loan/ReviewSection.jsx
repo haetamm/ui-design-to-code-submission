@@ -21,21 +21,21 @@ const ReviewSection = () => {
   };
   return (
     <>
-      <div className='w-full  bg-white h-full mb-4 text-black rounded-md'>
+      <div className="w-full  bg-white h-full mb-4 text-black rounded-md">
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormCustom
             fields={reviewField}
-            gridClass='grid grid-cols-1'
+            gridClass="grid grid-cols-1"
             control={control}
             errors={errors}
           />
-          <div className='flex items-center justify-end space-x-1 px-7 pb-7'>
+          <div className="flex items-center justify-end space-x-1 px-7 pb-7">
             <Button
-              type='submit'
-              label='Save'
-              icon='pi pi-save'
-              size='large'
-              className='p-2.5 bg-[#1cabe6] text-white'
+              type="submit"
+              label="Save"
+              icon="pi pi-save"
+              size="large"
+              className="p-2.5 bg-[#1cabe6] text-white"
             />
           </div>
         </form>

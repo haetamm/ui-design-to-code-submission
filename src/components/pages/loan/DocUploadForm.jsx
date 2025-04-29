@@ -41,17 +41,17 @@ const DocUploadForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='bg-white p-1 lg:p-6 h-full mb-4 text-black rounded-md'
+      className="bg-white p-1 lg:p-6 h-full mb-4 text-black rounded-md"
     >
       {Object.entries(groupedFields).map(
         ([category, fields], categoryIndex) => (
           <Accordion key={categoryIndex} activeIndex={0}>
             <AccordionTab header={categoryHeaders[category] || category}>
               {fields.map(({ label, placeholder, value: fieldName }, index) => (
-                <div key={index} className='m-0 text-black'>
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 items-center'>
-                    <div className='font-normal'>{label}</div>
-                    <div className='relative w-full mx-auto mb-4'>
+                <div key={index} className="m-0 text-black">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 items-center">
+                    <div className="font-normal">{label}</div>
+                    <div className="relative w-full mx-auto mb-4">
                       <Controller
                         name={fieldName}
                         control={control}
@@ -82,7 +82,7 @@ const DocUploadForm = () => {
                         )}
                       />
                       {errors[fieldName] && (
-                        <p className='text-red-500 text-sm mt-1'>
+                        <p className="text-red-500 text-sm mt-1">
                           {errors[fieldName].message}
                         </p>
                       )}
@@ -94,13 +94,13 @@ const DocUploadForm = () => {
           </Accordion>
         )
       )}
-      <div className='my-5 flex justify-end px-3 lg:px-6'>
+      <div className="my-5 flex justify-end px-3 lg:px-6">
         <Button
-          type='submit'
-          label='Save'
-          icon='pi pi-save'
-          size='large'
-          className='p-2.5 bg-[#1cabe6] text-white'
+          type="submit"
+          label="Save"
+          icon="pi pi-save"
+          size="large"
+          className="p-2.5 bg-[#1cabe6] text-white"
         />
       </div>
     </form>

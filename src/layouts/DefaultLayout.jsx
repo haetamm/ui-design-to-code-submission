@@ -19,7 +19,7 @@ const DefaultLayout = () => {
   return (
     <>
       <ToastContainer
-        position='top-center'
+        position="top-center"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -28,11 +28,11 @@ const DefaultLayout = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme='light'
+        theme="light"
       />
       <Navbar />
-      <div className='bg-custome w-full'>
-        <div className='kontener h-screen mx-auto'>
+      <div className="bg-custome w-full">
+        <div className="kontener h-screen mx-auto">
           <div
             className={`grid ${
               isOpen
@@ -41,8 +41,8 @@ const DefaultLayout = () => {
             }`}
           >
             <Sidebar />
-            <div className=' h-screen overflow-auto no-scrollbar'>
-              <div className=' pt-[46px] lg:pt-[54px]'>
+            <div className=" h-screen overflow-auto no-scrollbar">
+              <div className=" pt-[46px] lg:pt-[54px]">
                 <Outlet />
               </div>
             </div>

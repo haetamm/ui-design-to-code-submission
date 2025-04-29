@@ -24,12 +24,12 @@ const FormProductBank = ({ control, errors, id }) => {
   };
 
   return (
-    <div className='bg-white p-3 md:p-8 rounded-md'>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-14'>
+    <div className="bg-white p-3 md:p-8 rounded-md">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-14">
         <div>
           {productBankField.slice(0, 8).map(({ label, value, type }, index) => (
-            <div key={index} className='mb-4'>
-              {type !== 'date' && <p className='font-bold'>{label}</p>}
+            <div key={index} className="mb-4">
+              {type !== 'date' && <p className="font-bold">{label}</p>}
               <Controller
                 name={value}
                 control={control}
@@ -39,20 +39,20 @@ const FormProductBank = ({ control, errors, id }) => {
                       <Dropdown
                         value={field.value || null}
                         options={optionsMap[value] || []}
-                        optionLabel='name'
+                        optionLabel="name"
                         placeholder={`--Pilih ${label}--`}
-                        className='w-full bg-white border-[1px] h-[48px] focus-none'
+                        className="w-full bg-white border-[1px] h-[48px] focus-none"
                         onChange={(e) => field.onChange(e.value)}
                         onBlur={field.onBlur}
                       />
                     )}
 
                     {type === 'date' && (
-                      <div className='mb-2'>
-                        <div className='flex space-x-2 mt-3 items-center'>
+                      <div className="mb-2">
+                        <div className="flex space-x-2 mt-3 items-center">
                           <input
-                            type='checkbox'
-                            className='checkbox-custome h-5 w-5 cursor-pointer'
+                            type="checkbox"
+                            className="checkbox-custome h-5 w-5 cursor-pointer"
                             checked={!!field.value}
                             onChange={(e) =>
                               field.onChange(
@@ -62,28 +62,28 @@ const FormProductBank = ({ control, errors, id }) => {
                               )
                             }
                           />
-                          <p className='font-bold'>{label}</p>
+                          <p className="font-bold">{label}</p>
                         </div>
                         <Calendar
                           disabled={!field.value}
                           value={field.value}
                           onChange={(e) => field.onChange(e.value)}
                           showIcon
-                          selectionMode='range'
-                          className='w-full bg-gray-200 border-[1px] h-[48px] px-1.5 mt-1.5 rounded-md'
+                          selectionMode="range"
+                          className="w-full bg-gray-200 border-[1px] h-[48px] px-1.5 mt-1.5 rounded-md"
                         />
                       </div>
                     )}
 
                     {type === 'checkbox' && (
-                      <div className='grid grid-cols-2'>
+                      <div className="grid grid-cols-2">
                         {optionsMap[value].map((item, index) => (
                           <div
                             key={index}
-                            className='flex space-x-2 mt-3 items-center'
+                            className="flex space-x-2 mt-3 items-center"
                           >
                             <input
-                              type='checkbox'
+                              type="checkbox"
                               checked={field.value?.includes(item) || false}
                               onChange={(e) => {
                                 const updatedValues = new Set(
@@ -96,7 +96,7 @@ const FormProductBank = ({ control, errors, id }) => {
                                 }
                                 field.onChange([...updatedValues]);
                               }}
-                              className='checkbox-custome h-5 w-5 cursor-pointer shrink-0'
+                              className="checkbox-custome h-5 w-5 cursor-pointer shrink-0"
                             />
                             <p>{item}</p>
                           </div>
@@ -106,25 +106,25 @@ const FormProductBank = ({ control, errors, id }) => {
 
                     {type === 'number' && (
                       <InputNumber
-                        inputId='horizontal-buttons'
+                        inputId="horizontal-buttons"
                         value={field.value || null}
                         onValueChange={(e) => field.onChange(e.value)}
                         showButtons
-                        buttonLayout='horizontal'
+                        buttonLayout="horizontal"
                         step={0.1}
-                        decrementButtonClassName='bg-[#1cabe6] text-white'
-                        incrementButtonClassName='bg-[#1cabe6] text-white'
-                        incrementButtonIcon='pi pi-plus'
-                        decrementButtonIcon='pi pi-minus'
-                        prefix='%'
+                        decrementButtonClassName="bg-[#1cabe6] text-white"
+                        incrementButtonClassName="bg-[#1cabe6] text-white"
+                        incrementButtonIcon="pi pi-plus"
+                        decrementButtonIcon="pi pi-minus"
+                        prefix="%"
                         min={0}
-                        className='w-full'
-                        inputClassName='h-[48px] text-center border-[1px] w-full'
+                        className="w-full"
+                        inputClassName="h-[48px] text-center border-[1px] w-full"
                       />
                     )}
 
                     {errors[value] && (
-                      <p className='text-red-500 text-sm mt-1'>
+                      <p className="text-red-500 text-sm mt-1">
                         {errors[value].message}
                       </p>
                     )}
@@ -135,13 +135,13 @@ const FormProductBank = ({ control, errors, id }) => {
           ))}
         </div>
 
-        <div className='flex flex-col mt-1 md:mt-0'>
+        <div className="flex flex-col mt-1 md:mt-0">
           <div>
             {productBankField
               .slice(8, 16)
               .map(({ label, value, type }, index) => (
-                <div key={index} className='mb-4'>
-                  <p className='font-bold'>{label}</p>
+                <div key={index} className="mb-4">
+                  <p className="font-bold">{label}</p>
                   <Controller
                     name={value}
                     control={control}
@@ -149,20 +149,20 @@ const FormProductBank = ({ control, errors, id }) => {
                       <>
                         {type === 'number' && (
                           <InputNumber
-                            inputId='horizontal-buttons'
+                            inputId="horizontal-buttons"
                             value={field.value || null}
                             onValueChange={(e) => field.onChange(e.value)}
                             showButtons
-                            buttonLayout='horizontal'
+                            buttonLayout="horizontal"
                             step={0.1}
-                            decrementButtonClassName='bg-[#1cabe6] text-white'
-                            incrementButtonClassName='bg-[#1cabe6] text-white'
-                            incrementButtonIcon='pi pi-plus'
-                            decrementButtonIcon='pi pi-minus'
-                            prefix='%'
+                            decrementButtonClassName="bg-[#1cabe6] text-white"
+                            incrementButtonClassName="bg-[#1cabe6] text-white"
+                            incrementButtonIcon="pi pi-plus"
+                            decrementButtonIcon="pi pi-minus"
+                            prefix="%"
                             min={0}
-                            className='w-full'
-                            inputClassName='h-[48px] text-center border-[1px] w-full'
+                            className="w-full"
+                            inputClassName="h-[48px] text-center border-[1px] w-full"
                           />
                         )}
 
@@ -171,7 +171,7 @@ const FormProductBank = ({ control, errors, id }) => {
                             value={field.value || ''}
                             rows={5}
                             cols={30}
-                            className='w-full border-[1px] px-2'
+                            className="w-full border-[1px] px-2"
                             onChange={(e) => field.onChange(e.target.value)}
                             onBlur={field.onBlur}
                           />
@@ -180,14 +180,14 @@ const FormProductBank = ({ control, errors, id }) => {
                         {type === 'text' && (
                           <InputText
                             value={field.value || ''}
-                            className='w-full border-[1px] p-[11px]'
+                            className="w-full border-[1px] p-[11px]"
                             onChange={(e) => field.onChange(e.target.value)}
                             onBlur={field.onBlur}
                           />
                         )}
 
                         {errors[value] && (
-                          <p className='text-red-500 text-sm mt-1'>
+                          <p className="text-red-500 text-sm mt-1">
                             {errors[value].message}
                           </p>
                         )}
@@ -199,12 +199,12 @@ const FormProductBank = ({ control, errors, id }) => {
           </div>
         </div>
       </div>
-      <div className='hidden md:flex items-center justify-end space-x-1 mt-10 mb-5'>
+      <div className="hidden md:flex items-center justify-end space-x-1 mt-10 mb-5">
         <Button
           label={`${id ? 'Update' : 'Tambah Produk'}`}
-          type='submit'
-          icon='pi pi-save'
-          size='large'
+          type="submit"
+          icon="pi pi-save"
+          size="large"
           className={`${id ? 'bg-[#0c2f3e]' : 'bg-[#1cabe6]'} p-2.5  text-white`}
         />
       </div>

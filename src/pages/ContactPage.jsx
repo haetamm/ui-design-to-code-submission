@@ -6,7 +6,7 @@ import NavPage from '../components/layouts/NavPage';
 const ContactPage = () => {
   return (
     <>
-      <NavPage links={contactLink} entityName='Contact' subName='Contact' />
+      <NavPage links={contactLink} entityName="Contact" subName="Contact" />
       <Outlet />
     </>
   );

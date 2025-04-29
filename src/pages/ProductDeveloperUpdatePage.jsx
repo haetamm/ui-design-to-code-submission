@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { productDeveloperSchema } from '../utils/validation';
 
-const DeveloperUpdatePage = () => {
+const ProductDeveloperUpdatePage = () => {
   const { id } = useParams();
   const product = dataProdctDeveloper.find((item) => item.id === parseInt(id));
 
@@ -52,20 +52,20 @@ const DeveloperUpdatePage = () => {
     <>
       <Helmet>
         <title>Edit Bank Product | Loan Market</title>
-        <meta name='description' content='Edit Bank Product page' />
+        <meta name="description" content="Edit Bank Product page" />
       </Helmet>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='mt-[60px] mb-14 md:mb-0'>
-          <div className='px-3 py-6 md:p-6'>
+        <div className="mt-[60px] mb-14 md:mb-0">
+          <div className="px-3 py-6 md:p-6">
             <FormProductDeveloper control={control} errors={errors} id={id} />
           </div>
         </div>
         <ButtonBottom>
           <Button
-            label='Update'
-            icon='pi pi-save'
-            size='large'
-            className='w-full p-2.5 bg-[#0c2f3e] text-white'
+            label="Update"
+            icon="pi pi-save"
+            size="large"
+            className="w-full p-2.5 bg-[#0c2f3e] text-white"
           />
         </ButtonBottom>
       </form>
@@ -73,4 +73,4 @@ const DeveloperUpdatePage = () => {
   );
 };
 
-export default DeveloperUpdatePage;
+export default ProductDeveloperUpdatePage;

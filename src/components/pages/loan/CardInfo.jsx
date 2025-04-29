@@ -86,14 +86,14 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
   };
 
   return (
-    <div className='w-full mx-auto bg-white rounded-lg border-[1px] pb-6'>
-      <h2 className='font-bold mb-4 p-4 bg-[#0c2f3e] text-white rounded-t-lg'>
+    <div className="w-full mx-auto bg-white rounded-lg border-[1px] pb-6">
+      <h2 className="font-bold mb-4 p-4 bg-[#0c2f3e] text-white rounded-t-lg">
         {title}
       </h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-2 md:p-6'>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 md:p-6">
         {fields.map(({ label, value, type, placeholder }) => (
           <div key={value}>
-            <label className='block font-bold text-gray-500 mb-1'>
+            <label className="block font-bold text-gray-500 mb-1">
               {label}
             </label>
             <Controller
@@ -129,7 +129,7 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
                       }
                       disabled={loading || !optionsMap[value]?.length}
                     >
-                      <option value=''>—{placeholder}—</option>
+                      <option value="">—{placeholder}—</option>
                       {optionsMap[value]?.map((option) => (
                         <option key={option.id} value={option.id}>
                           {loading ? 'Loading' : option.name}
@@ -141,7 +141,7 @@ const CardInfo = ({ title, fields, namespace, control, errors }) => {
               )}
             />
             {errors[namespace]?.[value] && (
-              <span className='text-red-500 text-sm'>
+              <span className="text-red-500 text-sm">
                 {errors[namespace][value].message}
               </span>
             )}

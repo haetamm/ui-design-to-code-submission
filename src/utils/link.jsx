@@ -19,83 +19,83 @@ import { TbCategory2, TbReport } from 'react-icons/tb';
 export const navItems = [
   {
     to: urlPage.DASHBOARD,
-    icon: <AiOutlineHome className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <AiOutlineHome className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Dashboard',
   },
   {
     to: urlPage.CONTACT,
-    icon: <LiaAddressCard className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <LiaAddressCard className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Contact',
   },
   {
     to: urlPage.LOAN,
-    icon: <CiFileOn className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <CiFileOn className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Loan',
   },
   {
     to: '#',
-    icon: <AiOutlineShopping className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <AiOutlineShopping className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Product',
   },
   {
-    to: '#',
-    icon: <RiBankLine className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    to: urlPage.BANK,
+    icon: <RiBankLine className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Bank',
   },
   {
     to: '#',
-    icon: <PiGauge className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <PiGauge className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Credit Scoring',
   },
   {
     to: '#',
     icon: (
-      <AiOutlineQuestionCircle className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />
+      <AiOutlineQuestionCircle className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />
     ),
     label: "FAQ's",
   },
   {
     to: '#',
-    icon: <IoLayersOutline className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <IoLayersOutline className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Pipeline',
   },
   {
     to: '#',
-    icon: <IoLayersOutline className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <IoLayersOutline className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Pipeline Developer',
   },
   {
     to: '#',
-    icon: <FiArchive className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <FiArchive className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Marketing Tools',
   },
   {
     to: '#',
-    icon: <FaWhatsapp className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <FaWhatsapp className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Whatsapp',
   },
 ];
 
 export const cardItems = [
   {
-    icon: <LiaAddressCard className='h-6 w-6 flex-shrink-0 text-[#1cabe6]' />,
+    icon: <LiaAddressCard className="h-6 w-6 flex-shrink-0 text-[#1cabe6]" />,
     label: 'CONTACT',
     count: 51,
   },
   {
-    icon: <CiFileOn className='h-6 w-6 flex-shrink-0 text-[#1cabe6]' />,
+    icon: <CiFileOn className="h-6 w-6 flex-shrink-0 text-[#1cabe6]" />,
     label: 'LOAN',
     count: 56,
   },
   {
     icon: (
-      <AiOutlineShopping className='h-6 w-6 flex-shrink-0 text-[#1cabe6]' />
+      <AiOutlineShopping className="h-6 w-6 flex-shrink-0 text-[#1cabe6]" />
     ),
     label: 'PRODUCT',
     count: 80,
   },
   {
-    icon: <RiBankLine className='h-6 w-6 flex-shrink-0 text-[#1cabe6]' />,
+    icon: <RiBankLine className="h-6 w-6 flex-shrink-0 text-[#1cabe6]" />,
     label: 'BANK',
     count: 30,
   },
@@ -147,23 +147,23 @@ export const contactLink = [
 
 export const cardMenuBank = [
   {
-    icon: <IoHomeOutline className='h-12 w-12 flex-shrink-0' />,
+    icon: <IoHomeOutline className="h-12 w-12 flex-shrink-0" />,
     label: 'KPR dan Multiguna',
   },
   {
-    icon: <FiUser className='h-12 w-12 flex-shrink-0' />,
+    icon: <FiUser className="h-12 w-12 flex-shrink-0" />,
     label: 'Rafinancing',
   },
   {
-    icon: <FaRegCreditCard className='h-12 w-12 flex-shrink-0' />,
+    icon: <FaRegCreditCard className="h-12 w-12 flex-shrink-0" />,
     label: 'Kredit Modal Usaha dan Investasi',
   },
   {
-    icon: <MdOutlineSavings className='h-12 w-12 flex-shrink-0' />,
+    icon: <MdOutlineSavings className="h-12 w-12 flex-shrink-0" />,
     label: 'Deposito',
   },
   {
-    icon: <FaRegBuilding className='h-12 w-12 flex-shrink-0' />,
+    icon: <FaRegBuilding className="h-12 w-12 flex-shrink-0" />,
     label: 'Take Over dan Bridging Loan',
   },
 ];
@@ -171,17 +171,17 @@ export const cardMenuBank = [
 export const subNavItemProduct = [
   {
     to: urlPage.PRODUCT,
-    icon: <BsPiggyBank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <BsPiggyBank className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Bank Product',
   },
   {
     to: urlPage.PRODUCT_ADD,
-    icon: <SiStarlingbank className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <SiStarlingbank className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Product',
   },
   {
     to: urlPage.PRODUCT_ADD_CATEGORY,
-    icon: <TbCategory2 className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <TbCategory2 className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Category Product',
   },
 ];
@@ -189,7 +189,7 @@ export const subNavItemProduct = [
 export const subNavItemWhatsapp = [
   {
     to: '#',
-    icon: <TbReport className='h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9' />,
+    icon: <TbReport className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Report',
   },
 ];

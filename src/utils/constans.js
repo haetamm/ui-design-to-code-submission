@@ -13,4 +13,5 @@ export const urlPage = {
   PRODUCT_BANK: '/product/bank',
   PRODUCT_BANK_ADD: '/product/bank/add',
   PRODUCT_DEVELOPER: '/product/developer',
+  BANK: '/bank',
 };

@@ -40,14 +40,14 @@ const FamilyForm = ({ onSubmit, control, errors }) => {
               <Dropdown
                 {...commonProps}
                 options={relationship_family_option}
-                optionLabel='name'
-                optionValue='value'
+                optionLabel="name"
+                optionValue="value"
                 placeholder={`Pilih ${header}`}
                 onChange={(e) => {
                   field.onChange(e.value);
                   onSubmit(control._formValues.familyData);
                 }}
-                className='w-[138px] xxs:w-[178px] xs:w-full lg:w-[170px] xl:w-[220px] border-[1px]'
+                className="w-[138px] xxs:w-[178px] xs:w-full lg:w-[170px] xl:w-[220px] border-[1px]"
               />
             );
           case 'textarea':
@@ -67,30 +67,30 @@ const FamilyForm = ({ onSubmit, control, errors }) => {
   );
 
   return (
-    <div className='w-full px-3 md:px-6'>
-      <div className='font-bold mb-1'>
+    <div className="w-full px-3 md:px-6">
+      <div className="font-bold mb-1">
         Data kerabat tidak serumah yang bisa dihubungi:
       </div>
 
       <DataTable
         value={fields}
-        className='border border-gray-300 lg:hidden'
+        className="border border-gray-300 lg:hidden"
         stripedRows
       >
         <Column
-          header='#'
+          header="#"
           body={(_, { rowIndex }) => rowIndex + 1}
-          className='border text-center w-3 align-top'
+          className="border text-center w-3 align-top"
         />
         <Column
-          header='Detail Keluarga'
+          header="Detail Keluarga"
           body={(_, { rowIndex }) => (
-            <div className='flex flex-col gap-2'>
+            <div className="flex flex-col gap-2">
               {columns.map(({ field, type, header }) => (
                 <div key={field}>
                   {renderEditor(rowIndex, field, header, type)}
                   {errors.familyData?.[rowIndex]?.[field] && (
-                    <span className='text-red-500 text-sm inline-block'>
+                    <span className="text-red-500 text-sm inline-block">
                       {errors.familyData[rowIndex][field].message}
                     </span>
                   )}
@@ -98,19 +98,19 @@ const FamilyForm = ({ onSubmit, control, errors }) => {
               ))}
             </div>
           )}
-          className='border'
+          className="border"
         />
       </DataTable>
 
       <DataTable
         value={fields}
-        className='border border-gray-300 hidden lg:block'
+        className="border border-gray-300 hidden lg:block"
         stripedRows
       >
         <Column
-          header='#'
+          header="#"
           body={(_, { rowIndex }) => rowIndex + 1}
-          className='border text-center w-3 align-top'
+          className="border text-center w-3 align-top"
         />
         {columns.map(({ field, header, type }) => (
           <Column
@@ -120,13 +120,13 @@ const FamilyForm = ({ onSubmit, control, errors }) => {
               <div>
                 {renderEditor(rowIndex, field, header, type)}
                 {errors.familyData?.[rowIndex]?.[field] && (
-                  <span className='text-red-500 text-sm inline-block'>
+                  <span className="text-red-500 text-sm inline-block">
                     {errors.familyData[rowIndex][field].message}
                   </span>
                 )}
               </div>
             )}
-            className='border align-top'
+            className="border align-top"
           />
         ))}
       </DataTable>

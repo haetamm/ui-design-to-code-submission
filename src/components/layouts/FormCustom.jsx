@@ -17,11 +17,11 @@ const FormCustom = ({
   onFileChange,
 }) => {
   return (
-    <div className='px-3 pt-3 md:px-7 md:pt-7'>
+    <div className="px-3 pt-3 md:px-7 md:pt-7">
       {fields.map(({ label, value, type, placeholder }, index) => (
         <div key={index} className={`${gridClass} mb-3 xs:mb-6 items-center`}>
-          <div className='font-bold mb-1'>{label}</div>
-          <div className='mt-1 xs:mt-0'>
+          <div className="font-bold mb-1">{label}</div>
+          <div className="mt-1 xs:mt-0">
             <Controller
               name={value}
               control={control}
@@ -60,8 +60,8 @@ const FormCustom = ({
                   {type === 'select' && optionsMap[value] && (
                     <Dropdown
                       options={optionsMap[value]}
-                      optionLabel='name'
-                      optionValue='value'
+                      optionLabel="name"
+                      optionValue="value"
                       placeholder={`—${placeholder}—`}
                       className={`${errors[value] ? 'border-red-500' : ''} w-full bg-white border-[1px]`}
                       value={field.value || null}
@@ -88,14 +88,14 @@ const FormCustom = ({
                       label={label}
                       placeholder={placeholder}
                       error={errors[value]}
-                      accept='image/png, image/jpeg, image/jpg'
+                      accept="image/png, image/jpeg, image/jpg"
                     />
                   )}
                 </>
               )}
             />
             {errors[value] && (
-              <span className='text-red-500 text-sm'>
+              <span className="text-red-500 text-sm">
                 {errors[value].message}
               </span>
             )}

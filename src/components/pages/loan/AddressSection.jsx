@@ -100,12 +100,12 @@ const AddressSection = () => {
   };
 
   return (
-    <div className='w-full p-1 md:p-7 bg-white h-full mb-4 text-black rounded-md'>
+    <div className="w-full p-1 md:p-7 bg-white h-full mb-4 text-black rounded-md">
       <form onSubmit={handleSubmit(onSubmit)}>
         <CardInfo
-          title='Data KTP'
+          title="Data KTP"
           fields={addressField}
-          namespace='dataKtp'
+          namespace="dataKtp"
           control={control}
           errors={errors}
         />
@@ -114,14 +114,14 @@ const AddressSection = () => {
           handleChange={(e) =>
             handleCheckboxChange(e, 'dataDomisili', setIsDomisiliSameAsKtp)
           }
-          label='Domisili Sesuai KTP'
-          id='domisili'
+          label="Domisili Sesuai KTP"
+          id="domisili"
         />
         {!isDomisiliSameAsKtp && (
           <CardInfo
-            title='Data Domisili'
+            title="Data Domisili"
             fields={addressField}
-            namespace='dataDomisili'
+            namespace="dataDomisili"
             control={control}
             errors={errors}
           />
@@ -131,25 +131,25 @@ const AddressSection = () => {
           handleChange={(e) =>
             handleCheckboxChange(e, 'dataCompany', setIsCompanySameAsKtp)
           }
-          label='Alamat Tempat Bekerja / Perusahaan Sesuai KTP'
-          id='company'
+          label="Alamat Tempat Bekerja / Perusahaan Sesuai KTP"
+          id="company"
         />
         {!isCompanySameAsKtp && (
           <CardInfo
-            title='Data Alamat Tempat Kerja'
+            title="Data Alamat Tempat Kerja"
             fields={addressField}
-            namespace='dataCompany'
+            namespace="dataCompany"
             control={control}
             errors={errors}
           />
         )}
-        <div className='flex items-center justify-end space-x-1 mt-10 px-7 pb-7 md:p-0'>
+        <div className="flex items-center justify-end space-x-1 mt-10 px-7 pb-7 md:p-0">
           <Button
-            type='submit'
-            label='Save'
-            icon='pi pi-save'
-            size='large'
-            className='bg-[#1cabe6] p-2.5 text-white'
+            type="submit"
+            label="Save"
+            icon="pi pi-save"
+            size="large"
+            className="bg-[#1cabe6] p-2.5 text-white"
           />
         </div>
       </form>

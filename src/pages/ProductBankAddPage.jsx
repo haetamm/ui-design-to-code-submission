@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import FormProductBank from '../components/pages/bank/FormProductBank';
+import FormProductBank from '../components/pages/product/FormProductBank';
 import { Button } from 'primereact/button';
 import ButtonBottom from '../components/layouts/ButtonBottom';
 import { useForm } from 'react-hook-form';
@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { productBankSchema } from '../utils/validation';
 import { useSidebar } from '../store/sidebar';
 
-const BankAddPage = () => {
+const ProductBankAddPage = () => {
   const { isOpen } = useSidebar();
   const {
     control,
@@ -39,20 +39,20 @@ const BankAddPage = () => {
     <>
       <Helmet>
         <title>Add Product | Loan Market</title>
-        <meta name='description' content='Add Product page' />
+        <meta name="description" content="Add Product page" />
       </Helmet>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='mt-[60px] mb-14 md:mb-0'>
+        <div className="mt-[60px] mb-14 md:mb-0">
           <div className={`${isOpen ? 'pl-3' : 'px-3'} py-6 md:p-6`}>
             <FormProductBank control={control} errors={errors} />
           </div>
         </div>
         <ButtonBottom>
           <Button
-            label='Tambah Produk'
-            icon='pi pi-save'
-            size='large'
-            className=' w-full p-2.5 bg-[#1cabe6] text-white'
+            label="Tambah Produk"
+            icon="pi pi-save"
+            size="large"
+            className=" w-full p-2.5 bg-[#1cabe6] text-white"
           />
         </ButtonBottom>
       </form>
@@ -60,4 +60,4 @@ const BankAddPage = () => {
   );
 };
 
-export default BankAddPage;
+export default ProductBankAddPage;

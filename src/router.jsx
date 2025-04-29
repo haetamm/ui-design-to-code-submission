@@ -1,12 +1,12 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import DashboardPage from './pages/DashboardPage';
 import DefaultLayout from './layouts/DefaultLayout';
-import ProductBankPage from './pages/ProductBankPage';
+import ProductPage from './pages/ProductPage';
 import { urlPage } from './utils/constans';
-import BankPage from './pages/BankPage';
-import DeveloperPage from './pages/DeveloperPage';
-import BankDetailPage from './pages/BankDetailPage';
-import BankUpdatePage from './pages/BankUpdatePage';
+import ProductBankPage from './pages/ProductBankPage';
+import ProductDeveloperPage from './pages/ProductDeveloperPage';
+import ProductBankDetailPage from './pages/ProductBankDetailPage';
+import ProductBankUpdatePage from './pages/ProductBankUpdatePage';
 import ProductAddPage from './pages/ProductAddPage';
 import ProductAddCategoryPage from './pages/ProductAddCategoryPage';
 import LoanPage from './pages/LoanPage';
@@ -17,12 +17,14 @@ import ContactMePage from './pages/ContactMePage';
 import ContactOtherPage from './pages/ContactOtherPage';
 import ContactDetailPage from './pages/ContactDetailPage';
 import ContactUpdatePage from './pages/ContactUpdatePage';
-import DeveloperDetailPage from './pages/DeveloperDetailPage';
-import DeveloperUpdatePage from './pages/DeveloperUpdatePage';
-import BankAddPage from './pages/BankAddPage';
+import ProductDeveloperDetailPage from './pages/ProductDeveloperDetailPage';
+import ProductDeveloperUpdatePage from './pages/ProductDeveloperUpdatePage';
+import ProductBankAddPage from './pages/ProductBankAddPage';
 import ContactAddPage from './pages/ContactAddPage';
 import ContactAddCategoryPage from './pages/ContactAddCategoryPage';
 import ContactByIdPage from './pages/ContactByIdPage';
+import BankPage from './pages/BankPage';
+import BankDetailPage from './pages/BankDetailPage';
 
 const routerConfig = [
   {
@@ -31,12 +33,7 @@ const routerConfig = [
     children: [
       {
         path: '',
-        element: <Navigate to='dashboard' />,
-      },
-      {
-        path: urlPage.DASHBOARD,
-        element: <DashboardPage />,
-        handle: { name: 'Dashboard' },
+        element: <Navigate to="dashboard" />,
       },
       {
         path: urlPage.DASHBOARD,
@@ -54,7 +51,7 @@ const routerConfig = [
         children: [
           {
             path: '',
-            element: <Navigate to='me' />,
+            element: <Navigate to="me" />,
           },
           {
             path: 'add',
@@ -94,46 +91,51 @@ const routerConfig = [
         ],
       },
       {
+        path: urlPage.LOAN,
+        element: <LoanPage />,
+        handle: { name: 'Edit Application' },
+      },
+      {
         path: urlPage.PRODUCT,
-        element: <ProductBankPage />,
+        element: <ProductPage />,
         children: [
           {
             path: '',
-            element: <Navigate to='bank' />,
+            element: <Navigate to="bank" />,
           },
           {
             path: 'bank',
-            element: <BankPage />,
+            element: <ProductBankPage />,
             handle: { name: 'Product' },
           },
           {
             path: 'bank/add',
-            element: <BankAddPage />,
+            element: <ProductBankAddPage />,
             handle: { name: 'Product' },
           },
           {
             path: 'bank/:id',
-            element: <BankDetailPage />,
+            element: <ProductBankDetailPage />,
             handle: { name: 'Product' },
           },
           {
             path: 'bank/:id/update',
-            element: <BankUpdatePage />,
+            element: <ProductBankUpdatePage />,
             handle: { name: 'Product' },
           },
           {
             path: 'developer',
-            element: <DeveloperPage />,
+            element: <ProductDeveloperPage />,
             handle: { name: 'Product' },
           },
           {
             path: 'developer/:id',
-            element: <DeveloperDetailPage />,
+            element: <ProductDeveloperDetailPage />,
             handle: { name: 'Product' },
           },
           {
             path: 'developer/:id/update',
-            element: <DeveloperUpdatePage />,
+            element: <ProductDeveloperUpdatePage />,
             handle: { name: 'Product' },
           },
         ],
@@ -149,9 +151,14 @@ const routerConfig = [
         handle: { name: 'Category' },
       },
       {
-        path: urlPage.LOAN,
-        element: <LoanPage />,
-        handle: { name: 'Edit Application' },
+        path: urlPage.BANK,
+        element: <BankPage />,
+        handle: { name: 'Bank' },
+      },
+      {
+        path: `${urlPage.BANK}/:id/detail`,
+        element: <BankDetailPage />,
+        handle: { name: 'Bank' },
       },
     ],
   },

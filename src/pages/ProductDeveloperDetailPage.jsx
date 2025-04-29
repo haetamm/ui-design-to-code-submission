@@ -9,7 +9,7 @@ import { detailDeveloperField } from '../utils/fieldInput';
 import ProductNotFound from '../components/pages/DataNotFound';
 import ButtonBottom from '../components/layouts/ButtonBottom';
 
-const DeveloperDetailPage = () => {
+const ProductDeveloperDetailPage = () => {
   const { id } = useParams();
   const product = dataProdctDeveloper.find((item) => item.id === parseInt(id));
 
@@ -19,29 +19,29 @@ const DeveloperDetailPage = () => {
     <>
       <Helmet>
         <title>Bank Product Detail | Loan Market</title>
-        <meta name='description' content='Bank Product Detail page' />
+        <meta name="description" content="Bank Product Detail page" />
       </Helmet>
-      <div className='mt-[60px] mb-14 md:mb-0'>
-        <div className='px-3 py-6 md:p-6'>
+      <div className="mt-[60px] mb-14 md:mb-0">
+        <div className="px-3 py-6 md:p-6">
           <CardDetail data={product} fields={detailDeveloperField} />
         </div>
       </div>
       <ButtonBottom>
         <Button
-          label='Delete Produk'
-          icon='pi pi-trash'
-          size='normal'
-          className=' w-full px-2 py-2.5 bg-red-500 text-white'
+          label="Delete Produk"
+          icon="pi pi-trash"
+          size="normal"
+          className=" w-full px-2 py-2.5 bg-red-500 text-white"
         />
         <Link
           to={`${urlPage.PRODUCT_DEVELOPER}/${id}/update`}
-          className='w-full'
+          className="w-full"
         >
           <Button
-            label='Edit Produk'
-            icon='pi pi-pen-to-square'
-            size='normal'
-            className=' w-full px-2 py-2.5 bg-[#0c2f3e] text-white'
+            label="Edit Produk"
+            icon="pi pi-pen-to-square"
+            size="normal"
+            className=" w-full px-2 py-2.5 bg-[#0c2f3e] text-white"
           />
         </Link>
       </ButtonBottom>
@@ -49,4 +49,4 @@ const DeveloperDetailPage = () => {
   );
 };
 
-export default DeveloperDetailPage;
+export default ProductDeveloperDetailPage;

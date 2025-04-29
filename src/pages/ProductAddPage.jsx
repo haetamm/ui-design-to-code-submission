@@ -32,27 +32,27 @@ const ProductAddPage = () => {
     <>
       <Helmet>
         <title>Add Product | Loan Market</title>
-        <meta name='description' content='Add Product page' />
+        <meta name="description" content="Add Product page" />
       </Helmet>
-      <NavPage links={productAddLink} entityName='Product' subName='Product' />
+      <NavPage links={productAddLink} entityName="Product" subName="Product" />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='mb-14 mt-[50px] md:mb-0'>
-          <div className='px-3 md:px-3 lg:px-4 xl:px-6 py-4 w-full'>
-            <div className='bg-white pb-3 rounded-md'>
+        <div className="mb-14 mt-[50px] md:mb-0">
+          <div className="px-3 md:px-3 lg:px-4 xl:px-6 py-4 w-full">
+            <div className="bg-white pb-3 rounded-md">
               <FormCustom
                 fields={productAddField}
                 optionsMap={optionsMap}
-                gridClass='grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 md:space-x-2'
+                gridClass="grid grid-cols-1 xs:grid-cols-[30%_70%] lg:grid-cols-[25%_75%] space-x-0 md:space-x-2"
                 control={control}
                 errors={errors}
               />
-              <div className='hidden md:flex items-center justify-end space-x-1 md:mx-7 md:mb-3'>
+              <div className="hidden md:flex items-center justify-end space-x-1 md:mx-7 md:mb-3">
                 <Button
-                  label='Save'
-                  icon='pi pi-save'
-                  size='large'
-                  className=' p-2.5 bg-[#1cabe6] text-white'
-                  type='submit'
+                  label="Save"
+                  icon="pi pi-save"
+                  size="large"
+                  className=" p-2.5 bg-[#1cabe6] text-white"
+                  type="submit"
                 />
               </div>
             </div>
@@ -60,10 +60,10 @@ const ProductAddPage = () => {
         </div>
         <ButtonBottom>
           <Button
-            label='Simpan'
-            icon='pi pi-save'
-            size='large'
-            className=' w-full p-2.5 bg-[#1cabe6] text-white'
+            label="Simpan"
+            icon="pi pi-save"
+            size="large"
+            className=" w-full p-2.5 bg-[#1cabe6] text-white"
           />
         </ButtonBottom>
       </form>

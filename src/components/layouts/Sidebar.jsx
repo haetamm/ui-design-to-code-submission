@@ -25,21 +25,21 @@ const Sidebar = () => {
 
   return (
     isOpen && (
-      <div className='bg-white border-r-[1px] h-screen z-50'>
-        <div className='flex justify-center p-1 lg:p-0'>
+      <div className="bg-white border-r-[1px] h-screen z-50">
+        <div className="flex justify-center p-1 lg:p-0">
           <img
-            src='https://www.loanmarket.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Floan-market-logo.08e43cb2.png&w=96&q=75'
-            alt='logo-img'
-            className='hidden lg:inline-block h-[80px] w-[80px]'
+            src="https://www.loanmarket.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Floan-market-logo.08e43cb2.png&w=96&q=75"
+            alt="logo-img"
+            className="hidden lg:inline-block h-[80px] w-[80px]"
           />
           <LuAlignJustify
             onClick={() => toggleSidebar()}
-            className='h-10 w-10 block lg:hidden'
+            className="h-10 w-10 block lg:hidden"
           />
         </div>
-        <div className='mx-auto px-1.5 xl:px-3 h-[calc(100%-55px)] lg:h-[calc(100%-80px)] overflow-auto no-scrollbar pt-5 lg:py-3 xl:pt-6'>
+        <div className="mx-auto px-1.5 xl:px-3 h-[calc(100%-55px)] lg:h-[calc(100%-80px)] overflow-auto no-scrollbar pt-5 lg:py-3 xl:pt-6">
           {navItems.map((item, index) => (
-            <div key={index} className='relative'>
+            <div key={index} className="relative">
               <Link
                 to={item.to}
                 onClick={() => {
@@ -53,11 +53,11 @@ const Sidebar = () => {
                     : ''
                 }`}
               >
-                <div className='flex lg:space-x-1.5 xl:space-x-4 items-center px-0 py-0.5 lg:py-1.5 lg:px-1 xl:px-2'>
-                  <div className='flex-shrink-0 h-9 w-9 flex items-center justify-center'>
+                <div className="flex lg:space-x-1.5 xl:space-x-4 items-center px-0 py-0.5 lg:py-1.5 lg:px-1 xl:px-2">
+                  <div className="flex-shrink-0 h-9 w-9 flex items-center justify-center">
                     {item.icon}
                   </div>
-                  <p className='text-md xl:text-lg hidden lg:inline-block'>
+                  <p className="text-md xl:text-lg hidden lg:inline-block">
                     {item.label}
                   </p>
                   {(item.label === 'Product' || item.label === 'Whatsapp') && (
@@ -77,7 +77,7 @@ const Sidebar = () => {
                 ).map((link, index) => (
                   <div
                     key={index}
-                    className='left-0 top-full mt-2 w-full bg-white z-10'
+                    className="left-0 top-full mt-2 w-full bg-white z-10"
                   >
                     <Link
                       to={link.to}
@@ -87,11 +87,11 @@ const Sidebar = () => {
                           : ''
                       }`}
                     >
-                      <div className='flex lg:space-x-1.5 xl:space-x-4 items-center px-0 py-0.5 lg:py-1.5 lg:px-1 xl:px-2'>
-                        <div className='flex-shrink-0 h-9 w-9 flex items-center justify-center'>
-                          <div className='block lg:hidden'>{link.icon}</div>
+                      <div className="flex lg:space-x-1.5 xl:space-x-4 items-center px-0 py-0.5 lg:py-1.5 lg:px-1 xl:px-2">
+                        <div className="flex-shrink-0 h-9 w-9 flex items-center justify-center">
+                          <div className="block lg:hidden">{link.icon}</div>
                         </div>
-                        <p className='text-md xl:text-lg hidden lg:inline-block'>
+                        <p className="text-md xl:text-lg hidden lg:inline-block">
                           {link.label}
                         </p>
                       </div>

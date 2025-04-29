@@ -11,7 +11,8 @@ const NavPage = ({ links, entityName, subName }) => {
   const { isOpen } = useSidebar();
 
   const isActive = (path) => location.pathname === path;
-  const isBasePage = links.some((link) => location.pathname === link.to);
+  const isBasePage =
+    links?.some((link) => location.pathname === link.to) || false;
   const isUpdatePage = location.pathname.endsWith('/update');
   const isAddPage = location.pathname.endsWith('/add');
   const isAddCategoryPage = location.pathname.endsWith('/add-category');
@@ -24,34 +25,33 @@ const NavPage = ({ links, entityName, subName }) => {
   return (
     <>
       <div
-        className={`${isOpen ? 'w-[calc(100%-55px)]' : 'w-full '} flex fixed z-50 bg-white border-b-[1px] lg:w-[calc(100%-160px)] xl:w-[calc(1348px-210px)]  space-x-1  ${
-          isBasePage
-            ? '  justify-center'
-            : 'justify-normal px-3 xl:px-6 h-[63px]'
+        className={`${isOpen ? 'w-[calc(100%-55px)]' : 'w-full '} flex fixed z-50 bg-white border-b-[1px] lg:w-[calc(100%-160px)] xl:w-[calc(1348px-210px)] space-x-1 ${
+          isBasePage ? 'justify-center' : 'justify-normal px-3 xl:px-6 h-[63px]'
         }`}
       >
-        {isBasePage &&
-          links.map(({ to, label }, index) => (
-            <div
-              key={index}
-              className={`font-bold text-md w-[140px] flex justify-center lg:text-lg pt-3 pb-1 mt-1 mb-0.5 ${
-                isActive(to) ? ' border-b-2 border-[#1cabe6] ' : ''
-              }`}
-            >
-              <Link
-                to={to}
-                className={`${isActive(to) ? 'text-[#1cabe6]' : ''}`}
+        {isBasePage && links && links.length > 0
+          ? links.map(({ to, label }, index) => (
+              <div
+                key={index}
+                className={`font-bold text-md w-[140px] flex justify-center lg:text-lg pt-3 pb-1 mt-1 mb-0.5 ${
+                  isActive(to) ? 'border-b-2 border-[#1cabe6]' : ''
+                }`}
               >
-                {label}
-              </Link>
-            </div>
-          ))}
+                <Link
+                  to={to}
+                  className={`${isActive(to) ? 'text-[#1cabe6]' : ''}`}
+                >
+                  {label}
+                </Link>
+              </div>
+            ))
+          : null}
         {!isBasePage && (
-          <div className='flex justify-between w-full'>
-            <div className='text-md flex justify-center lg:text-xl py-2 mt-1 mb-0.5 space-x-3 items-center'>
+          <div className="flex justify-between w-full">
+            <div className="text-md flex justify-center lg:text-xl py-2 mt-1 mb-0.5 space-x-3 items-center">
               <FaArrowAltCircleLeft
                 onClick={handleBack}
-                className='h-8 w-8 text-[#1cabe6] cursor-pointer'
+                className="h-8 w-8 text-[#1cabe6] cursor-pointer"
               />
               <div>
                 {isAddPage
@@ -67,21 +67,21 @@ const NavPage = ({ links, entityName, subName }) => {
               !isAddPage &&
               !isDetailPage &&
               !isAddCategoryPage && (
-                <div className='hidden md:flex justify-between py-2 mt-1 mb-0.5 space-x-3 items-center'>
+                <div className="hidden md:flex justify-between py-2 mt-1 mb-0.5 space-x-3 items-center">
                   <Link to={`${location.pathname}/update`}>
                     <Button
                       label={`Edit ${entityName}`}
-                      icon='pi pi-pen-to-square'
-                      size='small'
-                      className='p-2.5 bg-[#0c2f3e] text-white text-md'
+                      icon="pi pi-pen-to-square"
+                      size="small"
+                      className="p-2.5 bg-[#0c2f3e] text-white text-md"
                     />
                   </Link>
                   {entityName === 'Product' && (
                     <Button
                       label={`Delete ${entityName}`}
-                      icon='pi pi-trash'
-                      size='small'
-                      className='p-2.5 bg-red-500 text-white text-md'
+                      icon="pi pi-trash"
+                      size="small"
+                      className="p-2.5 bg-red-500 text-white text-md"
                     />
                   )}
                 </div>
@@ -96,12 +96,16 @@ const NavPage = ({ links, entityName, subName }) => {
 NavPage.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      to: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
+      to: PropTypes.string,
+      label: PropTypes.string,
     })
-  ).isRequired,
+  ),
   entityName: PropTypes.string.isRequired,
   subName: PropTypes.string.isRequired,
+};
+
+NavPage.defaultProps = {
+  links: [],
 };
 
 export default NavPage;

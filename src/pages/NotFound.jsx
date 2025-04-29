@@ -6,9 +6,9 @@ const NotFound = () => {
     <>
       <Helmet>
         <title>404 Not Found . Tutorin</title>
-        <meta name='description' content='404 | Notfound page' />
+        <meta name="description" content="404 | Notfound page" />
       </Helmet>
-      <div className='text-center text-gray-500 flex items-center justify-center h-screen text-3xl font-bold p-4'>
+      <div className="text-center text-gray-500 flex items-center justify-center h-screen text-3xl font-bold p-4">
         <p>404 | Not Found</p>
       </div>
     </>
