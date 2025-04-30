@@ -59,7 +59,7 @@ const ContactUpdatePage = () => {
   return (
     <>
       <Helmet>
-        <title>Edit Contact | Loan Market</title>
+        <title>{contact.name} | Loan Market</title>
         <meta name="description" content="Edit Contact page" />
       </Helmet>
       <form onSubmit={handleSubmit(onSubmit)}>

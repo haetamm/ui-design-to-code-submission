@@ -17,7 +17,7 @@ const ContactDetailPage = () => {
   return (
     <>
       <Helmet>
-        <title>{data.name}| Loan Market</title>
+        <title>{data.name} | Loan Market</title>
         <meta name="description" content="Contact Detail page" />
       </Helmet>
       <div className="mt-[68px] mb-2">

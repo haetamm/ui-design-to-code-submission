@@ -6,7 +6,7 @@ const ProductDeveloperPage = () => {
   return (
     <>
       <Helmet>
-        <title>Developer Page | Loan Market</title>
+        <title>Developer | Loan Market</title>
         <meta name="description" content="Developer Page" />
       </Helmet>
       <div className="mb-0 mt-[65px] md:mb-0">

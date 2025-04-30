@@ -197,7 +197,7 @@ export const bankOfficerSchema = object({
 });
 
 // contact field
-export const name = string().min(1, 'wajib diisi');
+export const name = string().trim().min(1, 'wajib diisi');
 export const contact_type = string().min(1, 'wajib diisi');
 export const position = string().min(1, 'wajib diisi');
 export const employment_type = string().min(1, 'wajib diisi');
@@ -206,7 +206,7 @@ export const email = string()
   .min(1, 'wajib diisi')
   .email('format email invalid');
 export const contact_category = string().min(1, 'wajib diisi');
-export const nik = string().min(1, 'wajib diisi');
+export const nik = string().trim().min(1, 'wajib diisi');
 
 export const contactSchema = object({
   contact_type,
@@ -313,4 +313,21 @@ export const product_category_icon = imageFileSchema;
 export const productAddCategorySchema = object({
   product_category_name,
   product_category_icon,
+});
+
+// credit scoring page
+export const credit_purpose = string().trim().min(1, 'wajib diisi');
+export const npwp = string().trim().min(1, 'wajib diisi');
+
+export const creditScoringIndividualSchema = object({
+  name,
+  birth_date,
+  nik,
+  credit_purpose,
+});
+
+export const creditScoringCompanySchema = object({
+  name,
+  credit_purpose,
+  npwp,
 });

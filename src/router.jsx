@@ -25,6 +25,9 @@ import ContactAddCategoryPage from './pages/ContactAddCategoryPage';
 import ContactByIdPage from './pages/ContactByIdPage';
 import BankPage from './pages/BankPage';
 import BankDetailPage from './pages/BankDetailPage';
+import CreditScoringPage from './pages/CreditScoringPage';
+import CreditScoringIndividualPage from './pages/CreditScoringIndividualPage';
+import CreditScoringCompanyPage from './pages/CreditScoringCompanyPage';
 
 const routerConfig = [
   {
@@ -159,6 +162,27 @@ const routerConfig = [
         path: `${urlPage.BANK}/:id/detail`,
         element: <BankDetailPage />,
         handle: { name: 'Bank' },
+      },
+      {
+        path: urlPage.CREDIT_SCORING,
+        element: <CreditScoringPage />,
+        handle: { name: 'Credit Scoring' },
+        children: [
+          {
+            path: '',
+            element: <Navigate to="individual" />,
+          },
+          {
+            path: 'individual',
+            element: <CreditScoringIndividualPage />,
+            handle: { name: 'Credit Scoring' },
+          },
+          {
+            path: 'company',
+            element: <CreditScoringCompanyPage />,
+            handle: { name: 'Credit Scoring' },
+          },
+        ],
       },
     ],
   },

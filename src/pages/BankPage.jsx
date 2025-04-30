@@ -4,10 +4,15 @@ import { Button } from 'primereact/button';
 import { dataProductBank } from '../utils/data';
 import CardBank from '../components/pages/bank/CardBank';
 import ButtonBottom from '../components/layouts/ButtonBottom';
+import { Helmet } from 'react-helmet-async';
 
 const BankPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Bank | Loan Market</title>
+        <meta name="description" content="Bank page" />
+      </Helmet>
       <div className="m-3 md:m-6 pt-3 md:pt-6 bg-white rounded-md">
         <FilterBar>
           <Button

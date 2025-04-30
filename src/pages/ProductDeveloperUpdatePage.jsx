@@ -51,7 +51,7 @@ const ProductDeveloperUpdatePage = () => {
   return (
     <>
       <Helmet>
-        <title>Edit Bank Product | Loan Market</title>
+        <title>{product.name_product} | Loan Market</title>
         <meta name="description" content="Edit Bank Product page" />
       </Helmet>
       <form onSubmit={handleSubmit(onSubmit)}>

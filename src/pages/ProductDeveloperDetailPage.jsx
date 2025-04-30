@@ -18,7 +18,7 @@ const ProductDeveloperDetailPage = () => {
   return (
     <>
       <Helmet>
-        <title>Bank Product Detail | Loan Market</title>
+        <title>{product.name_product} | Loan Market</title>
         <meta name="description" content="Bank Product Detail page" />
       </Helmet>
       <div className="mt-[60px] mb-14 md:mb-0">

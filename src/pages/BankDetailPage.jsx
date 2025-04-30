@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 import FilterBar from '../components/layouts/FilterBar';
 import CredentialBank from '../components/pages/bank/CredentialBank';
 import CardBankBranch from '../components/pages/bank/CardBankBranch';
+import { Helmet } from 'react-helmet-async';
 
 const BankDetailPage = () => {
   const { id } = useParams();
@@ -18,6 +19,10 @@ const BankDetailPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{bank_name} | Loan Market</title>
+        <meta name="description" content={`${bank_name} bank page`} />
+      </Helmet>
       <NavPage entityName="Bank" subName="Bank" />
       <div className="p-5 lg:p-3 xl:p-6 ">
         <CredentialBank

@@ -43,7 +43,7 @@ export const navItems = [
     label: 'Bank',
   },
   {
-    to: '#',
+    to: urlPage.CREDIT_SCORING,
     icon: <PiGauge className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Credit Scoring',
   },
@@ -109,6 +109,17 @@ export const productBankLink = [
   {
     to: urlPage.PRODUCT_DEVELOPER,
     label: 'DEVELOPER',
+  },
+];
+
+export const creditScoringLink = [
+  {
+    to: urlPage.CREDIT_SCORING_INDIVIDUAL,
+    label: 'Individual',
+  },
+  {
+    to: urlPage.CREDIT_SCORING_COMPANY,
+    label: 'Company',
   },
 ];
 

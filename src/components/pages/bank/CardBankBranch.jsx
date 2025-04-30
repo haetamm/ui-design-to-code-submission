@@ -7,6 +7,12 @@ const CardBankBranch = ({ name, rating, address, reviews }) => {
   return (
     <>
       <div className="border-2 shadow-md p-5 lg:p-3 xl:p-4 rounded-lg flex flex-col h-full">
+        <div className="flex justify-end">
+          <Button
+            icon="pi pi-pen-to-square"
+            className=" text-[#1cabe6] border-[#1cabe6] border-2 py-1"
+          />
+        </div>
         <div className="text-md mt-3 text-center font-bold text-[#1cabe6]">
           {name}
         </div>

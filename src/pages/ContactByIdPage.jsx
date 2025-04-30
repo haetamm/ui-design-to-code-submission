@@ -18,7 +18,7 @@ const ContactByIdPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Detail | Loan Market</title>
+        <title>{data.name} | Loan Market</title>
         <meta name="description" content="Contact Detail page" />
       </Helmet>
       <div className="mb-14 mt-[68px] md:mb-0">

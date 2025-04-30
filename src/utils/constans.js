@@ -14,4 +14,7 @@ export const urlPage = {
   PRODUCT_BANK_ADD: '/product/bank/add',
   PRODUCT_DEVELOPER: '/product/developer',
   BANK: '/bank',
+  CREDIT_SCORING: '/credit-scoring',
+  CREDIT_SCORING_INDIVIDUAL: '/credit-scoring/individual',
+  CREDIT_SCORING_COMPANY: '/credit-scoring/company',
 };

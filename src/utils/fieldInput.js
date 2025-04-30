@@ -198,6 +198,47 @@ export const productBankField = [
   },
 ];
 
+export const creditScoringIndividualField = [
+  {
+    label: 'Name',
+    value: 'name',
+    type: 'text',
+  },
+  {
+    label: 'Date Of Birth',
+    value: 'birth_date',
+    type: 'date',
+  },
+  {
+    label: 'KTP',
+    value: 'nik',
+    type: 'text',
+  },
+  {
+    label: 'Purpose',
+    value: 'credit_purpose',
+    type: 'select',
+  },
+];
+
+export const creditScoringCompanyField = [
+  {
+    label: 'Name',
+    value: 'name',
+    type: 'text',
+  },
+  {
+    label: 'Purpose',
+    value: 'credit_purpose',
+    type: 'select',
+  },
+  {
+    label: 'NPWP',
+    value: 'npwp',
+    type: 'text',
+  },
+];
+
 export const uploadDocField = [
   {
     label: 'Fotokopi KTP Pemohon',

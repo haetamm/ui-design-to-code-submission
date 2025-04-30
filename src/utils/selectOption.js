@@ -190,3 +190,10 @@ export const bank_officer_option = [
   { name: 'loram ipsum2', value: 'loram ipsum2' },
   { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
+
+export const credit_purpose_option = [
+  { name: 'Tidak Ada', value: '  ' },
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];
