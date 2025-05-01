@@ -5,7 +5,7 @@ import { InputText } from 'primereact/inputtext';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FilterBar = ({ children }) => {
+const FilterBar = ({ children, isSort = true }) => {
   return (
     <>
       <div className="p-3 px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-4 xs:pt-0 w-full">
@@ -18,12 +18,14 @@ const FilterBar = ({ children }) => {
               />
               <InputIcon className="pi pi-search" />
             </IconField>
-            <Button
-              label="Sort"
-              icon="pi pi-sort-alpha-up"
-              size="small"
-              className="h-[48px] xs:w-[150px] mt-2 xs:mt-0 w-full bg-white px-3 border-2"
-            />
+            {isSort && (
+              <Button
+                label="Sort"
+                icon="pi pi-sort-alpha-up"
+                size="small"
+                className="h-[48px] xs:w-[150px] mt-2 xs:mt-0 w-full bg-white px-3 border-2"
+              />
+            )}
           </div>
           <div className="w-full md:w-[45%] flex space-x-2 justify-end">
             {children}
@@ -36,6 +38,7 @@ const FilterBar = ({ children }) => {
 
 FilterBar.propTypes = {
   children: PropTypes.node,
+  isSort: PropTypes.bool,
 };
 
 FilterBar.defaultProps = {

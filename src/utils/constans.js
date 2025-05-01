@@ -17,4 +17,5 @@ export const urlPage = {
   CREDIT_SCORING: '/credit-scoring',
   CREDIT_SCORING_INDIVIDUAL: '/credit-scoring/individual',
   CREDIT_SCORING_COMPANY: '/credit-scoring/company',
+  FAQ: '/faq',
 };

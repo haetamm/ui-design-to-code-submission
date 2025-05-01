@@ -12,8 +12,8 @@ const ProductBankPage = () => {
   return (
     <>
       <Helmet>
-        <title>Product | Loan Market</title>
-        <meta name="description" content="Product page" />
+        <title>Product Bank | Loan Market</title>
+        <meta name="description" content="Product Bank page" />
       </Helmet>
       <div className="mb-14 mt-[42px] md:mb-0">
         <CardMenuBank />

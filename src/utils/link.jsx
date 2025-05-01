@@ -48,7 +48,7 @@ export const navItems = [
     label: 'Credit Scoring',
   },
   {
-    to: '#',
+    to: urlPage.FAQ,
     icon: (
       <AiOutlineQuestionCircle className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />
     ),

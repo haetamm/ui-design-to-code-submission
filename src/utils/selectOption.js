@@ -197,3 +197,10 @@ export const credit_purpose_option = [
   { name: 'loram ipsum2', value: 'loram ipsum2' },
   { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
+
+export const faq_count_list_option = [
+  { name: '5', value: 5 },
+  { name: '10', value: 10 },
+  { name: '15', value: 15 },
+  { name: '20', value: 20 },
+];

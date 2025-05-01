@@ -1205,3 +1205,195 @@ export const dataCreditScoring = [
     status: 'Not Found',
   },
 ];
+
+export const dataFaqs = [
+  {
+    id: 1,
+    title: "FAQ's KPR Primary",
+    details: [
+      {
+        id: 1,
+        title: 'Apa itu KPR Primary?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'Apa keuntungan dari KPR Primary?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 3,
+        title: 'Apa saja Dokumen Penunjang yang dibutuhkan dalam KPR Primary?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 4,
+        title: 'Bagaimana cara mengajukan KPR Primary di Loan Market?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "FAQ's Refinancing BPKB dan mesin/alat berat",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 3,
+        title: 'Lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "FAQ's Take Over dan Bridging Loan",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "FAQ's KPR Multiguna/KPR Secondary",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 3,
+        title: 'Lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 4,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "FAQ's Form Renovasi",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "FAQ's Form Kredit Modal Usaha dan Investasi/Rekening Koran",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 3,
+        title: 'Lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "FAQ's Form Kredit Ivestasi",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 3,
+        title: 'Lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 4,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 5,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "FAQ's Form Deposito",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 2,
+        title: 'consectetur adipisicing elit.?',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+      {
+        id: 3,
+        title: 'Lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "FAQ's Refinancing Kendaraan Bermotor",
+    details: [
+      {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corrupti perferendis rem harum provident dolores. Est, corporis eius! Explicabo, nam consequuntur esse nemo possimus porro sint quos suscipit eius earum?',
+      },
+    ],
+  },
+];

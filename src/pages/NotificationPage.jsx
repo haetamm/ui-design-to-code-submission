@@ -1,9 +1,14 @@
 import React from 'react';
 import TimelineNotification from '../components/layouts/TimeLineNotification';
+import { Helmet } from 'react-helmet-async';
 
 const NotificationPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Notification| Loan Market</title>
+        <meta name="description" content="Notification page" />
+      </Helmet>
       <div className="px-3 pb-4 md:px-3 lg:px-6 w-full">
         <div className="pt-10 pb-4 rounded-lg">
           <div className="block md:flex justify-center items-center">

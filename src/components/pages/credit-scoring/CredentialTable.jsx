@@ -41,7 +41,7 @@ const CredentialTable = () => {
   );
 
   return (
-    <div className="w-full px-3 md:px-6 mt-6 mb-14">
+    <div className="w-full px-3 md:px-6 mt-3 mb-14">
       {/* Tabel Desktop */}
       <DataTable
         value={dataCreditScoring}

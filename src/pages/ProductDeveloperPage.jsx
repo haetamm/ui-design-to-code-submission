@@ -6,8 +6,8 @@ const ProductDeveloperPage = () => {
   return (
     <>
       <Helmet>
-        <title>Developer | Loan Market</title>
-        <meta name="description" content="Developer Page" />
+        <title>Product Developer | Loan Market</title>
+        <meta name="description" content="Product Developer Page" />
       </Helmet>
       <div className="mb-0 mt-[65px] md:mb-0">
         <CardProductDeveloper />

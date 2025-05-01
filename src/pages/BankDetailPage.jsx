@@ -8,6 +8,7 @@ import FilterBar from '../components/layouts/FilterBar';
 import CredentialBank from '../components/pages/bank/CredentialBank';
 import CardBankBranch from '../components/pages/bank/CardBankBranch';
 import { Helmet } from 'react-helmet-async';
+import ButtonBottom from '../components/layouts/ButtonBottom';
 
 const BankDetailPage = () => {
   const { id } = useParams();
@@ -60,6 +61,14 @@ const BankDetailPage = () => {
           </div>
         </div>
       </div>
+      <ButtonBottom>
+        <Button
+          label="Add Branch"
+          icon="pi pi-plus"
+          size="large"
+          className=" w-full p-2.5 bg-[#1cabe6] text-white"
+        />
+      </ButtonBottom>
     </>
   );
 };

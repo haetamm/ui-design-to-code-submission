@@ -28,6 +28,8 @@ import BankDetailPage from './pages/BankDetailPage';
 import CreditScoringPage from './pages/CreditScoringPage';
 import CreditScoringIndividualPage from './pages/CreditScoringIndividualPage';
 import CreditScoringCompanyPage from './pages/CreditScoringCompanyPage';
+import FaqPage from './pages/FaqPage';
+import FaqDetailPage from './pages/FaqDetailPage';
 
 const routerConfig = [
   {
@@ -183,6 +185,16 @@ const routerConfig = [
             handle: { name: 'Credit Scoring' },
           },
         ],
+      },
+      {
+        path: urlPage.FAQ,
+        element: <FaqPage />,
+        handle: { name: "FAQ's" },
+      },
+      {
+        path: `${urlPage.FAQ}/:id/detail`,
+        element: <FaqDetailPage />,
+        handle: { name: "FAQ's" },
       },
     ],
   },

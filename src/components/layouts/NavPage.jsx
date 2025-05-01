@@ -53,7 +53,7 @@ const NavPage = ({ links, entityName, subName }) => {
                 onClick={handleBack}
                 className="h-8 w-8 text-[#1cabe6] cursor-pointer"
               />
-              <div>
+              <div className="text-sm md:text-xl">
                 {isAddPage
                   ? `Add ${subName}`
                   : isUpdatePage
