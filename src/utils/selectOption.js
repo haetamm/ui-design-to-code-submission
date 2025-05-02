@@ -204,3 +204,9 @@ export const faq_count_list_option = [
   { name: '15', value: 15 },
   { name: '20', value: 20 },
 ];
+
+export const list_branch_offices_option = [
+  { name: 'loram ipsum1', value: 'loram ipsum1' },
+  { name: 'loram ipsum2', value: 'loram ipsum2' },
+  { name: 'loram ipsum3', value: 'loram ipsum3' },
+];

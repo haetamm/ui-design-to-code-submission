@@ -27,7 +27,7 @@ const CredentialTable = () => {
 
   const responsiveTable = (rowData) => (
     <div className="p-3 border border-gray-300 rounded">
-      <div className="inline-block xs:grid xs:grid-cols-[20%_70%] gap-x-2 gap-y-4 text-md">
+      <div className="inline-block xs:grid xs:grid-cols-[20%_80%] gap-x-2 gap-y-4 text-md">
         {columns.map((col, idx) => (
           <React.Fragment key={idx}>
             <div className="font-bold mt-2 xs:mt-0">{col.header}</div>
@@ -46,8 +46,9 @@ const CredentialTable = () => {
       <DataTable
         value={dataCreditScoring}
         className="w-full hidden lg:block border border-gray-300 rounded"
-        headerClassName="border-b border-gray-300 bg-gray-100"
-        rowClassName={() => 'border-b border-gray-300 last:border-b-0'}
+        headerClassName=""
+        stripedRows
+        rowClassName={() => 'border-b border-gray-300 '}
         paginator
         rows={5}
         rowsPerPageOptions={[5, 10, 20]}
@@ -69,7 +70,6 @@ const CredentialTable = () => {
       <DataTable
         value={dataCreditScoring}
         className="w-full lg:hidden"
-        rowClassName={() => 'last:border-b-0'}
         paginator
         rows={5}
         rowsPerPageOptions={[5, 10, 20]}

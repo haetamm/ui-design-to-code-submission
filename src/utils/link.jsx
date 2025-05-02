@@ -55,12 +55,12 @@ export const navItems = [
     label: "FAQ's",
   },
   {
-    to: '#',
+    to: urlPage.PIPELINE,
     icon: <IoLayersOutline className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Pipeline',
   },
   {
-    to: '#',
+    to: urlPage.PIPELINE_DEV,
     icon: <IoLayersOutline className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Pipeline Developer',
   },

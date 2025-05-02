@@ -4,7 +4,7 @@ import { dataProdctDeveloper } from '../utils/data';
 import DataNotFound from '../components/pages/DataNotFound';
 import { Helmet } from 'react-helmet-async';
 import { Button } from 'primereact/button';
-import FormProductDeveloper from '../components/pages/developer/FormProductDeveloper';
+import FormProductDeveloper from '../components/pages/product/FormProductDeveloper';
 import ButtonBottom from '../components/layouts/ButtonBottom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';

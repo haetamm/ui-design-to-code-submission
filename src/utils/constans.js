@@ -18,4 +18,6 @@ export const urlPage = {
   CREDIT_SCORING_INDIVIDUAL: '/credit-scoring/individual',
   CREDIT_SCORING_COMPANY: '/credit-scoring/company',
   FAQ: '/faq',
+  PIPELINE: '/pipeline',
+  PIPELINE_DEV: '/pipeline-developer',
 };

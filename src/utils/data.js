@@ -1397,3 +1397,76 @@ export const dataFaqs = [
     ],
   },
 ];
+
+export const dataLoan = [
+  {
+    office: 'LOAN MARKET ALAM SUTERA',
+    debiturName: 'MUHAMMAD FALYANDA PUTRA',
+    fullname: 'Ricardo de Melverda',
+    product: 'KREDIT PEMILIKAN APARTEMEN (KPA)',
+    plafond: 'Rp. 560,601,800',
+  },
+  {
+    office: 'LOAN MARKET ALAM SUTERA',
+    debiturName: 'SYIFFA ARHSYURA',
+    fullname: 'Ricardo de Melverda',
+    product: 'KREDIT PEMILIKAN APARTEMEN (KPA)',
+    plafond: 'Rp. 748,754,000',
+  },
+  {
+    office: 'LOAN MARKET ALAM SUTERA',
+    debiturName: 'ARI RAHMAT',
+    fullname: 'Imelda',
+    product: 'KREDIT PEMILIKAN RUMAH PRIMARY (KPR PRIMARY)',
+    plafond: 'Rp. 1,000,000,000',
+  },
+  {
+    office: 'LOAN MARKET ALAM SUTERA',
+    debiturName: 'DWI JELITA SUMANTRI',
+    fullname: 'Ricardo de Melverda',
+    product: 'KREDIT MULTIGUNA (KMG)',
+    plafond: 'Rp. 4,600,000',
+  },
+  {
+    office: 'LOAN MARKET ALAM SUTERA',
+    debiturName: 'DARNEL SATRIO, ST',
+    fullname: 'Imelda',
+    product: 'KREDIT PEMILIKAN APARTEMEN (KPA)',
+    plafond: 'Rp. 684,283,632',
+  },
+  {
+    office: 'LOAN MARKET ADAM MALIK',
+    debiturName: 'ENGGONO',
+    fullname: 'IWAN TIMOTI TANGKERE',
+    product: 'TAKE OVER',
+    plafond: 'Rp. 500,000,000',
+  },
+  {
+    office: 'LOAN MARKET PONDOK PINANG',
+    debiturName: 'IKA MUTIARINI',
+    fullname: 'ANDI KURNIAWAN',
+    product: 'TAKE OVER',
+    plafond: 'Rp. 1,200,000,000',
+  },
+  {
+    office: 'LOAN MARKET CENTRAL PARK',
+    debiturName: 'DUYUNG',
+    fullname: 'ALBERTO DWIJAYADI',
+    product: 'KREDIT TANPA AGUNAN (KTA)',
+    plafond: 'Rp. 50,000,000',
+  },
+  {
+    office: 'LOAN MARKET HARMONI',
+    debiturName: 'DANI',
+    fullname: 'SRI ANASARI (RIRI)',
+    product: 'KREDIT PEMILIKAN RUMAH SECONDARY (KPR SECONDARY)',
+    plafond: 'Rp. 500,000,000',
+  },
+  {
+    office: 'LOAN MARKET ADAM MALIK',
+    debiturName: 'RIVALDO ABIMANYU',
+    fullname: 'NONNY NADHIRA YUSUF',
+    product: 'KREDIT PEMILIKAN RUMAH SECONDARY (KPR SECONDARY)',
+    plafond: 'Rp. 500,000,000',
+  },
+];

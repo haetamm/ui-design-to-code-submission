@@ -32,13 +32,7 @@ const BankDetailPage = () => {
           description={description}
         />
         <div className="mt-3 md:my-6 pt-3 md:pt-6 bg-white rounded-md">
-          <FilterBar>
-            <Button
-              label="Filter"
-              icon="pi pi-filter"
-              size="small"
-              className="h-[48px] mt-2 md:mt-0 w-full md:w-[150px] bg-white px-3 border-2"
-            />
+          <FilterBar isFilter={true}>
             <Button
               label="Add Branch"
               icon="pi pi-plus"

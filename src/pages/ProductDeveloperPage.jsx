@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import CardProductDeveloper from '../components/pages/developer/CardProductDeveloper';
+import CardProductDeveloper from '../components/pages/product/CardProductDeveloper';
 
 const ProductDeveloperPage = () => {
   return (

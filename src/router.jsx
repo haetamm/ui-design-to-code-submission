@@ -30,6 +30,8 @@ import CreditScoringIndividualPage from './pages/CreditScoringIndividualPage';
 import CreditScoringCompanyPage from './pages/CreditScoringCompanyPage';
 import FaqPage from './pages/FaqPage';
 import FaqDetailPage from './pages/FaqDetailPage';
+import PipelinePage from './pages/PipelinePage';
+import PipelineDevPage from './pages/PipelineDevPage';
 
 const routerConfig = [
   {
@@ -195,6 +197,16 @@ const routerConfig = [
         path: `${urlPage.FAQ}/:id/detail`,
         element: <FaqDetailPage />,
         handle: { name: "FAQ's" },
+      },
+      {
+        path: urlPage.PIPELINE,
+        element: <PipelinePage />,
+        handle: { name: 'Pipeline' },
+      },
+      {
+        path: urlPage.PIPELINE_DEV,
+        element: <PipelineDevPage />,
+        handle: { name: 'Pipeline Developer' },
       },
     ],
   },

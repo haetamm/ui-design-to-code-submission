@@ -11,10 +11,8 @@ const FaqList = () => {
           key={index}
           className="h-[48px] mb-2.5 border border-gray-200 bg-white cursor-pointer rounded-lg flex items-center justify-between px-4 hover:bg-gray-50 transition-colors"
         >
-          <span className="text-blue-800 text-sm md:text-lg font-medium">
-            {faq.title}
-          </span>
-          <i className="pi pi-chevron-right text-blue-800" />
+          <span className=" text-sm md:text-lg font-medium">{faq.title}</span>
+          <i className="pi pi-chevron-right " />
         </Link>
       ))}
     </div>

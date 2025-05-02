@@ -21,7 +21,12 @@ const Sidebar = () => {
     }));
   };
 
-  const isActive = (path) => location.pathname.startsWith(path);
+  const isActive = (path) => {
+    if (path.includes('pipeline')) {
+      return location.pathname === path;
+    }
+    return location.pathname.startsWith(path);
+  };
 
   return (
     isOpen && (
