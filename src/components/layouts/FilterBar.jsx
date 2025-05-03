@@ -1,4 +1,3 @@
-import { Button } from 'primereact/button';
 import { IconField } from 'primereact/iconfield';
 import { InputIcon } from 'primereact/inputicon';
 import { InputText } from 'primereact/inputtext';
@@ -6,9 +5,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const FilterBar = ({
-  children,
-  isSort = true,
-  isFilter = false,
+  rightChild,
+  leftChild,
   value,
   onChange,
   placeholder = 'Cari berdasarkan nama',
@@ -18,7 +16,10 @@ const FilterBar = ({
       <div className="p-3 px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-4 xs:pt-0 w-full">
         <div className="inline-block md:flex w-full space-x-0 md:space-x-3 justify-between">
           <div className="inline-block xs:flex space-x-0 xs:space-x-2 w-full">
-            <IconField iconPosition="left" className="w-full md:w-[80%]">
+            <IconField
+              iconPosition="left"
+              className={`${leftChild ? 'md:w-[80%]' : 'md:w-ful'} w-full`}
+            >
               <InputText
                 placeholder={placeholder}
                 value={value}
@@ -27,25 +28,10 @@ const FilterBar = ({
               />
               <InputIcon className="pi pi-search" />
             </IconField>
-            {isFilter && (
-              <Button
-                label="Filter"
-                icon="pi pi-filter"
-                size="large"
-                className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
-              />
-            )}
-            {isSort && (
-              <Button
-                label="Sort"
-                icon="pi pi-sort-alpha-up"
-                size="large"
-                className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
-              />
-            )}
+            {leftChild}
           </div>
           <div className="w-full md:w-[45%] flex space-x-2 justify-end">
-            {children}
+            {rightChild}
           </div>
         </div>
       </div>
@@ -54,17 +40,11 @@ const FilterBar = ({
 };
 
 FilterBar.propTypes = {
-  children: PropTypes.node,
-  isSort: PropTypes.bool.isRequired,
-  isFilter: PropTypes.bool.isRequired,
+  rightChild: PropTypes.node,
+  leftChild: PropTypes.node,
   value: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string.isRequired,
-};
-
-FilterBar.defaultProps = {
-  buttonChildren: null,
-  children: null,
 };
 
 export default FilterBar;

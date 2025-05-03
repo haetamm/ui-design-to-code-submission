@@ -18,24 +18,40 @@ const ContactMePage = () => {
         <meta name="description" content="Contact page" />
       </Helmet>
       <div className="mb-14 mt-[68px] md:mb-0">
-        <FilterBar>
-          <Link to={urlPage.CONTACT_ADD} className="md:w-[160px]  ">
+        <FilterBar
+          leftChild={
             <Button
-              label="Add Contact"
-              icon="pi pi-plus"
-              size="small"
-              className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
+              label="Sort"
+              icon="pi pi-sort-alpha-up"
+              size="large"
+              className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
             />
-          </Link>
-          <Link to={urlPage.CONTACT_ADD_CATEGORY} className="md:w-[160px]  ">
-            <Button
-              label="Add Category"
-              icon="pi pi-plus"
-              size="small"
-              className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
-            />
-          </Link>
-        </FilterBar>
+          }
+          rightChild={
+            <>
+              <Link to={urlPage.CONTACT_ADD} className="md:w-[160px]  ">
+                <Button
+                  label="Add Contact"
+                  icon="pi pi-plus"
+                  size="small"
+                  className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
+                />
+              </Link>
+              <Link
+                to={urlPage.CONTACT_ADD_CATEGORY}
+                className="md:w-[160px]  "
+              >
+                <Button
+                  label="Add Category"
+                  icon="pi pi-plus"
+                  size="small"
+                  className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
+                />
+              </Link>
+            </>
+          }
+        />
+
         <div className=" px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-6 xs:pt-0 w-full">
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4">
             {contact.map((contact, index) => (

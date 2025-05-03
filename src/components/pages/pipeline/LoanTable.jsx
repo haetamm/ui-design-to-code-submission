@@ -29,36 +29,47 @@ const LoanTable = () => {
   const renderHeader = () => {
     return (
       <FilterBar
-        isFilter={true}
-        isSort={false}
         placeholder="Search"
         value={globalFilterValue}
         onChange={onGlobalFilterChange}
-      >
-        <Button
-          label="View Coloumn"
-          icon="pi pi-table"
-          size="large"
-          className="h-[48px] mt-2 md:mt-0 w-full md:w-[180px] bg-white px-3 border-2"
-        />
-        <Button
-          icon="pi pi-download"
-          size="large"
-          className="h-[48px] mt-2 md:mt-0 w-[80px] md:w-[48px] text-[#1cabe6] border-[#1cabe6] border-[1px] "
-        />
-        <Button
-          icon="pi pi-print"
-          size="large"
-          className="h-[48px] mt-2 md:mt-0 w-[80px] md:w-[48px] text-[#1cabe6] border-[#1cabe6] border-[1px] "
-        />
-      </FilterBar>
+        leftChild={
+          <>
+            <Button
+              label="Filter"
+              icon="pi pi-filter"
+              size="large"
+              className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
+            />
+          </>
+        }
+        rightChild={
+          <>
+            <Button
+              label="View Coloumn"
+              icon="pi pi-table"
+              size="large"
+              className="h-[48px] mt-2 md:mt-0 w-full md:w-[180px] bg-white px-3 border-2"
+            />
+            <Button
+              icon="pi pi-download"
+              size="large"
+              className="h-[48px] mt-2 md:mt-0 w-[80px] md:w-[48px] text-[#1cabe6] border-[#1cabe6] border-[1px] "
+            />
+            <Button
+              icon="pi pi-print"
+              size="large"
+              className="h-[48px] mt-2 md:mt-0 w-[80px] md:w-[48px] text-[#1cabe6] border-[#1cabe6] border-[1px] "
+            />
+          </>
+        }
+      />
     );
   };
 
   const columns = [
     { field: 'office', header: 'KANTOR LOAN MARKET' },
     { field: 'debiturName', header: 'NAMA DEBITUR' },
-    { field: 'fullname', header: 'NAMA LA"' },
+    { field: 'fullname', header: 'NAMA LA' },
     { field: 'product', header: 'PRODUCT' },
     { field: 'plafond', header: 'PLAFOND' },
   ];

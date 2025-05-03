@@ -13,7 +13,7 @@ const CredentialTable = () => {
     { field: 'ktpNpwp', header: 'KTP / NPWP' },
     { field: 'type', header: 'Type' },
     { field: 'purpose', header: 'Purpose' },
-    { field: 'tanggal', header: 'Tanggal' },
+    { field: 'date', header: 'Tanggal' },
     { field: 'status', header: 'Status' },
   ];
 

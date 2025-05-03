@@ -1121,7 +1121,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1129,7 +1129,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1137,7 +1137,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1145,7 +1145,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1153,7 +1153,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1161,7 +1161,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1169,7 +1169,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1177,7 +1177,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1185,7 +1185,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1193,7 +1193,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
   {
@@ -1201,7 +1201,7 @@ export const dataCreditScoring = [
     ktpNpwp: '7656745644453',
     type: 'Individual',
     purpose: 'ProvidingFacilities',
-    tanggal: '2022-02-24',
+    date: '2022-02-24',
     status: 'Not Found',
   },
 ];

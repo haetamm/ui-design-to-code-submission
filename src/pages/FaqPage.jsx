@@ -15,21 +15,25 @@ const FaqPage = () => {
         <meta name="description" content="FAQ's page" />
       </Helmet>
       <div className="mt-6">
-        <FilterBar isSort={false}>
-          <Button
-            label="Filter"
-            icon="pi pi-filter"
-            size="small"
-            className="h-[48px] mt-2 md:mt-0 w-full md:w-[150px] bg-white px-3 border-2"
-          />
-          <Dropdown
-            options={faq_count_list_option}
-            optionLabel="name"
-            value={selectedOption}
-            onChange={(e) => setSelectedOption(e.value)}
-            className="h-[48px] mt-2 md:mt-0 w-1/2 md:w-[100px] bg-white border-2"
-          />
-        </FilterBar>
+        <FilterBar
+          rightChild={
+            <>
+              <Button
+                label="Filter"
+                icon="pi pi-filter"
+                size="small"
+                className="h-[48px] mt-2 md:mt-0 w-full md:w-[150px] bg-white px-3 border-2"
+              />
+              <Dropdown
+                options={faq_count_list_option}
+                optionLabel="name"
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.value)}
+                className="h-[48px] mt-2 md:mt-0 w-1/2 md:w-[100px] bg-white border-2"
+              />
+            </>
+          }
+        />
       </div>
       <FaqList />
     </>

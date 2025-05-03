@@ -14,14 +14,25 @@ const BankPage = () => {
         <meta name="description" content="Bank page" />
       </Helmet>
       <div className="m-3 md:m-6 pt-3 md:pt-6 bg-white rounded-md">
-        <FilterBar>
-          <Button
-            label="Add Bank"
-            icon="pi pi-plus"
-            size="small"
-            className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
-          />
-        </FilterBar>
+        <FilterBar
+          leftChild={
+            <Button
+              label="Sort"
+              icon="pi pi-sort-alpha-up"
+              size="large"
+              className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
+            />
+          }
+          rightChild={
+            <Button
+              label="Add Bank"
+              icon="pi pi-plus"
+              size="small"
+              className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
+            />
+          }
+        />
+
         <div className=" px-3 pt-2 md:px-3 lg:px-4 xl:px-6 py-6 xs:pt-4 w-full">
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {dataProductBank.map((bank, index) => (

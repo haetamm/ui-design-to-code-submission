@@ -20,4 +20,5 @@ export const urlPage = {
   FAQ: '/faq',
   PIPELINE: '/pipeline',
   PIPELINE_DEV: '/pipeline-developer',
+  MARKETING_TOOL: '/marketing-tool',
 };

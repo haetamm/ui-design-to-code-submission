@@ -65,7 +65,7 @@ export const navItems = [
     label: 'Pipeline Developer',
   },
   {
-    to: '#',
+    to: urlPage.MARKETING_TOOL,
     icon: <FiArchive className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Marketing Tools',
   },

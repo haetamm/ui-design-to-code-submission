@@ -32,6 +32,7 @@ import FaqPage from './pages/FaqPage';
 import FaqDetailPage from './pages/FaqDetailPage';
 import PipelinePage from './pages/PipelinePage';
 import PipelineDevPage from './pages/PipelineDevPage';
+import MarketingPage from './pages/MarketingPage';
 
 const routerConfig = [
   {
@@ -207,6 +208,11 @@ const routerConfig = [
         path: urlPage.PIPELINE_DEV,
         element: <PipelineDevPage />,
         handle: { name: 'Pipeline Developer' },
+      },
+      {
+        path: urlPage.MARKETING_TOOL,
+        element: <MarketingPage />,
+        handle: { name: 'Marketing Tools' },
       },
     ],
   },

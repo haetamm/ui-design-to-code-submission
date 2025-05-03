@@ -32,14 +32,33 @@ const BankDetailPage = () => {
           description={description}
         />
         <div className="mt-3 md:my-6 pt-3 md:pt-6 bg-white rounded-md">
-          <FilterBar isFilter={true}>
-            <Button
-              label="Add Branch"
-              icon="pi pi-plus"
-              size="small"
-              className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
-            />
-          </FilterBar>
+          <FilterBar
+            leftChild={
+              <>
+                <Button
+                  label="Filter"
+                  icon="pi pi-filter"
+                  size="large"
+                  className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
+                />
+                <Button
+                  label="Sort"
+                  icon="pi pi-sort-alpha-up"
+                  size="large"
+                  className="h-[48px] mt-2 xs:mt-0 w-full xs:w-[150px] bg-white px-3 border-2"
+                />
+              </>
+            }
+            rightChild={
+              <Button
+                label="Add Branch"
+                icon="pi pi-plus"
+                size="small"
+                className="hidden md:block w-full py-3 mt-4 md:mt-0 bg-[#1cabe6] text-white px-3"
+              />
+            }
+          />
+
           <div className=" px-3 pt-2 md:px-3 lg:px-4 xl:px-6 py-6 xs:pt-4 w-full">
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {data?.branch?.length > 0 ? (
