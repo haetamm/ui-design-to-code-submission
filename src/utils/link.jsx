@@ -199,7 +199,7 @@ export const subNavItemProduct = [
 
 export const subNavItemWhatsapp = [
   {
-    to: '#',
+    to: urlPage.WHATSAPP_REPORT,
     icon: <TbReport className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Report',
   },

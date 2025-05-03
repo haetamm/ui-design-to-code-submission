@@ -21,4 +21,5 @@ export const urlPage = {
   PIPELINE: '/pipeline',
   PIPELINE_DEV: '/pipeline-developer',
   MARKETING_TOOL: '/marketing-tool',
+  WHATSAPP_REPORT: '/whatsapp-report',
 };

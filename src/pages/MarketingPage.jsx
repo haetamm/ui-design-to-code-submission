@@ -34,23 +34,28 @@ const MarketingPage = () => {
       </Helmet>
       <div className="mt-6 md:mb-8">
         <div className="p-3 px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-4 xs:pt-0 w-full">
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {dataTemplate.map(({ id, title, img }) => (
-              <React.Fragment key={id}>
-                <div className="mb-2">
-                  <img src={img} alt={title} className="h-[341px]" />
-                  <div className="text-center bg-white py-3 rounded-b-xl border-b-[1px] border-x-[1px] border-slate-300">
-                    {title}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {dataTemplate.map(({ id, title, img }) => (
+                <div
+                  className="w-[300px] xs:w-[250px] md:w-[300px] lg:w-[260px] mb-3"
+                  key={id}
+                >
+                  <div className=" flex flex-col items-center">
+                    <img src={img} alt={title} className="h-[341px]" />
+                    <div className="text-center bg-white py-3 w-full rounded-b-xl border-b-[1px] border-x-[1px] border-slate-300">
+                      {title}
+                    </div>
+                    <Button
+                      label="Create"
+                      icon="pi pi-plus"
+                      size="large"
+                      className="mt-3 w-full p-2.5 bg-[#1cabe6] text-white rounded-xl"
+                    />
                   </div>
-                  <Button
-                    label="Create"
-                    icon="pi pi-plus"
-                    size="large"
-                    className="mt-2 w-full p-2.5 bg-[#1cabe6] text-white rounded-xl"
-                  />
                 </div>
-              </React.Fragment>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="mt-8">
             <DesignTable />

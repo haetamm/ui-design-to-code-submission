@@ -33,6 +33,7 @@ import FaqDetailPage from './pages/FaqDetailPage';
 import PipelinePage from './pages/PipelinePage';
 import PipelineDevPage from './pages/PipelineDevPage';
 import MarketingPage from './pages/MarketingPage';
+import WhatsappReportPage from './pages/WhatsappReportPage';
 
 const routerConfig = [
   {
@@ -213,6 +214,11 @@ const routerConfig = [
         path: urlPage.MARKETING_TOOL,
         element: <MarketingPage />,
         handle: { name: 'Marketing Tools' },
+      },
+      {
+        path: urlPage.WHATSAPP_REPORT,
+        element: <WhatsappReportPage />,
+        handle: { name: 'Whatsapp' },
       },
     ],
   },
