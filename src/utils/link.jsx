@@ -1,13 +1,9 @@
-import {
-  AiOutlineHome,
-  AiOutlineQuestionCircle,
-  AiOutlineShopping,
-} from 'react-icons/ai';
+import { AiOutlineQuestionCircle, AiOutlineShopping } from 'react-icons/ai';
 import { urlPage } from './constans.js';
 import { LiaAddressCard } from 'react-icons/lia';
 import { FaRegBuilding, FaRegCreditCard, FaWhatsapp } from 'react-icons/fa';
 import { CiFileOn } from 'react-icons/ci';
-import { RiBankLine } from 'react-icons/ri';
+import { RiBankLine, RiHome4Line } from 'react-icons/ri';
 import { PiGauge } from 'react-icons/pi';
 import { IoHomeOutline, IoLayersOutline } from 'react-icons/io5';
 import { FiArchive, FiUser } from 'react-icons/fi';
@@ -19,7 +15,7 @@ import { TbCategory2, TbReport } from 'react-icons/tb';
 export const navItems = [
   {
     to: urlPage.DASHBOARD,
-    icon: <AiOutlineHome className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
+    icon: <RiHome4Line className="h-9 w-9 lg:w-7 lg:h-7 xl:w-9 xl:h-9" />,
     label: 'Dashboard',
   },
   {

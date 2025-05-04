@@ -118,7 +118,7 @@ const LoanTable = () => {
       <DataTable
         value={data}
         headerClassName=""
-        className="w-full block lg:hidden rounded-lg"
+        className="w-full block lg:hidden rounded-lg overflow-hidden"
         globalFilterFields={[
           'office',
           'debiturName',

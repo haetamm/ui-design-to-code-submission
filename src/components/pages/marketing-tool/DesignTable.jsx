@@ -19,7 +19,13 @@ const DesignTable = () => {
   );
 
   const imageTemplate = (rowData) => (
-    <Image src={rowData.image} alt="preview" width="40" preview={false} />
+    <Image
+      src={rowData.image}
+      alt="preview"
+      width="40"
+      preview={false}
+      className="hidden md:block"
+    />
   );
 
   return (

@@ -16,7 +16,7 @@ const DashboardPage = () => {
       <Credential />
       <CardMenu />
 
-      <div className="px-3 pb-4 md:px-3 lg:px-6 w-full">
+      <div className="px-3 mt-2 lg:mt-1 xl:mt-0 pb-4 md:px-3 lg:px-6 w-full">
         <div className="bg-white pt-10 pb-4 rounded-lg">
           <div className="block md:flex justify-center items-center">
             <div className="w-full md:w-1/2 md:border-r-2">

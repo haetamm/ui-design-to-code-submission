@@ -13,7 +13,7 @@ const BankPage = () => {
         <title>Bank | Loan Market</title>
         <meta name="description" content="Bank page" />
       </Helmet>
-      <div className="m-3 md:m-6 pt-3 md:pt-6 bg-white rounded-md">
+      <div className="m-3 md:m-6 pt-3 md:pt-6 bg-white rounded-md mb-20 md:mb-0">
         <FilterBar
           leftChild={
             <Button

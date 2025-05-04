@@ -20,7 +20,7 @@ const PipelineDevPage = () => {
         <title>Pipeline Developer | Loan Market</title>
         <meta name="description" content="Pipeline Developer page" />
       </Helmet>
-      <div className="mt-[40px] xs:mt-[10px] mb-14">
+      <div className="mt-[40px] xs:mt-[10px] mb-4">
         <div className={`${isOpen ? 'pl-3' : 'px-3'} md:px-6 md:py-3`}>
           <FilterSection
             labelLeft="Status"

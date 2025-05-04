@@ -1,26 +1,19 @@
 import React from 'react';
-import { LuAlignJustify } from 'react-icons/lu';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import NotificationButton from '../pages/dashboard/NotificationButton';
 import { useMatches } from 'react-router-dom';
-import { useSidebar } from '../../store/sidebar';
+import ToggleSidebarButton from './ToggleSidebarButton';
 
 const Navbar = () => {
-  const { toggleSidebar } = useSidebar();
   const matches = useMatches();
   const namePage = matches.find((match) => match.handle?.name);
 
   return (
-    <div className="w-full fixed z-50 flex justify-center">
+    <div className="w-full fixed z-[51] md:z-50 flex justify-center">
       <div className="kontener border-b-[3px] bg-white lg:px-2 xl:px-4">
         <div className="flex justify-between items-center px-2 py-1 lg:py-2">
           <div className="flex items-center">
-            <button
-              onClick={() => toggleSidebar()}
-              className="h-9 w-9 flex items-center justify-center lg:hidden"
-            >
-              <LuAlignJustify className="h-9 w-9" />
-            </button>
+            <ToggleSidebarButton />
             <div className="text-lg md:text-3xl pl-[15px] lg:pl-[160px] xl:pl-[210px]">
               {namePage?.handle?.name || 'Loan Market'}
             </div>

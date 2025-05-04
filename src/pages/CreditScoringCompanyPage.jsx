@@ -34,7 +34,7 @@ const CreditScoringCompanyPage = () => {
         <meta name="description" content="Credit Scoring Company page" />
       </Helmet>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mt-[60px] mb-14 md:mb-0">
+        <div className="mt-[60px] md:mb-0">
           <div className={`${isOpen ? 'pl-3' : 'px-3'} py-3 md:p-6`}>
             <FormCreditScoring
               control={control}

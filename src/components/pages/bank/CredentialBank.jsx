@@ -9,7 +9,7 @@ const CredentialBank = ({ img, bank_name, description }) => {
         <div className="flex justify-end">
           <Button
             icon="pi pi-pen-to-square"
-            className=" text-[#1cabe6] border-[#1cabe6] border-2 px-0 p-1 bg-white"
+            className=" text-[#1cabe6] border-[#1cabe6] border-2 h-9 w-9 bg-white"
           />
         </div>
         <div className=" flex justify-center">

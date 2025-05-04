@@ -35,7 +35,7 @@ const CardProductBank = () => {
   });
 
   return (
-    <>
+    <div className="mt-2 xl:mt-6">
       <ProductFilterBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -162,7 +162,7 @@ const CardProductBank = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

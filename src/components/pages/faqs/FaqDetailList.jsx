@@ -12,12 +12,12 @@ const FaqDetailList = ({ faq }) => {
             key={id}
             className="mb-2.5 border border-gray-200 bg-white rounded-lg"
           >
-            <details className="group">
+            <details className="group ">
               <summary className="h-[48px] flex items-center justify-between px-4 cursor-pointer text-sm md:text-lg font-medium">
                 <span>{title}</span>
                 <i className="pi pi-chevron-down group-open:pi-chevron-up " />
               </summary>
-              <div className="px-4 py-3 text-slate-800 text-sm bg-slate-300">
+              <div className="px-4 py-3 text-slate-800 text-sm bg-slate-300 rounded-b-lg">
                 {desc}
               </div>
             </details>

@@ -1,3 +1,7 @@
+.p-paginator {
+  font-size: 13px;
+}
+
 @media (min-width: 768px) {
   .p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th,
   .p-datatable.p-datatable-gridlines .p-datatable-tbody > tr > td {
@@ -14,7 +18,9 @@
     font-size: 14px;
   }
   .p-paginator {
+    font-size: 14px;
     display: flex;
     justify-content: flex-end;
+    padding: 0 10px;
   }
 }

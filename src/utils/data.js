@@ -1470,3 +1470,82 @@ export const dataLoan = [
     plafond: 'Rp. 500,000,000',
   },
 ];
+
+export const dataNotifWA = [
+  {
+    id: '1',
+    borderColor: 'border-blue-500',
+    textColor: 'text-blue-500',
+    label: 'Pesan Terkirim',
+    totalNotif: '51',
+    newNotif: '3',
+  },
+  {
+    id: '2',
+    borderColor: 'border-green-500',
+    textColor: 'text-green-500',
+    label: 'Pesan Terbaca',
+    totalNotif: '41',
+    newNotif: '2',
+  },
+  {
+    id: '3',
+    borderColor: 'border-red-500',
+    textColor: 'text-red-500',
+    label: 'Pesan Gagal',
+    totalNotif: '10',
+    newNotif: '1',
+  },
+  {
+    id: '4',
+    borderColor: 'border-purple-500',
+    textColor: 'text-purple-500',
+    label: 'Quota Available',
+    totalNotif: '200',
+    newNotif: '500',
+  },
+];
+
+export const dataCampaign = [
+  {
+    no: 1,
+    name: '(Nama Campaign)',
+    sentAt: '(Tanggal Dikirim)',
+    totalUsed: '(Jumlah Nomor Dipakai)',
+  },
+];
+
+export const dataNotifUser = [
+  {
+    id: 1,
+    label: 'Credit Scoring',
+    total: '25',
+  },
+  {
+    id: 2,
+    label: 'Marketing',
+    total: '45',
+  },
+  {
+    id: 3,
+    label: 'Utility',
+    total: '26',
+  },
+  {
+    id: 4,
+    label: 'Inbound',
+    total: '100',
+  },
+];
+
+export const dataChatPerformance = [
+  {
+    no: 1,
+    adviser_name: '(Nama LA)',
+    office: '(Nama Cabang Kantor)',
+    messageSent: '(Pesan Terkirim)',
+    messageRead: '(Pesan Terbaca)',
+    failedMessage: '(Pesan Gagal)',
+    status: '(Status)',
+  },
+];

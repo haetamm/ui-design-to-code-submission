@@ -26,7 +26,7 @@ const PipelinePage = () => {
         <title>Pipeline | Loan Market</title>
         <meta name="description" content="Pipeline page" />
       </Helmet>
-      <div className="mt-[20px] md:mt-[10px] mb-14">
+      <div className="mt-[20px] md:mt-[10px] mb-4">
         <div className={`${isOpen ? 'pl-3' : 'px-3'} md:px-6 md:py-3`}>
           <FilterSection
             labelLeft="Kantor Loan Market"

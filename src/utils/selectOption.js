@@ -210,3 +210,15 @@ export const list_branch_offices_option = [
   { name: 'loram ipsum2', value: 'loram ipsum2' },
   { name: 'loram ipsum3', value: 'loram ipsum3' },
 ];
+
+export const dateOptions = [
+  { label: 'This Month', value: 'This Month' },
+  { label: 'Last Month', value: 'Last Month' },
+  { label: 'All Time', value: 'All Time' },
+];
+
+export const viewOptions = [
+  { label: 'Officer or LA', value: 'officerOrLa' },
+  { label: 'lorem1', value: 'lorem1' },
+  { label: 'lorem2', value: 'lorem2' },
+];

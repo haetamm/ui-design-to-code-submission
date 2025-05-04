@@ -4,7 +4,7 @@ import { cardItems } from '../../../utils/link';
 const CardMenu = () => {
   return (
     <>
-      <div className="p-3 py-4 md:px-3 lg:px-6 xl:p-6 flex space-x-6 overflow-auto w-full">
+      <div className="p-3 py-4 md:px-3 lg:px-6 xl:p-6 flex space-x-6 overflow-auto pb-3 lg:pb-0 w-full">
         {cardItems.map((item, index) => (
           <div
             key={index}

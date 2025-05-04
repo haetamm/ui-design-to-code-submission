@@ -4,13 +4,13 @@ import {
   subNavItemProduct,
   subNavItemWhatsapp,
 } from '../../utils/link';
-import { LuAlignJustify } from 'react-icons/lu';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { useState } from 'react';
 import { useSidebar } from '../../store/sidebar';
+import ToggleSidebarButton from './ToggleSidebarButton';
 
 const Sidebar = () => {
-  const { isOpen, toggleSidebar } = useSidebar();
+  const { isOpen } = useSidebar();
   const location = useLocation();
   const [dropdowns, setDropdowns] = useState({});
 
@@ -37,10 +37,7 @@ const Sidebar = () => {
             alt="logo-img"
             className="hidden lg:inline-block h-[80px] w-[80px]"
           />
-          <LuAlignJustify
-            onClick={() => toggleSidebar()}
-            className="h-10 w-10 block lg:hidden"
-          />
+          <ToggleSidebarButton />
         </div>
         <div className="mx-auto px-1.5 xl:px-3 h-[calc(100%-55px)] lg:h-[calc(100%-80px)] overflow-auto no-scrollbar pt-5 lg:py-3 xl:pt-6">
           {navItems.map((item, index) => (

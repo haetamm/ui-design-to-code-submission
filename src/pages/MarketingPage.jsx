@@ -29,16 +29,16 @@ const MarketingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing Tools| Loan Market</title>
+        <title>Marketing Tools | Loan Market</title>
         <meta name="description" content="Marketing Tools page" />
       </Helmet>
-      <div className="mt-6 md:mb-8">
+      <div className="mt-6 mb-2">
         <div className="p-3 px-3 pt-0 md:px-3 lg:px-4 xl:px-6 py-4 xs:pt-0 w-full">
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 xs:gap-x-20 gap-y-8 lg:grid-cols-3 xl:grid-cols-4 lg:gap-8">
               {dataTemplate.map(({ id, title, img }) => (
                 <div
-                  className="w-[300px] xs:w-[250px] md:w-[300px] lg:w-[260px] mb-3"
+                  className="w-[300px] xs:w-[250px] md:w-[300px] lg:w-[260px] xl:w-[245px]"
                   key={id}
                 >
                   <div className=" flex flex-col items-center">

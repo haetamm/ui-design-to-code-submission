@@ -25,7 +25,7 @@ const BankDetailPage = () => {
         <meta name="description" content={`${bank_name} bank page`} />
       </Helmet>
       <NavPage entityName="Bank" subName="Bank" />
-      <div className="p-5 lg:p-3 xl:p-6 ">
+      <div className="p-5 lg:p-3 xl:p-6 mb-14 md:mb-0">
         <CredentialBank
           bank_name={bank_name}
           img={img}

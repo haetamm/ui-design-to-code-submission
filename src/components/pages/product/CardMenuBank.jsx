@@ -4,7 +4,7 @@ import { cardMenuBank } from '../../../utils/link';
 const CardMenuBank = () => {
   return (
     <>
-      <div className="p-3 py-6 md:px-3 lg:px-4 xl:p-6 flex space-x-3 overflow-auto w-full">
+      <div className="p-3 py-6 md:px-3 lg:px-4 xl:p-6 flex space-x-3 overflow-auto w-full pb-3 xl:pb-0">
         {cardMenuBank.map(({ icon, label }, index) => (
           <div
             key={index}

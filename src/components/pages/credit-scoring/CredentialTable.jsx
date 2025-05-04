@@ -41,12 +41,13 @@ const CredentialTable = () => {
   );
 
   return (
-    <div className="w-full px-3 md:px-6 mt-3 mb-14">
+    <div className="w-full px-3 md:px-6 mt-3 mb-4">
       {/* Tabel Desktop */}
       <DataTable
         value={dataCreditScoring}
-        className="w-full hidden lg:block border border-gray-300 rounded"
+        className="w-full hidden lg:block border border-gray-300 rounded-xl overflow-hidden"
         headerClassName=""
+        showGridlines
         stripedRows
         rowClassName={() => 'border-b border-gray-300 '}
         paginator
@@ -69,7 +70,7 @@ const CredentialTable = () => {
       {/* Tabel Mobile */}
       <DataTable
         value={dataCreditScoring}
-        className="w-full lg:hidden"
+        className="w-full lg:hidden rounded-lg overflow-hidden"
         paginator
         rows={5}
         rowsPerPageOptions={[5, 10, 20]}
